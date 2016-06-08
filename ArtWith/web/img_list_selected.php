@@ -12,6 +12,7 @@ $img_link[7] = "img_hb8.png"; $img_due[7] =   2; $img_user[7] = "허그미"; $im
 $img_link[8] = "img_hb9.png"; $img_due[8] =  15; $img_user[8] = "기부천사"; $img_rep[8] = 16; $img_tag[8] = "#왕비 #할머니 #예쁜";
 $img_link[9] = "img_hb10.png";$img_due[9] =   11; $img_user[9] = "크러쉬굳"; $img_rep[9] = 2; $img_tag[9] = "#기생";
 $img_link[10] = "img_hb11.png";$img_due[10] = 15; $img_user[10] = "참깨와친구"; $img_rep[10] = 41; $img_tag[10] = "#전통 #다양한";
+
 /*echo(" <ul style=\"list-style:none;  width:80%; \"> ");
 for($count=0; $count<16; $count++){
     echo(" <div style=\"backgound:#FFF;\"> ");
