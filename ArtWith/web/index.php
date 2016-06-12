@@ -71,7 +71,7 @@
                 var count = $(this).find('li').length;
                 if(maxCount < count) maxCount = count;
             });
-            //alert(maxCount * 35);
+            //alert(maxCount * 35+ "  adf   " + (maxCount + 1) * 35);
             $("#cat-container").css("height", (maxCount + 1) * 35);
         }
 
@@ -95,9 +95,51 @@
                 if(maxCount < count) maxCount = count;
             });
             //alert(maxCount * 35);
-            $("#cat-container").css("height", (maxCount + 1) * 35);
+            $("#cat-container").css("height", (maxCount + 2) * 35);
             changeBackgroundImageForCat($(this), $(this).val());
         })
+		
+		$(document).on('click','#sharewith',function(){
+			if($(this).val() == 0){
+				$(this).attr('src','images/design/img_nnw_on.png');
+				$(this).val(1);
+				
+				$("#wetalk").attr('src','images/design/img_talk_off.png');
+				$("#wetalk").next().val(0);
+				$("#myspace").attr('src','images/design/img_my_off.png');
+				$("#myspace").val(0);				
+			}
+		});
+		
+		$(document).on('click','#wetalk',function(){
+			if($(this).val() == 0){
+				$(this).attr('src','images/design/img_talk_on.png');
+				$(this).val(1);
+
+				$("#myspace").attr('src','images/design/img_my_off.png');
+				$("#myspace").val(0);
+				
+				$("#sharewith").attr('src','images/design/img_nnw_off.png');
+				$("#sharewith").val(0);	
+			}
+		});
+
+
+		$(document).on('click','#myspace',function(){
+			if($(this).val() == 0){
+				$(this).attr('src','images/design/img_my_on.png');
+				$(this).val(1);
+				
+				$("#wetalk").attr('src','images/design/img_talk_off.png');
+				$("#wetalk").val(0);
+				
+				$("#sharewith").attr('src','images/design/img_nnw_off.png');
+				$("#sharewith").val(0);
+				
+			}
+			
+		});
+
 
         $(document).on('click', '#sub3', function() {
             $("#cat-container").css("height", 35);
@@ -110,11 +152,15 @@
             var li_index = $this.index();
 
             var $sibl = $this.parent().children();
-            $sibl.not($this).css("background","#8F4C99");
-            $this.css("background","white");
-            $this.children().css("color", "#8F4C99");
-            $this.children().css("font-weight", "bold");
-            $sibl.not($this).children().css("color", "transparent");
+			
+            $sibl.not($this).css("background","#FFF");           		
+         //   $this.children().not($this).css("color", "#A0A1A3");
+           
+			$this.css("background","#F36E4B");
+            $this.children().css("color","#FFFFFF");
+			$this.children().css("font-style","normal");				
+
+           $sibl.not($this).children().css("color", "#A0A1A3");
 
 
             //alert($this.children().css("text-weight", "bold"));
@@ -147,24 +193,49 @@
         function setTextCategory(id_for_showing_selected, text) {
             $("#" + id_for_showing_selected).text(text);
         }
+		function initlist(){
+			var list11 = $("#sub1").children().length;
+			var list12 = $("#sub1").children().eq(5).index();
+			var list21 = $("#sub2").children().length;
+			var list22 = $("#sub2").children().eq(5).index();
+			
+			
+			if(list11 > 5){
+				for(var i= list1; i<6; i++){
+					$("#sub1").children().eq(i).remove();
+				}
+			}
+			if(list21 > 5){
+				for(var i= list1; i<6; i++){
+					$("#sub2").children().eq(i).remove();					
+				}				
+			}
+			alert(lis1);	
+			
+		}		
+
 
         function setNextCatList(id_for_showing_selected, index, id_next_cat) {
             //alert("setNextCatList:" + id_for_showing_selected);
+
             if(id_for_showing_selected == "cat_first") {
-                $("#cat_second").text("선택");
-                $("#cat_third").text("선택");
+                $("#cat_second").text("전체");
+                $("#cat_third").text("전체");
+
                 if(index == 0) { // 의상
                     //alert("의상입니다");
                     $("#" + id_next_cat).empty();
                     $("#" + id_next_cat).append('<li class="each-category" value="1"><a href="#">일반의상</a></li>');
                     $("#" + id_next_cat).append('<li class="each-category" value="2"><a href="#">전통의상</a></li>');
                     $("#" + id_next_cat).append('<li class="each-category" value="3"><a href="#">컨셉의상</a></li>');
-                    $("#" + id_next_cat).append('<li></li>');
-                    $("#" + id_next_cat).append('<li></li>');
+                    $("#" + id_next_cat).append('<li class="each-category"></li>');
+                    $("#" + id_next_cat).append('<li class="each-category"></li>');
                     $("#sub3").empty();
-                    $("#sub3").append('<li></li>');				$("#sub3").append('<li></li>');
-                    $("#sub3").append('<li></li>');				$("#sub3").append('<li></li>');
-                    $("#sub3").append('<li></li>');
+                    $("#sub3").append('<li class="each-category"></li>');			
+					$("#sub3").append('<li class="each-category"></li>');
+                    $("#sub3").append('<li class="each-category"></li>');			
+					$("#sub3").append('<li class="each-category"></li>');
+                    $("#sub3").append('<li class="each-category"></li>');
                 }
                 else if(index == 1) { // 소풍
                     //alert("소품입니다");
@@ -173,11 +244,13 @@
                     $("#" + id_next_cat).append('<li class="each-category" value="2"><a href="#">생활제품</a></li>');
                     $("#" + id_next_cat).append('<li class="each-category" value="3"><a href="#">옛날소품</a></li>');
                     $("#" + id_next_cat).append('<li class="each-category" value="3"><a href="#">컨셉물품</a></li>');
-                    $("#" + id_next_cat).append('<li></li>');
+                    $("#" + id_next_cat).append('<li class="each-category"></li>');
                     $("#sub3").empty();
-                    $("#sub3").append('<li></li>');				$("#sub3").append('<li></li>');
-                    $("#sub3").append('<li></li>');				$("#sub3").append('<li></li>');
-                    $("#sub3").append('<li></li>');
+                    $("#sub3").append('<li class="each-category"></li>');		
+					$("#sub3").append('<li class="each-category"></li>');
+                    $("#sub3").append('<li class="each-category"></li>');		
+					$("#sub3").append('<li class="each-category"></li>');
+                    $("#sub3").append('<li class="each-category"></li>');
                 }
                 else {
                     //alert("해당 없음");
@@ -186,7 +259,8 @@
             }
             else if(id_for_showing_selected == "cat_second") {
                 //alert("cat_second->" + id_next_cat);
-                $("#cat_third").text("선택");
+
+                $("#cat_third").text("전체");
                 var cat_first_text = $("#cat_first").text().trim();
                 var cat_second_text = $("#cat_second").text().trim();
                 if(cat_first_text == "의상") {
@@ -221,8 +295,8 @@
                         $("#" + id_next_cat).append('<li class="each-category" value="1"><a href="#">장</a></li>');
                         $("#" + id_next_cat).append('<li class="each-category" value="2"><a href="#">의자/테이블</a></li>');
                         $("#" + id_next_cat).append('<li class="each-category" value="3"><a href="#">침대/쇼파</a></li>');
-                        $("#" + id_next_cat).append('<li></li>');
-                        $("#" + id_next_cat).append('<li></li>');
+                        $("#" + id_next_cat).append('<li class="each-category"></li>');
+                        $("#" + id_next_cat).append('<li class="each-category"></li>');
                     }
                     else if(cat_second_text == "생활제품") {
                         $("#" + id_next_cat).empty();
@@ -230,15 +304,15 @@
                         $("#" + id_next_cat).append('<li class="each-category" value="2"><a href="#">욕실용품</a></li>');
                         $("#" + id_next_cat).append('<li class="each-category" value="3"><a href="#">장식소품</a></li>');
                         $("#" + id_next_cat).append('<li class="each-category" value="3"><a href="#">가전제품</a></li>');
-                        $("#" + id_next_cat).append('<li></li>');
+                        $("#" + id_next_cat).append('<li class="each-category"></li>');
                     }
                     else if(cat_second_text == "옛날소품") {
                         $("#" + id_next_cat).empty();
                         $("#" + id_next_cat).append('<li class="each-category" value="1"><a href="#">전통놀이</a></li>');
                         $("#" + id_next_cat).append('<li class="each-category" value="2"><a href="#">시대소품</a></li>');
                         $("#" + id_next_cat).append('<li class="each-category" value="3"><a href="#">고미술</a></li>');
-                        $("#" + id_next_cat).append('<li></li>');
-                        $("#" + id_next_cat).append('<li></li>');
+                        $("#" + id_next_cat).append('<li class="each-category"></li>');
+                        $("#" + id_next_cat).append('<li class="each-category"></li>');
                     }
 
                     else if(cat_second_text == "컨셉물품") {
@@ -246,12 +320,20 @@
                         $("#" + id_next_cat).append('<li class="each-category" value="1"><a href="#">병원소품</a></li>');
                         $("#" + id_next_cat).append('<li class="each-category" value="2"><a href="#">학교/회사물품</a></li>');
                         $("#" + id_next_cat).append('<li class="each-category" value="3"><a href="#">음악소품</a></li>');
-                        $("#" + id_next_cat).append('<li class="each-category" value="3"><a href="#">과학소품</a></li>');
-                        $("#" + id_next_cat).append('<li class="each-category" value="3"><a href="#">운동소품</a></li>');
-                        $("#" + id_next_cat).append('<li class="each-category" value="3"><a href="#">미술소품</a></li>');
-                        $("#" + id_next_cat).append('<li class="each-category" value="3"><a href="#">파티소품</a></li>');
-                        $("#" + id_next_cat).append('<li class="each-category" value="3"><a href="#">게임소품</a></li>');
-                        $("#" + id_next_cat).append('<li class="each-category" value="3"><a href="#">계절소품</a></li>');
+                        $("#" + id_next_cat).append('<li class="each-category" value="4"><a href="#">과학소품</a></li>');
+                        $("#" + id_next_cat).append('<li class="each-category" value="5"><a href="#">운동소품</a></li>');
+                        $("#" + id_next_cat).append('<li class="each-category" value="6"><a href="#">미술소품</a></li>');
+                        $("#" + id_next_cat).append('<li class="each-category" value="7"><a href="#">파티소품</a></li>');
+                        $("#" + id_next_cat).append('<li class="each-category" value="8"><a href="#">게임소품</a></li>');
+                        $("#" + id_next_cat).append('<li class="each-category" value="9"><a href="#">계절소품</a></li>');
+						$("#sub1").append('<li class="each-category"></li>');
+						$("#sub1").append('<li class="each-category"></li>');
+						$("#sub1").append('<li class="each-category"></li>');
+						$("#sub1").append('<li class="each-category"></li>');
+						$("#sub2").append('<li class="each-category"></li>');
+						$("#sub2").append('<li class="each-category"></li>');
+						$("#sub2").append('<li class="each-category"></li>');
+						$("#sub2").append('<li class="each-category"></li>');																																										
                     }
 
                 }
@@ -259,6 +341,9 @@
             }
 
         }
+
+
+
 
     </script>
 
@@ -373,7 +458,12 @@
             text-align: left;
             line-height: 35px;
             text-indent: 10px;
+			
         }
+		
+		ul.sub li.each-category a{
+			color:#A0A1A3;
+		}
 
         ul.menu li a{
             float: left;
@@ -389,11 +479,12 @@
         }
 
         ul.menu li a:hover{
-            color: transparent;
+             color:#A0A1A3
         }
 
         ul.menu li ul.sub {
             display: block;
+			
         }
 
         ul.menu:after{
@@ -404,6 +495,8 @@
 
         ul.menu li.each-category{
             z-index:999;
+			padding:0px;			
+			
         }
 
         ul.sub {
@@ -415,8 +508,24 @@
             width: 100%;
             list-style-type: none;
             text-align: left;
-            border-radius: 5px;
+           
+			color:#A0A1A3;
+			background:#FFF;
+			border-left-width:1px;
+			border-right-width:1px;			
+			border-right-style:solid;
+			border-right-color:#F36E4B;
+			border-left-color:#F36E4B;
+			border-top-color:#A0A1A3;
+			border-top-width:1px;
+			border-bottom-color:#A0A1A3;
+			border-bottom-width:1px;
+			border-bottom-style:solid;			
         }
+		ul.sub li.each-category a.ui-link{
+			color:#A0A1A3;
+			z-index:2000;
+		}
 
         .cat-list {
             width: 30%;
@@ -554,6 +663,7 @@
             padding: 0;
         }
 
+
         .product-info-table-td-right {
             background-color: white;
             padding-left: 10px;
@@ -628,7 +738,7 @@
             <div id="cat-container">
                 <ul class="menu">
                     <li id="test" class="cat-list">
-                        <a href="#" id="cat_first">선택</a>
+                        <a href="#" id="cat_first">전체</a>
                         <ul class="sub" id="sub1">
                             <li class="each-category">
                                 <a href="#">의상</a>
@@ -643,13 +753,13 @@
                     </li>
 
                     <li id="test2" class="cat-list">
-                        <a href="#" id="cat_second">선택</a>
+                        <a href="#" id="cat_second">전체</a>
                         <ul class="sub" id="sub2">
                         </ul>
                     </li>
 
                     <li id="test3" class="cat-list">
-                        <a href="#" id="cat_third">선택</a>
+                        <a href="#" id="cat_third">전체</a>
                         <ul class="sub" id="sub3">
                         </ul>
                     </li>
@@ -691,13 +801,13 @@
             <div style="width: 100%">
                 <div>
                     <a href="#">
-                        <img class="bottom-tab-menu" src="images/design/img_nnw_on.png" style="underbutton" width="33%"/>
+                        <img class="bottom-tab-menu" id="sharewith" value="0" src="images/design/img_nnw_on.png" style="underbutton" width="33%"/>
                     </a>
                     <a href="#">
-                        <img class="bottom-tab-menu" src="images/design/img_talk_off.png" style="underbutton"width="33%"/>
+                        <img class="bottom-tab-menu" id="wetalk" value="0" src="images/design/img_talk_off.png" style="underbutton"width="33%"/>
                     </a>
                     <a href="#">
-                        <img class="bottom-tab-menu" src="images/design/img_my_off.png" style="underbutton"width="33%"/>
+                        <img class="bottom-tab-menu" id="myspace" value="0" src="images/design/img_my_off.png" style="underbutton"width="33%"/>
                     </a>
                 </div><!-- /footer -->
             </div>
@@ -710,3 +820,4 @@
 </body>
 
 </html>
+
