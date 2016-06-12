@@ -454,7 +454,7 @@
         vertical-align: middle;
         width: 18px;
         height: auto;
-        margin-left: 10px;
+        margin-left: 2px;
         margin-right: 2px;
     }
 
@@ -681,19 +681,23 @@
 
         <table class="concert-info-table" style="display:none">
             <tr>
-                <th style="width: 30%;">공연명</th>
-                <td style="width: 70%;">마술가게</td>
+                <th style="width: 30%;">나눔혜택</th>
+                <td style="width: 70%;">초청권</td>
             </tr>
             <tr>
-                <th>공연일시</th>
+                <th>혜택명</th>
+                <td>마술가게</td>
+            </tr>
+            <tr>
+                <th>일시</th>
                 <td>2016.10.10 - 2015.11.25</td>
             </tr>
             <tr>
-                <th>공연장소</th>
+                <th>위치</th>
                 <td>두레홀 4관</td>
             </tr>
             <tr>
-                <th>티켓장수</th>
+                <th>장수</th>
                 <td>3장</td>
             </tr>
             <tr>
@@ -803,7 +807,7 @@
                     <th style="width: 65%;">
                         <div class="bg-white">
                             <img class="comment-img" src="images/design/img_re.png">
-                            <span class="comment-info-span">댓글수 22</span>
+                            <span class="comment-info-span">댓글 22개</span>
                         </div>
                     </th>
                     <!--
