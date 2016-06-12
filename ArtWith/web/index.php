@@ -193,31 +193,29 @@
         function setTextCategory(id_for_showing_selected, text) {
             $("#" + id_for_showing_selected).text(text);
         }
+		
 		function initlist(){
-			var list11 = $("#sub1").children().length;
-			var list12 = $("#sub1").children().eq(5).index();
-			var list21 = $("#sub2").children().length;
-			var list22 = $("#sub2").children().eq(5).index();
+			var list1 =	$("#sub1").children();
+			var list2 = $("#sub2").children();
 			
 			
-			if(list11 > 5){
-				for(var i= list1; i<6; i++){
-					$("#sub1").children().eq(i).remove();
-				}
+			if(list1.length > 5){
+				for(var i = list1.length; i>4; i--)
+					list1.eq(i).remove();
 			}
-			if(list21 > 5){
-				for(var i= list1; i<6; i++){
-					$("#sub2").children().eq(i).remove();					
-				}				
-			}
-			alert(lis1);	
 			
-		}		
+			if(list2.length > 5){
+				for(var i = list2.length; i>4; i--)
+					list2.eq(i).remove();
+			}			
+			
+		}
+	
 
 
         function setNextCatList(id_for_showing_selected, index, id_next_cat) {
             //alert("setNextCatList:" + id_for_showing_selected);
-
+			initlist();
             if(id_for_showing_selected == "cat_first") {
                 $("#cat_second").text("전체");
                 $("#cat_third").text("전체");
@@ -746,9 +744,9 @@
                             <li class="each-category">
                                 <a href="#">소품</a>
                             </li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                            <li class="each-category"></li>
+                            <li class="each-category"></li>
+                            <li class="each-category"></li>
                         </ul>
                     </li>
 
