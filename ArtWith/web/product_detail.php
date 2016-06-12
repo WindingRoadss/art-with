@@ -333,6 +333,7 @@
     .cat-info-span {
         vertical-align: middle;
         font-size: 14px;
+        font-weight: bold;
     }
 
     .hash-tag-div{
@@ -393,7 +394,7 @@
         color: black;
     }
 
-    .cat-and-day-info-table {
+    .cat-and-cheer-info-table {
         width: 100%;
         font-weight: bold;
         font-size: 14px;
@@ -402,7 +403,7 @@
         border-spacing: 0;
     }
 
-    .cat-and-day-info-table tr th {
+    .cat-and-cheer-info-table tr th {
         text-align: center;
         vertical-align: middle;
         color: black;
@@ -411,7 +412,7 @@
         border-top: 2px solid #e3e5e6;
     }
 
-    .cat-and-day-info-table tr td {
+    .cat-and-cheer-info-table tr td {
         text-align: center;
         vertical-align: middle;
         color: black;
@@ -419,11 +420,15 @@
         border-top: 2px solid #e3e5e6;
     }
 
-    .cat-and-day-info-table tr td .day-img {
+    .cat-and-cheer-info-table a {
+        text-decoration: none !important;
+    }
+
+    .cat-and-cheer-info-table tr td .cheer-img {
         vertical-align: middle;
-        width: 14.5px;
-        height: 14.5px;
-        padding: 5;
+        width: 30px;
+        height: 28.5px;
+        padding: 3;
         maring: 0;
     }
 
@@ -474,10 +479,12 @@
         vertical-align: middle;
         font-size: 14px;
         margin-right: 10px;
+        color: #848587;
+        font-weight: bold;
     }
 
     .li-tab-one {
-        color: black;
+        color: #26b2c1;
     }
 
     .li-tab-two {
@@ -488,12 +495,50 @@
         background-color: white;
     }
 
+    .dday-info-div {
+        position: absolute;
+        width: 100%;
+        height: 42px;
+        top: 0px;
+        right: 0px;
+        line-height: 42px;
+        z-index: 1001;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .dday-info-div .day-img {
+        vertical-align: middle;
+        line-height: 42px;
+        width: 21px;
+        height: 18.5px;
+        maring: 0;
+        padding: 3;
+    }
+
+    .dday-info-span {
+        line-height: 42px;
+        color: white;
+        font-weight: lighter;
+        font-size: 13;
+        font-weight: bold;
+    }
+
+    .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
+        text-shadow: none;
+    }
+
 	</style>
 </head>
 
 <body style="background-color:white;">
 
 	<div class="bg-white" id="page">
+
+        <div class="dday-info-div">
+            <img class="day-img" src="images/design/img_dday.png">
+            <span class="dday-info-span">D.day 20</span>
+        </div>
 
         <!--
 		<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="a" class="header">
@@ -571,16 +616,18 @@
         -->
 
         <!-- category and d.day info -->
-        <table class="cat-and-day-info-table">
+        <table class="cat-and-cheer-info-table">
             <tr>
-                <th style="width: 70%;">
+                <th style="width: 63%;">
                     <div class="bg-white cat-info-div">
                         <span class="cat-info-span"><b>[ 의상 > 전통의상 > 여성한복 ]</b></span>
                     </div>
                 </th>
-                <td style="width: 30%;">
-                    <img class="day-img" src="images/design/img_day.png">
-                    <span class="cat-info-span">D.day 20</span>
+                <td style="width: 37%;">
+                    <a href="#">
+                        <img class="cheer-img" src="images/design/img_cheer_nclick.png">
+                        <span class="cheer-info-span">응원해요 <span>25</span></span>
+                    </a>
                 </td>
             </tr>
         </table>
@@ -599,7 +646,7 @@
 
         <ul class="ul-tab">
             <li class="li-tab-one" style="border-bottom: solid 4px #e3e5e6">물품정보</li>
-            <li class="li-tab-two" style="border-bottom: solid 4px #e3e5e6"">공연정보</li>
+            <li class="li-tab-two" style="border-bottom: solid 4px #e3e5e6"">나눔혜택정보</li>
             <li class="slider"></li>
         </ul>
 
@@ -759,9 +806,11 @@
                             <span class="comment-info-span">댓글수 22</span>
                         </div>
                     </th>
+                    <!--
                     <td style="width: 35%;">
                         <span class="cheer-info-span">응원해요 26</span>
                     </td>
+                    -->
                 </tr>
             </table>
 
@@ -870,6 +919,41 @@
         $.mobile.toolbar.prototype.options.hideDuringFocus = "";
         $.mobile.toolbar.prototype.options.tapToggle = false;
 
+        function changeCheerImg() {
+            if($('.cheer-img').attr("src").trim() == "images/design/img_cheer_nclick.png") {
+                $('.cheer-img').attr("src", "images/design/img_cheer_click.png");
+                changeCheerNum(0); // 0 : inc
+            }
+            else {
+                $('.cheer-img').attr("src", "images/design/img_cheer_nclick.png");
+                changeCheerNum(1); // 1 : dec
+            }
+        }
+
+        function changeCheerNum(valueIncOrDec) {
+            var currentNum = $('.cheer-info-span span').text()
+            if(valueIncOrDec == 0) { // Inc
+                currentNum++;
+                $('.cheer-info-span span').text(currentNum);
+                //alert($('.cheer-info-span span').text());
+            }
+            else { // Dec
+                currentNum--;
+                $('.cheer-info-span span').text(currentNum);
+            }
+        }
+
+
+        $('.cat-and-cheer-info-table tr td a').click(function(){
+            $.ajax({
+                async:true,
+                success:function(data){
+                    //alert("cheer");
+                    changeCheerImg();
+                }
+            })
+        })
+
         // tab 애니메이션
         $(".ul-tab li").click(function(e) {
 
@@ -924,13 +1008,13 @@
                 $(".hash-tag-div").show();
                 $(".concert-info-table").hide();
                 $(".li-tab-two").css("color", "#848587");
-                $(".li-tab-one").css("color", "black");
+                $(".li-tab-one").css("color", "#26b2c1");
             } else {
                 $(".concert-info-table").show();
                 $(".product-info-table").hide();
                 $(".hash-tag-div").hide();
                 $(".li-tab-one").css("color", "#848587");
-                $(".li-tab-two").css("color", "black");
+                $(".li-tab-two").css("color", "#26b2c1");
             }
 
         });
