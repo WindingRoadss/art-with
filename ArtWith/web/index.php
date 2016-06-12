@@ -7,6 +7,7 @@
 
         $(document).on('click','#test_icon',function()	 {
             $("ul.sub").slideToggle("fast");
+			changeBackgroundImageForCat($('.cat-icon'), $('.cat-icon').val());
         });
     </script>
 
@@ -154,7 +155,7 @@
             var $sibl = $this.parent().children();
 			
             $sibl.not($this).css("background","#FFF");           		
-         //   $this.children().not($this).css("color", "#A0A1A3");
+            $this.children().not($this).css("color", "#A0A1A3");
            
 			$this.css("background","#F36E4B");
             $this.children().css("color","#FFFFFF");
@@ -169,14 +170,15 @@
 
             var id_for_showing_selected = $this.closest("ul").prev().attr("id"); // 선택된 내용 보여주는 a 태그 id
             //alert("1" + id_for_showing_selected);
+					
             if(id_for_showing_selected.trim() == "cat_third") {
-                setTextCategory(id_for_showing_selected, cat_text);
+                setTextCategory(id_for_showing_selected, cat_text);				
                 $("ul.sub").slideUp("slow");
-                changeBackgroundImageForCat($('.cat-icon'), $('.cat-icon').val());
                 if(cat_text.trim() == "여성한복")
                     addSelectedProducts();
                 else
                     removeAllProducts();
+				changeBackgroundImageForCat($('.cat-icon'), $('.cat-icon').val())					
             }
             else {
                 //alert("no cat_third");
@@ -190,6 +192,7 @@
             changeCatContainerHeight();
         })
 
+	
         function setTextCategory(id_for_showing_selected, text) {
             $("#" + id_for_showing_selected).text(text);
         }
@@ -424,7 +427,7 @@
             z-index: 1500;
             height: 35px;
             border-radius: 5px;
-            background-color: #8F4C99;
+            width:105%;
             margin: 10;
         }
 
@@ -527,6 +530,7 @@
 
         .cat-list {
             width: 30%;
+			background-color: #8F4C99;
         }
 
         .cat-icon {
@@ -685,7 +689,7 @@
         .blank-div-for-product {
             height: 3px;
             background-color:  #f7f7f7;
-            width: 100%"
+            width: 100%;
         }
 
         .div-info-row {
@@ -708,7 +712,7 @@
             z-index: 3000;
         }
 
-    </style>
+	 </style>
 
     <title>Page ID 1</title>
 
@@ -732,7 +736,10 @@
                     <img id="logo" src="images/design/img_logo.png">
                 </a>
             </div>
-
+	
+            
+            
+            
             <div id="cat-container">
                 <ul class="menu">
                     <li id="test" class="cat-list">
@@ -753,16 +760,26 @@
                     <li id="test2" class="cat-list">
                         <a href="#" id="cat_second">전체</a>
                         <ul class="sub" id="sub2">
+                        <li class="each-category"></li>
+                        <li class="each-category"></li>
+                        <li class="each-category"></li>
+                        <li class="each-category"></li>
+                        <li class="each-category"></li>
                         </ul>
                     </li>
 
                     <li id="test3" class="cat-list">
                         <a href="#" id="cat_third">전체</a>
                         <ul class="sub" id="sub3">
+                        <li class="each-category"></li>
+                        <li class="each-category"></li>
+                        <li class="each-category"></li>
+                        <li class="each-category"></li>
+                        <li class="each-category"></li>
                         </ul>
                     </li>
 
-                    <li class="cat-icon" value="0">
+                    <li class="cat-icon" value="0" style="float:fixed; z-index:2000; right:35px;">
                         <a href="#" id="test_icon">
                         </a>
                     </li>
@@ -818,4 +835,5 @@
 </body>
 
 </html>
+
 
