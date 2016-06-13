@@ -111,7 +111,6 @@
 	}
 
 	#fixed-bottom-btn {
-        height: 80px;
         width: 100%;
 	}
 
@@ -873,8 +872,6 @@
             </div>
         </div>
 
-
-
         <!--
         <div class="swiper-container swiper-container-product">
 			<div class="swiper-wrapper">
@@ -892,7 +889,7 @@
                 </div>
             </a>
         </div
-		
+
 	</div> <!-- page -->
 	
     <?php require "./common/footer.php"; ?>

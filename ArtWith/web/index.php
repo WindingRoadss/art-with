@@ -5,6 +5,19 @@
         $("ul.sub").hide();
     });
 
+    $(document).on('click','.cat-icon',function()	 {
+        $("ul.sub").slideToggle("fast");
+        if($('cat-icon').val() == 0) {
+            $('cat-icon').css("background-image", "url(images/design/category_icon_on.png)")
+            $('cat-icon').val(1);
+        }
+        else {
+            $('cat-icon').css("background-image", "url(images/design/category_icon.png)")
+            $('cat-icon').val(0);
+            $("#cat-container").css("height", 35);
+        }
+    });
+
     $(document).on('click','#cat_first',function()	 {
         $("ul.sub").slideToggle("fast");
         changeBackgroundImageForCat($('.cat-icon'), $('.cat-icon').val());
@@ -18,10 +31,7 @@
         changeBackgroundImageForCat($('.cat-icon'), $('.cat-icon').val());
     });
 
-    $(document).on('click','#test_icon',function()	 {
-        $("ul.sub").slideToggle("fast");
-        changeBackgroundImageForCat($('.cat-icon'), $('.cat-icon').val());
-    });
+
 </script>
 
 <script>
@@ -500,7 +510,6 @@
 
     ul.menu li ul.sub {
         display: block;
-
     }
 
     ul.menu:after{
@@ -512,7 +521,6 @@
     ul.menu li.each-category{
         z-index:999;
         padding:0px;
-
     }
 
     ul.sub {

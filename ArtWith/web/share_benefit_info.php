@@ -4,7 +4,7 @@
 <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
 <noscript><link rel="stylesheet" type="text/css" href="css/noJS.css" /></noscript>
 
-<title>Write Comment</title>
+<title>Share Info Benefit</title>
 
 <!-- Demo styles -->
 <style>
@@ -303,7 +303,7 @@
 <div class="bg-gray" id="page">
 
     <div class="header-title">
-        <span class="header-title-span">나눔댓글작성</span>
+        <span class="header-title-span">나눔혜택정보</span>
     </div>
 
     <div id="fixed-top-header" class="header">
@@ -323,10 +323,10 @@
     <div class="blank-div-for-header"></div>
 
     <div class="bg-white input-box-default">
-        <span class="title-span">물품 이미지 (최대 5장)</span>
+        <span class="title-span">요청물품 유사 이미지 (최대 5장)</span>
         <hr/>
         <span class="description-span">
-            요청자에게 적합한 물품인지 파악하기 위해 필요한 정보입니다.
+            나눔자가 기부할 물품이 적합한지 파악하기 위해 필요한 정보입니다.
         </span>
         <br>
         <span class="description-span">
@@ -344,6 +344,98 @@
     </div>
 
     <input type="file" id="imgInput" />
+
+    <div class="bg-white input-box-default" id="category_div">
+        <span class="title-span">배송가능 날짜</span>
+        <hr/>
+
+        <div class="wrapper-div">
+            <table style="width: 100%; margin: 0; padding: 0;">
+                <tr>
+                    <td style="width: 33.33%;">
+                        <div id="category_drop_down" class="wrapper-dropdown" tabindex="1" >
+                            <span>전체</span>
+                            <ul class="dropdown" id="ul_category">
+                                <li><a href="#">전체</a></li>
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                            </ul>
+                        </div>
+                    </td>
+
+                    <td style="width: 33.33%;">
+                        <div id="month_drop_down" class="wrapper-dropdown" tabindex="1">
+                            <span>월</span>
+                            <ul class="dropdown" id="ul_month">
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">6</a></li>
+                                <li><a href="#">7</a></li>
+                                <li><a href="#">8</a></li>
+                                <li><a href="#">9</a></li>
+                                <li><a href="#">10</a></li>
+                                <li><a href="#">11</a></li>
+                                <li><a href="#">12</a></li>
+                            </ul>
+                        </div>
+                    </td>
+
+                    <td style="width: 33.33%;">
+                        <div id="day_drop_down" class="wrapper-dropdown" tabindex="1">
+                            <span>일</span>
+                            <ul class="dropdown" id="ul_day">
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">6</a></li>
+                                <li><a href="#">7</a></li>
+                                <li><a href="#">8</a></li>
+                                <li><a href="#">9</a></li>
+                                <li><a href="#">10</a></li>
+                                <li><a href="#">11</a></li>
+                                <li><a href="#">12</a></li>
+                                <li><a href="#">13</a></li>
+                                <li><a href="#">14</a></li>
+                                <li><a href="#">15</a></li>
+                                <li><a href="#">16</a></li>
+                                <li><a href="#">17</a></li>
+                                <li><a href="#">18</a></li>
+                                <li><a href="#">19</a></li>
+                                <li><a href="#">20</a></li>
+                                <li><a href="#">21</a></li>
+                                <li><a href="#">22</a></li>
+                                <li><a href="#">23</a></li>
+                                <li><a href="#">24</a></li>
+                                <li><a href="#">25</a></li>
+                                <li><a href="#">26</a></li>
+                                <li><a href="#">27</a></li>
+                                <li><a href="#">28</a></li>
+                                <li><a href="#">29</a></li>
+                                <li><a href="#">30</a></li>
+                                <li><a href="#">31</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
 
     <div class="bg-white input-box-default" id="transport_div">
         <span class="title-span">배송가능 날짜</span>
