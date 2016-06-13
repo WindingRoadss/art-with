@@ -99,19 +99,19 @@
             $("#cat-container").css("height", (maxCount + 2) * 35);
             changeBackgroundImageForCat($(this), $(this).val());
         })
-		
+
 		$(document).on('click','#sharewith',function(){
 			if($(this).val() == 0){
 				$(this).attr('src','images/design/img_nnw_on.png');
 				$(this).val(1);
-				
+
 				$("#wetalk").attr('src','images/design/img_talk_off.png');
 				$("#wetalk").next().val(0);
 				$("#myspace").attr('src','images/design/img_my_off.png');
-				$("#myspace").val(0);				
+				$("#myspace").val(0);
 			}
 		});
-		
+
 		$(document).on('click','#wetalk',function(){
 			if($(this).val() == 0){
 				$(this).attr('src','images/design/img_talk_on.png');
@@ -119,9 +119,9 @@
 
 				$("#myspace").attr('src','images/design/img_my_off.png');
 				$("#myspace").val(0);
-				
+
 				$("#sharewith").attr('src','images/design/img_nnw_off.png');
-				$("#sharewith").val(0);	
+				$("#sharewith").val(0);
 			}
 		});
 
@@ -130,17 +130,31 @@
 			if($(this).val() == 0){
 				$(this).attr('src','images/design/img_my_on.png');
 				$(this).val(1);
-				
+
 				$("#wetalk").attr('src','images/design/img_talk_off.png');
 				$("#wetalk").val(0);
-				
+
 				$("#sharewith").attr('src','images/design/img_nnw_off.png');
 				$("#sharewith").val(0);
-				
+
 			}
-			
+
 		});
 
+        $(document).on('click', '#cat_first', function() {
+            $("ul.sub").slideToggle("fast");
+            changeBackgroundImageForCat($('.cat-icon'), $('.cat-icon').val());
+        })
+
+        $(document).on('click', '#cat_second', function() {
+            $("ul.sub").slideToggle("fast");
+            changeBackgroundImageForCat($('.cat-icon'), $('.cat-icon').val());
+        })
+
+        $(document).on('click', '#cat_third', function() {
+            $("ul.sub").slideToggle("fast");
+            changeBackgroundImageForCat($('.cat-icon'), $('.cat-icon').val());
+        })
 
         $(document).on('click', '#sub3', function() {
             $("#cat-container").css("height", 35);
@@ -153,13 +167,13 @@
             var li_index = $this.index();
 
             var $sibl = $this.parent().children();
-			
-            $sibl.not($this).css("background","#FFF");           		
+
+            $sibl.not($this).css("background","#FFF");
             $this.children().not($this).css("color", "#A0A1A3");
-           
+
 			$this.css("background","#F36E4B");
             $this.children().css("color","#FFFFFF");
-			$this.children().css("font-style","normal");				
+			$this.children().css("font-style","normal");
 
            $sibl.not($this).children().css("color", "#A0A1A3");
 
@@ -170,9 +184,9 @@
 
             var id_for_showing_selected = $this.closest("ul").prev().attr("id"); // 선택된 내용 보여주는 a 태그 id
             //alert("1" + id_for_showing_selected);
-					
+
             if(id_for_showing_selected.trim() == "cat_third") {
-                setTextCategory(id_for_showing_selected, cat_text);				
+                setTextCategory(id_for_showing_selected, cat_text);
                 $("ul.sub").slideUp("slow");
                 if(cat_text.trim() == "여성한복")
                     addSelectedProducts();
