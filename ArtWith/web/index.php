@@ -5,7 +5,15 @@
             $("ul.sub").hide();
         });
 
-        $(document).on('click','#test_icon',function()	 {
+        $(document).on('click','#cat_first',function()	 {
+            $("ul.sub").slideToggle("fast");
+			changeBackgroundImageForCat($('.cat-icon'), $('.cat-icon').val());
+        });
+		$(document).on('click','#cat_second',function()	 {
+            $("ul.sub").slideToggle("fast");
+			changeBackgroundImageForCat($('.cat-icon'), $('.cat-icon').val());
+        });
+		$(document).on('click','#cat_third',function()	 {
             $("ul.sub").slideToggle("fast");
 			changeBackgroundImageForCat($('.cat-icon'), $('.cat-icon').val());
         });
@@ -172,8 +180,10 @@
             //alert("1" + id_for_showing_selected);
 					
             if(id_for_showing_selected.trim() == "cat_third") {
-                setTextCategory(id_for_showing_selected, cat_text);				
-                $("ul.sub").slideUp("slow");
+                setTextCategory(id_for_showing_selected, cat_text);		
+					
+	            $("ul.sub").slideUp("slow");
+				
                 if(cat_text.trim() == "여성한복")
                     addSelectedProducts();
                 else
