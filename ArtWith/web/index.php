@@ -40,6 +40,7 @@
         windowWidth = $(window).width();
         $(".bottom-tab-menu").css("width", windowWidth / 3);
         addAnchorTagForExample();
+
     });
 
     function removeAllProducts() {
@@ -833,7 +834,9 @@
     <div class="blank-div-for-product">
     </div>
 
-    <img src="images/design/img_plus1.png" id="fixed-button_btn" style="height:56.5px; width:56.5px;"/>
+    <a id="btn_share_benefit_info" href="#" >
+        <img src="images/design/img_plus1.png" id="fixed-button_btn" style="height:56.5px; width:56.5px;"/>
+    </a>
 
     <div data-role="footer" data-position="fixed" data-tap-toggle="false" style="border: none;">
         <div style="width: 100%">
@@ -854,6 +857,20 @@
 </div>
 
 <?php require "./common/footer.php"; ?>
+
+<script>
+
+    $('#btn_share_benefit_info').click(function(){
+        $.ajax({
+            async:true,
+            success:function(data){
+                //alert("success");
+                window.location='share_benefit_info.php';
+            }
+        })
+    })
+
+</script>
 
 </body>
 

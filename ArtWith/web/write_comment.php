@@ -143,7 +143,7 @@
     }
 
     .header-title {
-        position: absolute;
+        position: fixed;
         margin: 0 auto;
         width: 150px;
         height: 50px;
@@ -277,23 +277,6 @@
     a:visited {
         text-decoration: none;
     }
-
-    #cat_first {
-        border: solid 1px #F36E4B;
-        color: #F36E4B;
-        width: 300px;
-    }
-
-    #cat_second {
-        border: solid 1px #F36E4B;
-        color: #F36E4B;
-    }
-
-    #cat_third {
-        border: solid 1px #F36E4B;
-        color: #F36E4B;
-    }
-
 
 </style>
 </head>

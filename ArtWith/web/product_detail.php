@@ -116,7 +116,6 @@
 
     #fixed-bottom-btn div {
         z-index: 1000;
-        height: 80px;
         width: 11.05%;
         background-color: #8F4C99;
         position: fixed;
@@ -883,7 +882,7 @@
         -->
 
         <div id="fixed-bottom-btn" style="width: 100%">
-            <a href="http://www.naver.com">
+            <a id="btn_write_comment" href="http://www.naver.com">
                 <div>
                     <img src="images/design/img_plus2.png"/>
                 </div>
@@ -907,6 +906,16 @@
                 success:function(data){
                     //alert("success");
                     window.location='comment_detail.php';
+                }
+            })
+        })
+
+        $('#btn_write_comment').click(function(){
+            $.ajax({
+                async:true,
+                success:function(data){
+                    //alert("success");
+                    window.location='write_comment.php';
                 }
             })
         })

@@ -69,6 +69,60 @@
         font-weight: normal;
     }
 
+    .ui-content {
+        padding: 0;
+    }
+
+    .ui-page-theme-a .ui-btn, html .ui-bar-a .ui-btn, html .ui-body-a .ui-btn, html body .ui-group-theme-a .ui-btn, html head + body .ui-btn.ui-btn-a, .ui-page-theme-a .ui-btn:visited, html .ui-bar-a .ui-btn:visited, html .ui-body-a .ui-btn:visited, html body .ui-group-theme-a .ui-btn:visited, html head + body .ui-btn.ui-btn-a:visited {
+        background-color: #692c6f;
+        border: 0;
+        color: white /*{a-bup-color}*/;
+        text-shadow: 0;
+    }
+
+    .ui-page-theme-a .ui-btn.ui-btn-active, html .ui-bar-a .ui-btn.ui-btn-active, html .ui-body-a .ui-btn.ui-btn-active, html body .ui-group-theme-a .ui-btn.ui-btn-active, html head + body .ui-btn.ui-btn-a.ui-btn-active, .ui-page-theme-a .ui-checkbox-on:after, html .ui-bar-a .ui-checkbox-on:after, html .ui-body-a .ui-checkbox-on:after, html body .ui-group-theme-a .ui-checkbox-on:after, .ui-btn.ui-checkbox-on.ui-btn-a:after, .ui-page-theme-a .ui-flipswitch-active, html .ui-bar-a .ui-flipswitch-active, html .ui-body-a .ui-flipswitch-active, html body .ui-group-theme-a .ui-flipswitch-active, html body .ui-flipswitch.ui-bar-a.ui-flipswitch-active, .ui-page-theme-a .ui-slider-track .ui-btn-active, html .ui-bar-a .ui-slider-track .ui-btn-active, html .ui-body-a .ui-slider-track .ui-btn-active, html body .ui-group-theme-a .ui-slider-track .ui-btn-active, html body div.ui-slider-track.ui-body-a .ui-btn-active {
+        background-color: #f9fafc /*{a-active-background-color}*/;
+        border: 0;
+        color: #fff /*{a-active-color}*/;
+        text-shadow: 0;
+    }
+
+    .ui-page-theme-a a:visited, html .ui-bar-a a:visited, html .ui-body-a a:visited, html body .ui-group-theme-a a:visited {
+        color: transparent;
+    }
+
+    .ui-page-theme-a .ui-btn, html .ui-bar-a .ui-btn, html .ui-body-a .ui-btn, html body .ui-group-theme-a .ui-btn, html head + body .ui-btn.ui-btn-a, .ui-page-theme-a .ui-btn:visited, html .ui-bar-a .ui-btn:visited, html .ui-body-a .ui-btn:visited, html body .ui-group-theme-a .ui-btn:visited, html head + body .ui-btn.ui-btn-a:visited {
+        background-color: #692c6f;
+        border: 0;
+        color: white;
+    }
+
+    .ui-page-theme-a .ui-btn.ui-btn-active, html .ui-bar-a .ui-btn.ui-btn-active, html .ui-body-a .ui-btn.ui-btn-active, html body .ui-group-theme-a .ui-btn.ui-btn-active, html head + body .ui-btn.ui-btn-a.ui-btn-active, .ui-page-theme-a .ui-checkbox-on:after, html .ui-bar-a .ui-checkbox-on:after, html .ui-body-a .ui-checkbox-on:after, html body .ui-group-theme-a .ui-checkbox-on:after, .ui-btn.ui-checkbox-on.ui-btn-a:after, .ui-page-theme-a .ui-flipswitch-active, html .ui-bar-a .ui-flipswitch-active, html .ui-body-a .ui-flipswitch-active, html body .ui-group-theme-a .ui-flipswitch-active, html body .ui-flipswitch.ui-bar-a.ui-flipswitch-active, .ui-page-theme-a .ui-slider-track .ui-btn-active, html .ui-bar-a .ui-slider-track .ui-btn-active, html .ui-body-a .ui-slider-track .ui-btn-active, html body .ui-group-theme-a .ui-slider-track .ui-btn-active, html body div.ui-slider-track.ui-body-a .ui-btn-active {
+        color: #692c6f;
+    }
+
+    .ui-page-theme-a .ui-btn.ui-btn-active, html .ui-bar-a .ui-btn.ui-btn-active, html .ui-body-a .ui-btn.ui-btn-active, html body .ui-group-theme-a .ui-btn.ui-btn-active, html head + body .ui-btn.ui-btn-a.ui-btn-active, .ui-page-theme-a .ui-checkbox-on:after, html .ui-bar-a .ui-checkbox-on:after, html .ui-body-a .ui-checkbox-on:after, html body .ui-group-theme-a .ui-checkbox-on:after, .ui-btn.ui-checkbox-on.ui-btn-a:after, .ui-page-theme-a .ui-flipswitch-active, html .ui-bar-a .ui-flipswitch-active, html .ui-body-a .ui-flipswitch-active, html body .ui-group-theme-a .ui-flipswitch-active, html body .ui-flipswitch.ui-bar-a.ui-flipswitch-active, .ui-page-theme-a .ui-slider-track .ui-btn-active, html .ui-bar-a .ui-slider-track .ui-btn-active, html .ui-body-a .ui-slider-track .ui-btn-active, html body .ui-group-theme-a .ui-slider-track .ui-btn-active, html body div.ui-slider-track.ui-body-a .ui-btn-active {
+        text-shadow: none;
+        font-weight: bold;
+    }
+
+    .ui-page-theme-a .ui-btn, html .ui-bar-a .ui-btn, html .ui-body-a .ui-btn, html body .ui-group-theme-a .ui-btn, html head + body .ui-btn.ui-btn-a, .ui-page-theme-a .ui-btn:visited, html .ui-bar-a .ui-btn:visited, html .ui-body-a .ui-btn:visited, html body .ui-group-theme-a .ui-btn:visited, html head + body .ui-btn.ui-btn-a:visited {
+        text-shadow: none;
+        font-weight: bold;
+    }
+
+    .ui-navbar li .ui-btn {
+        font-size: 16px;
+        margin: 0;
+        border: 0;
+    }
+
+    .no-shadow {
+        -moz-box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+    }
+
     /* Art-With 전용 CSS */
     @font-face {
         font-family:"Nanum Gothic";
@@ -143,7 +197,7 @@
     }
 
     .header-title {
-        position: absolute;
+        position: fixed;
         margin: 0 auto;
         width: 150px;
         height: 50px;
@@ -260,7 +314,34 @@
         font-size: 10px;
     }
 
-    #textBoxMessage {
+    #textBoxTag {
+        min-height: 15px;
+        height: 30px;
+        background-color: white;
+        border: solid #f08b68 1px;
+        color: #828282;
+        font-size: 10px;
+    }
+
+    #textBoxAddress {
+        min-height: 15px;
+        height: 30px;
+        background-color: white;
+        border: solid #f08b68 1px;
+        color: #828282;
+        font-size: 10px;
+    }
+
+    #textBoxShareBenefit {
+        min-height: 15px;
+        height: 30px;
+        background-color: white;
+        border: solid #f08b68 1px;
+        color: #828282;
+        font-size: 10px;
+    }
+
+    #textBoxBenefitContents {
         min-height: 15px;
         height: 30px;
         background-color: white;
@@ -276,24 +357,14 @@
 
     a:visited {
         text-decoration: none;
+
+    .tab-menu{
+        height: 50px;
     }
 
-    #cat_first {
-        border: solid 1px #F36E4B;
-        color: #F36E4B;
-        width: 300px;
+    .no-shadow span {
+        color: red;
     }
-
-    #cat_second {
-        border: solid 1px #F36E4B;
-        color: #F36E4B;
-    }
-
-    #cat_third {
-        border: solid 1px #F36E4B;
-        color: #F36E4B;
-    }
-
 
 </style>
 </head>
@@ -322,272 +393,246 @@
 
     <div class="blank-div-for-header"></div>
 
-    <div class="bg-white input-box-default">
-        <span class="title-span">요청물품 유사 이미지 (최대 5장)</span>
-        <hr/>
-        <span class="description-span">
-            나눔자가 기부할 물품이 적합한지 파악하기 위해 필요한 정보입니다.
-        </span>
-        <br>
-        <span class="description-span">
-            첫 번째 이미지가 대표 이미지로 지정됩니다.
-        </span>
-        <div class="product-img-wrapper">
-            <div class="product-img"></div>
-            <div class="product-img"></div>
-            <div class="product-img"></div>
-            <div class="product-img"></div>
-            <div class="add-image-btn">
+    <div data-role="tabs" id="tabs">
+        <div data-role="navbar">
+            <ul>
+                <li><a id="tab-product-info" href="#one" data-ajax="false" class="no-shadow tab-menu ui-btn-active"><span>물품정보</span></a></li>
+                <li><a id="tab-concert-info" href="#two" data-ajax="false" class="no-shadow tab-menu"><span>공연정보</span></a></li>
+            </ul>
+        </div>
+        <div id="one">
+
+            <div class="bg-white input-box-default">
+                <span class="title-span">요청물품 유사 이미지 (최대 5장)</span>
+                <hr/>
+                <span class="description-span">
+                    나눔자가 기부할 물품이 적합한지 파악하기 위해 필요한 정보입니다.
+                </span>
+                <br>
+                <span class="description-span">
+                    첫 번째 이미지가 대표 이미지로 지정됩니다.
+                </span>
+                <div class="product-img-wrapper">
+                    <div class="product-img"></div>
+                    <div class="product-img"></div>
+                    <div class="product-img"></div>
+                    <div class="product-img"></div>
+                    <div class="add-image-btn">
+
+                    </div>
+                </div>
+            </div>
+
+            <input type="file" id="imgInput" />
+
+            <div class="bg-white input-box-default" id="cat_div">
+                <span class="title-span">카테고리</span>
+                <hr/>
+
+                <div class="wrapper-div">
+                    <table style="width: 100%; margin: 0; padding: 0;">
+                        <tr>
+                            <td style="width: 33.33%;">
+                                <div id="cat_first_drop_down" class="wrapper-dropdown" tabindex="1" >
+                                    <span>전체</span>
+                                    <ul class="dropdown" id="ul_cat_first">
+                                        <li><a href="#">전체</a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                    </ul>
+                                </div>
+                            </td>
+
+                            <td style="width: 33.33%;">
+                                <div id="cat_second_drop_down" class="wrapper-dropdown" tabindex="1">
+                                    <span>전체</span>
+                                    <ul class="dropdown" id="ul_cat_second">
+                                        <li><a href="#">전체</a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                    </ul>
+                                </div>
+                            </td>
+
+                            <td style="width: 33.33%;">
+                                <div id="cat_third_drop_down" class="wrapper-dropdown" tabindex="1">
+                                    <span>전체</span>
+                                    <ul class="dropdown" id="ul_cat_third">
+                                        <li><a href="#">전체</a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
 
             </div>
+
+            <div class="bg-white input-box-default">
+                <span class="title-span">태그 (최대 5개)</span>
+                <hr/>
+                <input id="textBoxTag" type="text" placeholder="나눔자가 세분화된 분류로 검색하기 위한 정보입니다." maxlength="200">
+            </div>
+
+            <div class="bg-white input-box-default">
+                <span class="title-span">거래가능지역 (구 단위까지)</span>
+                <hr/>
+                <input id="textBoxAddress" type="text" placeholder="나눔자가 거래가능한 지역을 파악하기 위해 필요한 정보입니다." maxlength="200">
+            </div>
+
+            <div class="bg-white input-box-default">
+                <span class="title-span">물품설명 (10자 이상, 100자 미만)</span>
+                <hr/>
+                <input id="textBoxProductInfo" type="text" placeholder="더 적합한 물품의 기부를 받기 위한 정보입니다." maxlength="200">
+            </div>
+
+        </div>
+
+        <div id="two">
+
+            <div class="bg-white input-box-default">
+                <span class="title-span">나눔혜택</span>
+                <hr/>
+                <input id="textBoxShareBenefit" type="text" placeholder="나눔자가 세분화된 분류로 검색하기 위한 정보입니다." maxlength="200">
+            </div>
+
+            <div class="bg-white input-box-default">
+                <span class="title-span">혜택명</span>
+                <hr/>
+                <input id="textBoxBenefitContents" type="text" placeholder="나눔자가 세분화된 분류로 검색하기 위한 정보입니다." maxlength="200">
+            </div>
+
+            <div class="bg-white input-box-default" id="date_div">
+                <span class="title-span">일시</span>
+                <hr/>
+
+                <span class="description-span">
+                    나눔혜택을 제공할 수 있는 일시를 적어주세요.
+                </span>
+
+                <div class="wrapper-div">
+                    <table style="width: 100%; margin: 5 0 0 0; padding: 0;">
+                        <tr>
+                            <td style="width: 33.33%;">
+                                <div id="cat_first_drop_down" class="wrapper-dropdown" tabindex="1" >
+                                    <span>전체</span>
+                                    <ul class="dropdown" id="ul_cat_first">
+                                        <li><a href="#">전체</a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                    </ul>
+                                </div>
+                            </td>
+
+                            <td style="width: 33.33%;">
+                                <div id="cat_second_drop_down" class="wrapper-dropdown" tabindex="1">
+                                    <span>전체</span>
+                                    <ul class="dropdown" id="ul_cat_second">
+                                        <li><a href="#">전체</a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                    </ul>
+                                </div>
+                            </td>
+
+                            <td style="width: 33.33%;">
+                                <div id="cat_third_drop_down" class="wrapper-dropdown" tabindex="1">
+                                    <span>전체</span>
+                                    <ul class="dropdown" id="ul_cat_third">
+                                        <li><a href="#">전체</a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                        <li><a href="#"></a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+
+            <div class="bg-white input-box-default">
+                <span class="title-span">위치</span>
+                <hr/>
+                <input id="textBoxAddress" type="text" placeholder="나눔자가 찾아갈 수 있는 공연 장소의 자세한 위치가 필요합니다." maxlength="200">
+            </div>
+
+            <div class="bg-white input-box-default">
+                <span class="title-span">소속 단위</span>
+                <hr/>
+                <input id="textBoxProductInfo" type="text" placeholder="대표자 성함을 작성해주시기 바랍니다." maxlength="200">
+            </div>
+
         </div>
     </div>
 
-    <input type="file" id="imgInput" />
-
-    <div class="bg-white input-box-default" id="category_div">
-        <span class="title-span">배송가능 날짜</span>
-        <hr/>
-
-        <div class="wrapper-div">
-            <table style="width: 100%; margin: 0; padding: 0;">
-                <tr>
-                    <td style="width: 33.33%;">
-                        <div id="category_drop_down" class="wrapper-dropdown" tabindex="1" >
-                            <span>전체</span>
-                            <ul class="dropdown" id="ul_category">
-                                <li><a href="#">전체</a></li>
-                                <li><a href="#"></a></li>
-                                <li><a href="#"></a></li>
-                                <li><a href="#"></a></li>
-                                <li><a href="#"></a></li>
-                                <li><a href="#"></a></li>
-                                <li><a href="#"></a></li>
-                                <li><a href="#"></a></li>
-                                <li><a href="#"></a></li>
-                                <li><a href="#"></a></li>
-                                <li><a href="#"></a></li>
-                                <li><a href="#"></a></li>
-                                <li><a href="#"></a></li>
-                            </ul>
-                        </div>
-                    </td>
-
-                    <td style="width: 33.33%;">
-                        <div id="month_drop_down" class="wrapper-dropdown" tabindex="1">
-                            <span>월</span>
-                            <ul class="dropdown" id="ul_month">
-                                <li><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li><a href="#">6</a></li>
-                                <li><a href="#">7</a></li>
-                                <li><a href="#">8</a></li>
-                                <li><a href="#">9</a></li>
-                                <li><a href="#">10</a></li>
-                                <li><a href="#">11</a></li>
-                                <li><a href="#">12</a></li>
-                            </ul>
-                        </div>
-                    </td>
-
-                    <td style="width: 33.33%;">
-                        <div id="day_drop_down" class="wrapper-dropdown" tabindex="1">
-                            <span>일</span>
-                            <ul class="dropdown" id="ul_day">
-                                <li><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li><a href="#">6</a></li>
-                                <li><a href="#">7</a></li>
-                                <li><a href="#">8</a></li>
-                                <li><a href="#">9</a></li>
-                                <li><a href="#">10</a></li>
-                                <li><a href="#">11</a></li>
-                                <li><a href="#">12</a></li>
-                                <li><a href="#">13</a></li>
-                                <li><a href="#">14</a></li>
-                                <li><a href="#">15</a></li>
-                                <li><a href="#">16</a></li>
-                                <li><a href="#">17</a></li>
-                                <li><a href="#">18</a></li>
-                                <li><a href="#">19</a></li>
-                                <li><a href="#">20</a></li>
-                                <li><a href="#">21</a></li>
-                                <li><a href="#">22</a></li>
-                                <li><a href="#">23</a></li>
-                                <li><a href="#">24</a></li>
-                                <li><a href="#">25</a></li>
-                                <li><a href="#">26</a></li>
-                                <li><a href="#">27</a></li>
-                                <li><a href="#">28</a></li>
-                                <li><a href="#">29</a></li>
-                                <li><a href="#">30</a></li>
-                                <li><a href="#">31</a></li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </div>
-
-    </div>
-
-    <div class="bg-white input-box-default" id="transport_div">
-        <span class="title-span">배송가능 날짜</span>
-        <hr/>
-
-        <div class="wrapper-div">
-            <table style="width: 100%; margin: 0; padding: 0;">
-                <tr>
-                    <td style="width: 33.33%;">
-                        <div id="year_drop_down" class="wrapper-dropdown" tabindex="1" >
-                            <span>년도</span>
-                            <ul class="dropdown" id="ul_year">
-                                <li><a id="2016" href="#">2016</a></li>
-                                <li><a href="#">2015</a></li>
-                                <li><a href="#">2014</a></li>
-                                <li><a href="#">2013</a></li>
-                                <li><a href="#">2012</a></li>
-                                <li><a href="#">2011</a></li>
-                                <li><a href="#">2010</a></li>
-                                <li><a href="#">2009</a></li>
-                                <li><a href="#">2008</a></li>
-                                <li><a href="#">2007</a></li>
-                                <li><a href="#">2006</a></li>
-                                <li><a href="#">2005</a></li>
-                                <li><a href="#">2004</a></li>
-                            </ul>
-                        </div>
-                    </td>
-
-                    <td style="width: 33.33%;">
-                        <div id="month_drop_down" class="wrapper-dropdown" tabindex="1">
-                            <span>월</span>
-                            <ul class="dropdown" id="ul_month">
-                                <li><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li><a href="#">6</a></li>
-                                <li><a href="#">7</a></li>
-                                <li><a href="#">8</a></li>
-                                <li><a href="#">9</a></li>
-                                <li><a href="#">10</a></li>
-                                <li><a href="#">11</a></li>
-                                <li><a href="#">12</a></li>
-                            </ul>
-                        </div>
-                    </td>
-
-                    <td style="width: 33.33%;">
-                        <div id="day_drop_down" class="wrapper-dropdown" tabindex="1">
-                            <span>일</span>
-                            <ul class="dropdown" id="ul_day">
-                                <li><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li><a href="#">6</a></li>
-                                <li><a href="#">7</a></li>
-                                <li><a href="#">8</a></li>
-                                <li><a href="#">9</a></li>
-                                <li><a href="#">10</a></li>
-                                <li><a href="#">11</a></li>
-                                <li><a href="#">12</a></li>
-                                <li><a href="#">13</a></li>
-                                <li><a href="#">14</a></li>
-                                <li><a href="#">15</a></li>
-                                <li><a href="#">16</a></li>
-                                <li><a href="#">17</a></li>
-                                <li><a href="#">18</a></li>
-                                <li><a href="#">19</a></li>
-                                <li><a href="#">20</a></li>
-                                <li><a href="#">21</a></li>
-                                <li><a href="#">22</a></li>
-                                <li><a href="#">23</a></li>
-                                <li><a href="#">24</a></li>
-                                <li><a href="#">25</a></li>
-                                <li><a href="#">26</a></li>
-                                <li><a href="#">27</a></li>
-                                <li><a href="#">28</a></li>
-                                <li><a href="#">29</a></li>
-                                <li><a href="#">30</a></li>
-                                <li><a href="#">31</a></li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </div>
-
-    </div>
-
-
-    <div class="bg-white input-box-default" id="address_div">
-        <span class="title-span">주소지</span>
-        <hr/>
-        <div class="wrapper-div">
-            <table style="width: 100%; margin: 0; padding: 0;">
-                <tr>
-                    <td style="width: 33.33%;">
-                        <div id="city_drop_down" class="wrapper-dropdown" tabindex="1" >
-                            <span>시</span>
-                            <ul class="dropdown" id="ul_city">
-                                <li><a href="#">서울특별시</a></li>
-                                <li><a href="#"></a></li>
-                                <li><a href="#"></a></li>
-                                <li><a href="#"></a></li>
-                                <li><a href="#"></a></li>
-                                <li><a href="#"></a></li>
-                                <li><a href="#"></a></li>
-                            </ul>
-                        </div>
-                    </td>
-
-                    <td style="width: 33.33%;">
-                        <div id="district_drop_down" class="wrapper-dropdown" tabindex="1">
-                            <span>구</span>
-                            <ul class="dropdown" id="ul_district">
-                                <li><a href="#">송파구</a></li>
-                                <li><a href="#">강동구</a></li>
-                                <li><a href="#">강남구</a></li>
-                                <li><a href="#">성동구</a></li>
-                                <li><a href="#">영등포구</a></li>
-                                <li><a href="#">중구</a></li>
-                            </ul>
-                        </div>
-                    </td>
-
-                    <td style="width: 33.33%;">
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </div>
-
-    <div class="bg-white input-box-default">
-        <span class="title-span">물품설명 (10자 이상, 100자 미만)</span>
-        <hr/>
-        <input id="textBoxProductInfo" type="text" placeholder="제품의 상태, 크기, 훼손여부 등을 상세하게 적어주세요." maxlength="200">
-    </div>
-
-    <div class="bg-white input-box-default">
-        <span class="title-span">하고 싶은 말(10자 이상, 100자 미만)</span>
-        <hr/>
-        <input id="textBoxMessage" type="text" placeholder="나눔을 하게 된 이유나 기타 하고 싶은 말이 있다면 작성해주세요." maxlength="200">
-    </div>
 
     <div data-role="footer" data-position="fixed" data-tap-toggle="false" style="border: none;">
         <div id="fixed-bottom-btn" style="width: 100%">
             <div>
-                <span> 완료 </span>
+                <span> 다음 </span>
             </div>
         </div>
     </div>
@@ -656,40 +701,24 @@
     $.mobile.toolbar.prototype.options.hideDuringFocus = "";
     $.mobile.toolbar.prototype.options.tapToggle = false;
 
-    /* 드롭다운 목록 */
-    $(function(){
-        $("ul.sub").hide();
-    });
-
-    $(document).on('click','#cat_first',function()	 {
-        $("ul.sub").slideToggle("fast");
-    });
-
-    $(document).on('click','#cat_second',function()	 {
-        $("ul.sub").slideToggle("fast");
-    });
-
-    $(document).on('click','#cat_third',function()	 {
-        $("ul.sub").slideToggle("fast");
-    });
-
 </script>
 
 <script type="text/javascript">
 
-    function DropDownTrans(el) {
+
+    function DropDownCat(el) {
         this.dd = el;
         this.initEvents();
     }
 
-    DropDownTrans.prototype = {
+    DropDownCat.prototype = {
         initEvents : function() {
             var obj = this;
 
             obj.dd.on('click', function(event){
                 $(this).toggleClass('active');
                 event.stopPropagation();
-                changeHeightTransportDiv();
+                changeHeightCategoryDiv();
             });
         }
     }
@@ -712,9 +741,9 @@
     }
 
     $(function() {
-        var yearDropDown = new DropDownTrans( $('#year_drop_down') );
-        var monthDropDown = new DropDownTrans( $('#month_drop_down') );
-        var dayDropDown = new DropDownTrans( $('#day_drop_down') );
+        var yearDropDown = new DropDownCat( $('#cat_first_drop_down') );
+        var monthDropDown = new DropDownCat( $('#cat_second_drop_down') );
+        var dayDropDown = new DropDownCat( $('#cat_third_drop_down') );
         var districtDropDown = new DropDownAddr( $('#district_drop_down') );
         var cityDropDown = new DropDownAddr( $('#city_drop_down ') );
 
@@ -731,23 +760,23 @@
     var countTransDropDownOpened = 0; // 1 : open, 0 : closed
     var isDropDownOpenAddr = 0; // 1 : open, 0 : closed
 
-    $('#transport_div #ul_year li a').each( function(index) {
+    $('#cat_div #ul_cat_first li a').each( function(index) {
         $(this).click( function() {
-            $('#year_drop_down span').text($(this).text());
+            $('#cat_first_drop_down span').text($(this).text());
             //changeHeightTransportDiv();
         });
     });
 
-    $('#transport_div #ul_month li a').each( function(index) {
+    $('#cat_div #ul_cat_second li a').each( function(index) {
         $(this).click( function() {
-            $('#month_drop_down span').text($(this).text());
+            $('#cat_second_drop_down span').text($(this).text());
             //changeHeightTransportDiv();
         });
     });
 
-    $('#transport_div #ul_day li a').each( function(index) {
+    $('#cat_div #ul_cat_third li a').each( function(index) {
         $(this).click( function() {
-            $('#day_drop_down span').text($(this).text());
+            $('#cat_third_drop_down span').text($(this).text());
             //changeHeightTransportDiv();
         });
     });
@@ -766,15 +795,15 @@
 
     //alert($('#year_drop_down div').text().trim());
 
-    function changeHeightTransportDiv() {
-        var numTransDropDownActive = $('#transport_div .active').length;
+    function changeHeightCategoryDiv() {
+        var numTransDropDownActive = $('#cat_div .active').length;
 
-        if ($('#transport_div').css('height') == '88px') { // closed
-            $('#transport_div').css('height', '250px');
+        if ($('#cat_div').css('height') == '88px') { // closed
+            $('#cat_div').css('height', '250px');
         }
         else {
             if(numTransDropDownActive == 0)
-                $('#transport_div').css('height', '88px');
+                $('#cat_div').css('height', '88px');
         }
     }
 

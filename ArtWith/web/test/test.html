@@ -5,114 +5,104 @@
     <title>Swiper demo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="css/swiper.min.css">
-
     <!-- Demo styles -->
     <style>
-
-    	* {
-			padding: 0;
-			margin: 0;
-    	}
-
-		#artiststhumbnail {
-		    width:100%;
-		    height:108px;
-		    overflow:hidden;
-		    border-color:#DADADA;
-		    background-color:pink;
-		}
-
-		#artiststhumbnail img {
-		    display : block;
-		    margin : auto;
-		}
-
-    #searchwrapper {
-    width:310px; /*follow your image's size*/
-    height:40px;/*follow your image's size*/
-    background-image:url(../images/pages/second/product/img_hb11.png);
-    background-repeat:no-repeat; /*important*/
-    padding:0px;
-    margin:0px;
-    position:relative; /*important*/
-    }
-
-    #searchwrapper form { display:inline ; }
-
-    .searchbox {
-    border:0px; /*important*/
-    background-color:transparent; /*important*/
-    position:absolute; /*important*/
-    top:4px;
-    left:9px;
-    width:256px;
-    height:28px;
-    }
-
-    .searchbox_submit {
-    border:0px; /*important*/
-    background-color:transparent; /*important*/
-    position:absolute; /*important*/
-    top:4px;
-    left:265px;
-    width:32px;
-    height:28px;
-    }
+        /* tab menu css */
+        .tab-wrap * {
+            margin: 0px;
+            padding: 0px;
+        }
+        .tab-wrap {
+            position: relative;
+            padding-top: 30px;
+        }
+        .tab-wrap li {
+            z-index: 2;
+            position: absolute;
+            top: 0px;
+            width: 100px;
+            height: 30px;
+            text-indent: -9999%;
+        }
+        .tab-wrap li:nth-of-type(1) {
+            left: 0px;
+        }
+        .tab-wrap li:nth-of-type(2) {
+            left: 100px;
+        }
+        .tab-wrap li a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        .tab-wrap article h1 {
+            position: absolute;
+            top: 0px;
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            text-align: center;
+            font-size: 12px;
+        }
+        .tab-wrap article p {
+            border: 1px solid #ddd;
+            padding: 30px;
+        }
+        .tab-wrap article:target h1 {
+            background-color: yellow;
+        }
+        .tab-wrap article:nth-of-type(1) h1 {
+            left: 0px;
+        }
+        .tab-wrap article:nth-of-type(2) h1 {
+            left: 100px;
+        }
+        .tab-wrap article p {
+            display: none;
+        }
+        .tab-wrap article:target p {
+            display: block;
+        }
 
     </style>
+
+
+    <script>
+        $(function () {
+
+            $(".tab_content").hide();
+            $(".tab_content:first").show();
+
+            $("ul.tabs li").click(function () {
+                $("ul.tabs li").removeClass("active").css("color", "#333");
+                //$(this).addClass("active").css({"color": "darkred","font-weight": "bolder"});
+                $(this).addClass("active").css("color", "darkred");
+                $(".tab_content").hide()
+                var activeTab = $(this).attr("rel");
+                $("#" + activeTab).fadeIn()
+            });
+        });
+    </script>
 </head>
 <body>
+<div class="tab-wrap">
+    <ul>
+        <li><a href="#tab1">tab1</a></li>
+        <li><a href="#tab2">tab2</a></li>
+    </ul>
 
-<div data-role="footer" data-position="fixed" style="color:pink;">
-        <!--image here-->
-        <img src="http://goo.gl/QrKCc" height="100%" alt="artist" border="1" />
-</div>
-        <div style="width: 120px; height: 90px; overflow: hidden">
-        <img src="../images/pages/second/product/hb_re6.png" style="width: 120px; height: auto;">
-        </div>
-
-
-    <div id="searchwrapper"><form action="">
-    <input type="text" class="searchbox" name="s" value="" />
-    <input type="image" src="../images/pages/second/product/img_hb11.png" class="searchbox_submit" value="" />
-    </form>
+    <div>
+        <article id="tab1">
+            <h1>tab1</h1>
+            <p>Here is tab1 contents</p>
+        </article>
+        <article id="tab2">
+            <h1>tab2</h1>
+            <p>Here is tab2 contents</p>
+        </article>
     </div>
-
-    <!-- Swiper JS -->
-    <script src="js/swiper.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-    var appendNumber = 4;
-    var prependNumber = 1;
-    var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 3,
-        paginationClickable: true,
-    });
-    document.querySelector('.prepend-2-slides').addEventListener('click', function (e) {
-        e.preventDefault();
-        swiper.prependSlide([
-            '<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>',
-            '<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>'
-        ]);
-    });
-    document.querySelector('.prepend-slide').addEventListener('click', function (e) {
-        e.preventDefault();
-        swiper.prependSlide('<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>');
-    });
-    document.querySelector('.append-slide').addEventListener('click', function (e) {
-        e.preventDefault();
-        swiper.appendSlide('<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>');
-    });
-    document.querySelector('.append-2-slides').addEventListener('click', function (e) {
-        e.preventDefault();
-        swiper.appendSlide([
-            '<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>',
-            '<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>'
-        ]);
-    });
-    </script>
+</div>
 </body>
 </html>
