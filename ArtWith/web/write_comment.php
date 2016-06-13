@@ -1,606 +1,448 @@
-<!doctype html>
-<html lang="ko">
+<?php require "./common/header.php"; ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
-    <title>[##_page_title_##]</title>
-    <link rel="alternate" type="application/rss+xml" title="[##_title_##]" href="[##_rss_url_##]" />
+<title>Write Comment</title>
 
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./images/font.css">
+<!-- Demo styles -->
+<style>
 
-    <!--[if lt IE 9]>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <![endif]-->
-    <!--[if gte IE 9]><!-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <!--<![endif]-->
+    /* 기존 CSS 재정의 */
+    .ui-select .ui-icon-arrow-d {
+        display: none;
+    }
+
+    .ui-page {
+        background: transparent;
+    }
+
+    .ui-content{
+        background: transparent;
+    }
+
+    .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
+        text-shadow: none;
+    }
+
+    .ui-bar-a, .ui-page-theme-a .ui-bar-inherit, html .ui-bar-a .ui-bar-inherit, html .ui-body-a .ui-bar-inherit, html body .ui-group-theme-a .ui-bar-inherit {
+        background-color: #f9fafc;
+    }
+
+    .ui-bar-a, .ui-page-theme-a .ui-bar-inherit, html .ui-bar-a .ui-bar-inherit, html .ui-body-a .ui-bar-inherit, html body .ui-group-theme-a .ui-bar-inherit {
+        font-weight: normal;
+    }
+
+    .ui-body-a, .ui-page-theme-a .ui-body-inherit, html .ui-bar-a .ui-body-inherit, html .ui-body-a .ui-body-inherit, html body .ui-group-theme-a .ui-body-inherit, html .ui-panel-page-container-a {
+        background-color: transparent;
+        border-color: transparent;
+        color: transparent;
+        text-shadow: 0;
+    }
+
+    .ui-input-text, .ui-input-search {
+        margin: 0;
+        border-width: 0;
+        border: none;
+        box-shadow: none;
+    }
+
+    .ui-focus {
+        -moz-box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+    }
+
+    .ui-corner-all {
+        border-radius: 0 !important;
+    }
+
+    /* Art-With 전용 CSS */
+    @font-face {
+        font-family:"Nanum Gothic";
+        src: url('font/NanumGothic.eot');
+        src: url('font/NanumGothic.eot?#iefix') format('embedded-opentype'),
+        url('font/NanumGothic.woff') format('woff'),
+        url('font/NanumGothic.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    html, body {
+        position: relative;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background: #fff;
+    }
+
+    body {
+        font-family: "Nanum Gothic", serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+    }
+
+    .bg-gray {
+        background: #f9fafc;
+        /*background: #26b2c1;*/
+    }
+
+    .bg-white {
+        background: white;
+    }
+
+    span {
+        font-family: "Nanum Gothic", serif;
+    }
+
+    #fixed-top-header {
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        z-index: 1000;
+    }
+
+    .header-title {
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        top: 0px;
+        right: 0px;
+        line-height: 50px;
+        z-index: 1001;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .header-title-span {
+        line-height: 50px;
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    #fixed-bottom-btn {
+        height: 50px;
+        width: 100%;
+    }
+
+    #fixed-bottom-btn div {
+        z-index: 1000;
+        height: 50px;
+        width: 100%;
+        background-color: #0ba4c3;
+        line-height: 50px;
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+        margin: 0px;
+        text-align: center;
+    }
+
+    #fixed-bottom-btn span {
+        line-height: 50px;
+        color: white;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 16px;
+    }
+
+    .header-title {
+        position: absolute;
+        margin: 0 auto;
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1001;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .header-title-span {
+        line-height: 50px;
+        color: white;
+        font-weight: lighter;
+        font-size: 15;
+        font-weight: bold;
+    }
+
+    .header {
+        background-color: #914291;
+        border: none;
+        width: 100%;
+        height: 50px;
+        background-size: 100% 100%;
+    }
+
+    .blank-div-for-header {
+        width: 100%;
+        height: 50px;
+    }
+
+    .product-info-table {
+        width: 100%;
+        font-weight: bold;
+        padding: 14px;
+        font-size: 13px;
+        color: #848587;
+        line-height: 1.6em;
+    }
+
+    .product-info-table tr th {
+        text-align: left;
+        vertical-align: top;
+        color: black;
+    }
+
+    .input-box-default {
+        background-color: white;
+        margin: 8;
+        border: solid #cccccc 1px;
+        border-radius: 5px;
+        padding: 8;
+    }
+
+    .input-box-default .title-span {
+        font-weight: bold;
+        color: #868686;
+        font-size: 13px;
+        padding: 5px;
+    }
+
+    .input-box-default .description-span {
+        color: #cccccc;
+        font-size: 10px;
+        font-weight: lighter;
+        padding: 5px;
+    }
+
+    .input-box-default hr {
+        border: 0;
+        height: 1px;
+        background: #cccccc;
+    }
+
+    .product-img-wrapper {
+        margin-top: 5px;
+        display: table;
+        border-spacing: 5px;
+    }
+
+    .product-img-wrapper div {
+        height: 59px; /* width 계산 후 height 값 세팅(jquery) */
+        width: 59px;
+        display: table-cell;
+        border: solid #f08b68 1px;
+        border-radius: 5px;
+    }
+
+    .add-image-btn {
+        cursor: pointer;
+        background-size: 59px 59px;
+        background-position: 50% 50%;
+        background-image: url("images/design/img_plus3.png");
+        background-repeat: no-repeat;
+    }
+
+    #imgInput {
+        display: none;
+    }
+
+    .product-img {
+        background-position: center top;
+        background-size: 100% auto;
+    }
+
+    #textBoxProductInfo {
+        min-height: 15px;
+        height: 30px;
+        background-color: white;
+        border: solid #f08b68 1px;
+        color: #828282;
+        font-size: 10px;
+    }
+
+    #textBoxMessage {
+        min-height: 15px;
+        height: 30px;
+        background-color: white;
+        border: solid #f08b68 1px;
+        color: #828282;
+        font-size: 10px;
+    }
+
+
+</style>
 </head>
 
-<body id="[##_body_id_##]">
-<s_t3>
+<body style="background-color:white;">
 
-    <div id="dkIndex">
-        <!--웹접근성용 바로가기 링크 모음-->
-        <a href="#dkBody">본문 바로가기</a>
+<div class="bg-gray" id="page">
+
+    <div class="header-title">
+        <span class="header-title-span">나눔댓글작성</span>
     </div>
-    <div id="dkWrap" class="wrap_skin">
-        <!-- 카테고리버튼 클릭시 'navi_on' 클래스 부여 -->
-        <div id="dkHead" role="banner" class="area_head">
-            <h1 class="screen_out">[##_title_##]</h1>
-            <button type="button" class="btn_cate">
-                <span class="ico_skin ico_cate">카테고리</span>
-            </button>
-            <div class="area_search ">
-                <button type="button" class="btn_search">
-                    <span class="ico_skin ico_search">검색하기</span>
-                </button>
-                <s_search>
-                    <form action="#" method="get" class="frm_search box_search" onsubmit="[##_search_onclick_submit_##]">
-                        <fieldset>
-                            <legend class="screen_out">검색하기</legend>
-                            <label for="[##_search_name_##]" class="lab_search screen_out">Search</label>
-                            <input type="text" name="[##_search_name_##]" id="[##_search_name_##]" class="tf_search" placeholder="Search" value="[##_search_text_##]" data-value="[##_search_text_##]">
-                            <span class="ico_skin ico_search"></span>
-                        </fieldset>
-                    </form>
-                </s_search>
-            </div>
-            <div class="area_profile">
-                <div class="tit_post">
-                    <a href="/" class="link_post">[##_title_##]</a>
-                </div>
-            <span class="thumb_profile">
-                <img src="[##_image_##]" class="img_profile" alt="프로필사진">
-            </span>
-                <span class="txt_profile">[##_blogger_##]</span>
-            </div>
-        </div>
-        <hr class="hide">
-        <div id="dkContent" class="cont_skin" role="main">
-            <div id="cMain">
-                <div id="mFeature" class="wrap_sub">
-                    <div class="cont_sub">
-                        <div class="inner_sub">
-                            <div class="area_sub">
-                                <div role="navigation" class="area_navi">
-                                    [##_category_list_##]
-                                    <a href="[##_guestbook_link_##]" class="link_guestbook">Guestbook</a>
-                                </div>
-                                <div class="wrap_etc">
-                                    <div class="col_aside left_side">
-                                        <s_sidebar>
-                                            <s_sidebar_element>
-                                                <!-- 공지사항 -->
-                                                <s_rct_notice>
-                                                    <div class="box_aside">
-                                                        <strong class="tit_aside">Notice</strong>
-                                                        <ul class="list_board">
-                                                            <s_rct_notice_rep>
-                                                                <li><a href="[##_notice_rep_link_##]" class="link_board">[##_notice_rep_title_##]</a></li>
-                                                            </s_rct_notice_rep>
-                                                        </ul>
-                                                    </div>
-                                                </s_rct_notice>
-                                            </s_sidebar_element>
 
-                                            <s_sidebar_element>
-                                                <!-- 최근에 올라온 글 -->
-                                                <div class="box_aside">
-                                                    <strong class="tit_aside">Recent Posts</strong>
-                                                    <ul class="list_board">
-                                                        <s_rctps_rep>
-                                                            <li><a href="[##_rctps_rep_link_##]" class="link_board">[##_rctps_rep_title_##]</a></li>
-                                                        </s_rctps_rep>
-                                                    </ul>
-                                                </div>
-                                            </s_sidebar_element>
-
-                                            <s_sidebar_element>
-                                                <!-- 최근에 달린 댓글 -->
-                                                <div class="box_aside">
-                                                    <strong class="tit_aside">Recent Comments</strong>
-                                                    <ul class="list_board">
-                                                        <s_rctrp_rep>
-                                                            <li><a href="[##_rctrp_rep_link_##]" class="link_board">[##_rctrp_rep_desc_##]</a></li>
-                                                        </s_rctrp_rep>
-                                                    </ul>
-                                                </div>
-                                            </s_sidebar_element>
-
-                                            <s_sidebar_element>
-                                                <!-- 링크 -->
-                                                <div class="box_aside">
-                                                    <strong class="tit_aside">Link</strong>
-                                                    <ul class="list_board">
-                                                        <s_link_rep>
-                                                            <li><a href="[##_link_url_##]" class="link_board" target="_blank">[##_link_site_##]</a></li>
-                                                        </s_link_rep>
-                                                    </ul>
-                                                </div>
-                                            </s_sidebar_element>
-                                        </s_sidebar>
-                                    </div>
-
-
-                                    <div class="col_aside right_side">
-                                        <s_sidebar>
-                                            <s_sidebar_element>
-                                                <!-- 달력 -->
-                                                <div class="box_aside box_calendar">
-                                                    [##_calendar_##]
-                                                </div>
-                                            </s_sidebar_element>
-
-                                            <s_sidebar_element>
-                                                <!-- 태그 클라우드 -->
-                                                <div class="box_aside box_tag">
-                                                    <strong class="tit_aside">Tags</strong>
-                                                    <ul class="list_tag">
-                                                        <s_random_tags>
-                                                            <li><a href="[##_tag_link_##]" class="link_tag [##_tag_class_##]">[##_tag_name_##]</a></li>
-                                                        </s_random_tags>
-                                                    </ul>
-                                                    <a href="[##_taglog_link_##]" class="link_more">more</a>
-                                                </div>
-                                            </s_sidebar_element>
-
-                                            <s_sidebar_element>
-                                                <!-- 글 보관함 -->
-                                                <div class="box_aside box_archive">
-                                                    <strong class="tit_aside">Archives</strong>
-                                                    <ul class="list_keep">
-                                                        <s_archive_rep>
-                                                            <li><a href="[##_archive_rep_link_##]" class="link_keep">[##_archive_rep_date_##]</a> ([##_archive_rep_count_##])</li>
-                                                        </s_archive_rep>
-                                                    </ul>
-                                                </div>
-                                            </s_sidebar_element>
-
-                                            <s_sidebar_element>
-                                                <!-- 방문자수 -->
-                                                <div class="box_aside box_visitor">
-                                                    <dl class="list_visitor">
-                                                        <dt>Today</dt>
-                                                        <dd>[##_count_today_##]</dd>
-                                                    </dl>
-                                                    <dl class="list_total">
-                                                        <dt>Total</dt>
-                                                        <dd>[##_count_total_##]</dd>
-                                                    </dl>
-                                                </div>
-                                            </s_sidebar_element>
-                                        </s_sidebar>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button type="button" class="ico_skin btn_close">닫기</button>
-
-                        <strong class="screen_out">관리 메뉴</strong>
-                        <ul class="list_control">
-                            <li><a href="[##_owner_url_##]/entry/post" class="ico_skin link_write" title="글쓰기">글쓰기</a></li>
-                            <li><a href="[##_guestbook_link_##]" class="ico_skin link_memo" title="방명록">방명록</a></li>
-                            <li><a href="[##_rss_url_##]" class="ico_skin link_rss" title="RSS">RSS</a></li>
-                            <li><a href="[##_owner_url_##]" class="ico_skin link_manage" title="관리">관리</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div id="mArticle" class="article_skin">
-
-                    <s_list>
-                        <div class="list_title">
-                            <h2 id="dkBody" class="tit_skin"><span class="screen_out">목록</span><span class="txt_title">[##_list_conform_##] ([##_list_count_##])</span></h2>
-                        </div>
-                    </s_list>
-
-                    <div class="index_title">
-                        <h2 class="tit_skin"><span class="txt_title">[##_title_##]</span></h2>
-                    </div>
-
-                    <s_article_rep>
-                        <s_index_article_rep>
-                            <div class="list_content">
-                                <s_article_rep_thumbnail>
-                                    <a href="[##_article_rep_link_##]" class="thumbnail_post"><img src="//i1.daumcdn.net/thumb/C150x150/?fname=[##_article_rep_thumbnail_raw_url_##]"></a>
-                                </s_article_rep_thumbnail>
-                                <a href="[##_article_rep_link_##]" class="link_post">
-                                    <strong class="tit_post ">[##_article_rep_title_##]</strong>
-                                    <p class="txt_post">[##_article_rep_summary_##]</p>
-                                </a>
-                                <div class="detail_info">
-                                    <a href="[##_article_rep_category_link_##]" class="link_cate">[##_article_rep_category_##]</a>
-                                    <span class="txt_bar"></span>
-                                    <span class="txt_date">[##_article_rep_date_##]</span>
-                                </div>
-                            </div>
-                        </s_index_article_rep>
-
-
-                        <s_permalink_article_rep>
-                            <h2 id="dkBody" class="screen_out">[##_article_rep_title_##] 본문</h2>
-                            <div class="area_title">
-                                <strong class="tit_category"><a href="[##_article_rep_category_link_##]">[##_article_rep_category_##]</a></strong>
-                                <h3 class="tit_post">[##_article_rep_title_##]</h3>
-                            <span class="info_post">[##_article_rep_author_##]
-                                <span class="txt_bar"></span>[##_article_rep_date_##]
-								<s_ad_div>
-                                    <span class="txt_bar"></span><a href="[##_s_ad_m_link_##]" class="link_detail">수정</a>
-                                    <span class="txt_bar"></span><a href="#" onclick="[##_s_ad_s2_onclick_##]" class="link_detail">[##_s_ad_s1_label_##]</a>
-                                    <span class="txt_bar"></span><a href="#" onclick="[##_s_ad_d_onclick_##]" class="link_detail">삭제</a>
-                                </s_ad_div>
-							</span>
-                            </div>
-
-                            <div class="area_view">
-                                [##_article_rep_desc_##]
-                            </div>
-                            <div class="area_etc">
-                                <s_tag_label>
-                                    <dl class="list_tag">
-                                        <dt>Tag</dt>
-                                        <dd>[##_tag_label_rep_##]</dd>
-                                    </dl>
-                                </s_tag_label>
-
-                                <strong class="screen_out">공유하기 링크</strong>
-                                <ul class="list_share">
-                                    <li><a href="#none" class="ico_skin link_fb" data-service="facebook">페이스북</a></li>
-                                    <li><a href="#none" class="ico_skin link_ks" data-service="kakaostory">카카오스토리</a></li>
-                                    <li><a href="#none" class="ico_skin link_tw" data-service="twitter">트위터</a></li>
-                                </ul>
-                            </div>
-
-                            <s_article_related>
-                                <div class="area_related">
-                                    <strong class="tit_related">'[##_article_rep_category_##]' Related Articles</strong>
-                                    <ul class="list_related">
-                                        <s_article_related_rep>
-                                            <li class="[##_article_related_rep_type_##]">
-                                                <a href="[##_article_related_rep_link_##]" class="link_related">
-                                                    <s_article_related_rep_thumbnail>
-													<span class="thumb_related">
-														<img src="//i1.daumcdn.net/thumb/C185x200/?fname=[##_article_related_rep_thumbnail_link_##]" class="img_related" alt="">
-													</span>
-                                                    </s_article_related_rep_thumbnail>
-                                                    <span class="txt_related">[##_article_related_rep_title_##]</span>
-                                                    <span class="date_related">[##_article_related_rep_date_##]</span>
-                                                    <span class="frame_related"></span>
-                                                </a>
-                                            </li>
-                                        </s_article_related_rep>
-                                    </ul>
-                                    <a href="[##_article_rep_category_link_##]" class="link_more">more</a>
-                                </div>
-                            </s_article_related>
-
-                            <div class="area_reply">
-                                <strong class="tit_reply"><s_rp_count>[##_article_rep_rp_cnt_##]</s_rp_count>  Comments</strong>
-                                <s_rp>
-                                    <s_rp_container>
-                                        <ul class="list_reply">
-                                            <s_rp_rep>
-                                                <li id='[##_rp_rep_id_##]' class="[##_rp_rep_class_##]">
-                                            <span class="ico_skin thumb_profile">
-												<img src="//i1.daumcdn.net/thumb/C96x96/?fname=[##_rp_rep_logo_##]" width="48" height="48" class="img_profile" alt="프로필사진">
-											</span>
-                                            <span class="reply_content">
-                                                <span class="tit_nickname">[##_rp_rep_name_##]</span>
-                                                <span class="txt_date">[##_rp_rep_date_##]</span>
-                                                <span class="txt_reply">[##_rp_rep_desc_##]</span>
-                                            </span>
-                                                    <div class="area_more">
-                                                        <!-- on_more 클래스 추가시 레이어 오픈 -->
-                                                        <a href="#none" class="more_reply">
-                                                            <span class="ico_skin ico_more">댓글 메뉴 보기</span>
-                                                        </a>
-                                                        <div class="reply_layer">
-                                                            <div class="inner_reply_layer">
-                                                                <div class="layer_head">
-                                                                    <strong class="screen_out">댓글메뉴</strong>
-                                                                </div>
-                                                                <div class="layer_body">
-                                                                    <a href="[##_rp_rep_link_##]" class="link_reply">댓글주소</a>
-                                                                    <a href="#none" onclick="[##_rp_rep_onclick_delete_##]" class="link_reply">수정/삭제</a>
-                                                                    <a href="#none" onclick="[##_rp_rep_onclick_reply_##]" class="link_reply">댓글쓰기</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-
-                                                <s_rp2_container>
-                                                    <s_rp2_rep>
-                                                        <li id='[##_rp_rep_id_##]' class="re_reply [##_rp_rep_class_##]">
-                                                    <span class="ico_skin thumb_profile">
-														<img src="//i1.daumcdn.net/thumb/C96x96/?fname=[##_rp_rep_logo_##]" width="48" height="48" class="img_profile" alt="프로필사진">
-													</span>
-                                                    <span class="reply_content">
-                                                        <span class="tit_nickname">[##_rp_rep_name_##]</span>
-                                                        <span class="txt_date">[##_rp_rep_date_##]</span>
-                                                        <span class="txt_reply">[##_rp_rep_desc_##]</span>
-                                                    </span>
-                                                            <div class="area_more">
-                                                                <!-- on_more 클래스 추가시 레이어 오픈 -->
-                                                                <a href="#none" class="more_reply">
-                                                                    <span class="ico_skin ico_more">댓글 메뉴 보기</span>
-                                                                </a>
-                                                                <div class="reply_layer">
-                                                                    <div class="inner_reply_layer">
-                                                                        <div class="layer_head">
-                                                                            <strong class="screen_out">댓글메뉴</strong>
-                                                                        </div>
-                                                                        <div class="layer_body">
-                                                                            <a href="[##_rp_rep_link_##]" class="link_reply">댓글주소</a>
-                                                                            <a href="#none" onclick="[##_rp_rep_onclick_delete_##]" class="link_reply">수정/삭제</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    </s_rp2_rep>
-                                                </s_rp2_container>
-                                            </s_rp_rep>
-
-                                        </ul>
-                                    </s_rp_container>
-
-                                    <s_rp_input_form>
-                                        <fieldset class="fld_reply">
-                                            <legend class="screen_out">댓글쓰기 폼</legend>
-                                            <s_rp_member>
-                                                <s_rp_guest>
-                                                    <div class="writer_info">
-                                                    <span class="info_name">
-                                                        <label for="[##_rp_input_name_##]" class="lab_info screen_out">이름</label>
-                                                        <span class="wrap_info">
-                                                            <input type="text" name="[##_rp_input_name_##]" id="[##_rp_input_name_##]" class="inp_info" placeholder="Name" tabindex="1">
-                                                        </span>
-                                                    </span>
-                                                    <span class="info_pw ">
-                                                        <label for="[##_rp_input_password_##]" class="lab_info screen_out">비밀번호</label>
-                                                        <span class="wrap_info">
-                                                            <input type="password" name="[##_rp_input_password_##]" id="[##_rp_input_password_##]" class="inp_info" placeholder="Password" tabindex="2">
-                                                        </span>
-                                                    </span>
-                                                    </div>
-                                                </s_rp_guest>
-                                                <div class="writer_check">
-                                                <span class="check_secret ">
-                                                    <input type="checkbox" name="[##_rp_input_is_secret_##]" id="[##_rp_input_is_secret_##]" class="inp_secret" tabindex="4">
-                                                    <label for="[##_rp_input_is_secret_##]" class="lab_secret">
-                                                        <span class="ico_skin ico_check"></span>
-                                                        Secret
-                                                    </label>
-                                                </span>
-                                                </div>
-                                            </s_rp_member>
-
-                                            <div class="reply_write ">
-                                                <label for="[##_rp_input_comment_##]" class="lab_write screen_out">내용</label>
-                                                <textarea name="[##_rp_input_comment_##]" id="[##_rp_input_comment_##]" class="tf_reply" placeholder="여러분의 소중한 댓글을 입력해주세요" tabindex="3"></textarea>
-                                            </div>
-
-                                            <div class="writer_btn">
-                                                <button type="submit" class="btn_enter" onclick="[##_rp_onclick_submit_##]" tabindex="5">Send</button>
-                                            </div>
-                                        </fieldset>
-                                    </s_rp_input_form>
-                                </s_rp>
-                            </div>
-
-
-                        </s_permalink_article_rep>
-                    </s_article_rep>
-
-                    <s_notice_rep>
-                        <s_index_article_rep>
-                            <div class="list_content">
-                                <a href="[##_notice_rep_link_##]" class="link_post">
-                                    <strong class="tit_post ">[##_notice_rep_title_##]</strong>
-                                    <p class="txt_post">[##_notice_rep_summary_##]</p>
-                                </a>
-                                <div class="detail_info">
-                                    <a href="/notice" class="link_cate">공지사항</a>
-                                    <span class="txt_bar"></span> [##_notice_rep_date_##]
-                                </div>
-                            </div>
-                        </s_index_article_rep>
-
-                        <s_permalink_article_rep>
-                            <h2 id="dkBody" class="screen_out">[##_notice_rep_title_##] 본문</h2>
-                            <div class="area_title">
-                                <strong class="tit_category"><a href="/notice">공지사항</a></strong>
-                                <h3 class="tit_post">[##_notice_rep_title_##]</h3>
-                            <span class="info_post">[##_notice_rep_author_##]
-                                <span class="txt_bar"></span>[##_notice_rep_date_##]</span>
-                            </div>
-
-                            <div class="area_view">
-                                [##_notice_rep_desc_##]
-                            </div>
-                        </s_permalink_article_rep>
-                    </s_notice_rep>
-
-                    <s_article_protected>
-                        <s_index_article_rep>
-                            <div class="list_content">
-                                <a href="[##_article_rep_link_##]" class="link_post">
-                                    <strong class="tit_post ">[##_article_rep_title_##]</strong>
-                                    <p class="txt_post">보호되어 있는 글입니다.</p>
-                                </a>
-                                <div class="detail_info">
-                                    <a href="[##_article_rep_category_link_##]" class="link_cate">[##_article_rep_category_##]</a>
-                                    <span class="txt_bar"></span> [##_article_rep_date_##]
-                                </div>
-                            </div>
-                        </s_index_article_rep>
-
-                        <s_permalink_article_rep>
-                            <h2 id="dkBody" class="screen_out">[##_article_rep_title_##] 본문</h2>
-                            <div class="area_title">
-                                <strong class="tit_category"><a href="[##_article_rep_category_link_##]">[##_article_rep_category_##]</a></strong>
-                                <h3 class="tit_post">[##_article_rep_title_##]</h3>
-                            <span class="info_post">[##_article_rep_author_##]
-                                <span class="txt_bar"></span>[##_article_rep_date_##]</span>
-                            </div>
-
-                            <form class="protected_form" onsubmit="[##_article_dissolve_##]">
-                                <p>보호되어 있는 글입니다.<br>내용을 보시려면 비밀번호를 입력하세요.</p>
-                                <input type="password" id="[##_article_password_##]" name="[##_article_password_##]" value="" placeholder="비밀번호" />
-                                <button type="submit">확인</button>
-                            </form>
-                        </s_permalink_article_rep>
-                    </s_article_protected>
-
-                    <s_tag>
-                        <h2 id="dkBody" class="tit_skin"><span class="txt_title">Tags</span></h2>
-                        <ul class="list_tag">
-                            <s_tag_rep>
-                                <li><a href="[##_tag_link_##]" class="link_tag [##_tag_class_##]">[##_tag_name_##]</a></li>
-                            </s_tag_rep>
-                        </ul>
-                    </s_tag>
-
-                    <s_guest>
-                        <h2 id="dkBody" class="tit_skin"><span class="txt_title">Guestbook</span></h2>
-                        <div class="area_reply">
-                            <s_guest_input_form>
-                                <fieldset class="fld_reply">
-                                    <legend class="screen_out">방명록쓰기 폼</legend>
-                                    <s_guest_member>
-                                        <s_guest_form>
-                                            <div class="writer_info">
-											<span class="info_name">
-												<label for="[##_guest_input_name_##]" class="lab_info screen_out">이름</label>
-												<span class="wrap_info">
-													<input type="text" name="[##_guest_input_name_##]" id="[##_guest_input_name_##]" class="inp_info" placeholder="Name" tabindex="1">
-												</span>
-											</span>
-											<span class="info_pw ">
-												<label for="[##_guest_input_password_##]" class="lab_info screen_out">비밀번호</label>
-												<span class="wrap_info">
-													<input type="password" name="[##_guest_input_password_##]" id="[##_guest_input_password_##]" class="inp_info" placeholder="Password" tabindex="2">
-												</span>
-											</span>
-                                            </div>
-                                        </s_guest_form>
-                                        <div class="writer_check">
-										<span class="check_secret ">
-											<input type="checkbox" name="[##_guest_input_is_secret_##]" id="[##_guest_input_is_secret_##]" class="inp_secret" tabindex="4">
-											<label for="[##_guest_input_is_secret_##]" class="lab_secret">
-                                                <span class="ico_skin ico_check"></span>
-                                                Secret
-                                            </label>
-										</span>
-                                        </div>
-                                    </s_guest_member>
-
-                                    <div class="reply_write ">
-                                        <label for="[##_guest_input_comment_##]" class="lab_write screen_out">내용</label>
-                                        <textarea name="[##_guest_input_comment_##]" id="[##_guest_input_comment_##]" class="tf_reply" placeholder="여러분의 소중한 댓글을 입력해주세요" tabindex="3"></textarea>
-                                    </div>
-
-                                    <div class="writer_btn">
-                                        <button type="submit" class="btn_enter" onclick="[##_guest_onclick_submit_##]" tabindex="5">Send</button>
-                                    </div>
-                                </fieldset>
-                            </s_guest_input_form>
-
-
-                            <s_guest_container>
-                                <ul class="list_reply">
-                                    <s_guest_rep>
-                                        <li id='[##_guest_rep_id_##]' class="[##_guest_rep_class_##]">
-                                            <span class="ico_skin thumb_profile"></span>
-									<span class="reply_content">
-										<span class="tit_nickname">[##_guest_rep_name_##]</span>
-										<span class="txt_date">[##_guest_rep_date_##]</span>
-										<span class="txt_reply">[##_guest_rep_desc_##]</span>
-									</span>
-                                            <div class="area_more">
-                                                <!-- on_more 클래스 추가시 레이어 오픈 -->
-                                                <a href="#none" class="more_reply">
-                                                    <span class="ico_skin ico_more">댓글 메뉴 보기</span>
-                                                </a>
-                                                <div class="reply_layer">
-                                                    <div class="inner_reply_layer">
-                                                        <div class="layer_head">
-                                                            <strong class="screen_out">댓글메뉴</strong>
-                                                        </div>
-                                                        <div class="layer_body">
-                                                            <a href="#none" onclick="[##_guest_rep_onclick_delete_##]" class="link_reply">수정/삭제</a>
-                                                            <a href="#none" onclick="[##_guest_rep_onclick_reply_##]" class="link_reply">댓글쓰기</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-
-                                        <s_guest_reply_container>
-                                            <s_guest_reply_rep>
-                                                <li id='[##_guest_rep_id_##]' class="re_reply [##_guest_rep_class_##]">
-                                                    <span class="ico_skin thumb_profile"></span>
-											<span class="reply_content">
-												<span class="tit_nickname">[##_guest_rep_name_##]</span>
-												<span class="txt_date">[##_guest_rep_date_##]</span>
-												<span class="txt_reply">[##_guest_rep_desc_##]</span>
-											</span>
-                                                    <div class="area_more">
-                                                        <!-- on_more 클래스 추가시 레이어 오픈 -->
-                                                        <a href="#none" class="more_reply">
-                                                            <span class="ico_skin ico_more">댓글 메뉴 보기</span>
-                                                        </a>
-                                                        <div class="reply_layer">
-                                                            <div class="inner_reply_layer">
-                                                                <div class="layer_head">
-                                                                    <strong class="screen_out">댓글메뉴</strong>
-                                                                </div>
-                                                                <div class="layer_body">
-                                                                    <a href="#none" onclick="[##_guest_rep_onclick_delete_##]" class="link_reply">수정/삭제</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </s_guest_reply_rep>
-                                        </s_guest_reply_container>
-                                    </s_guest_rep>
-
-                                </ul>
-                            </s_guest_container>
-                        </div>
-                    </s_guest>
-
-                    <s_paging>
-                        <div class="area_paging">
-    					<span class="inner_paging">
-                            <a [##_prev_page_##] class="btn_prev [##_no_more_prev_##]"><span class="ico_skin ico_prev"></span>Prev</a>
-    						<s_paging_rep>
-                                <a [##_paging_rep_link_##] class="link_page">[##_paging_rep_link_num_##]</a>
-                            </s_paging_rep>
-                            <a [##_next_page_##] class="btn_next [##_no_more_next_##]">Next<span class="ico_skin ico_next"></span></a>
-    					</span>
-                        </div>
-                    </s_paging>
-                </div>
-            </div>
-        </div>
-        <hr class="hide">
-        <div id="dkFoot" role="contentinfo" class="area_foot">
-            <small class="info_copyright">
-                Blog is powered by
-                <a href="http://www.kakaocorp.com" class="emph_t" target="_blank">kakao</a> / Designed by
-                <a href="http://www.tistory.com" class="emph_t" target="_blank">Tistory</a>
-            </small>
+    <div id="fixed-top-header" class="header">
+        <div class="center-wrapper">
+            <a href="#">
+                <img style="float: right; margin-top: 12px; margin-right: 15px" width="20.5px" height="22px" alt="Header" src="images/design/img_set.png" />
+            </a>
+            <a href="#">
+                <img style="float: right; margin-top: 12px; margin-right: 15px" width="20.5px" height="22px"  alt="Header" src="images/design/img_al.png" />
+            </a>
+            <a href="#" onclick='return goBack()'>
+                <img style="float: left; margin-top: 12px; margin-left: 15px" width="20.5px" height="22px"  alt="Header" src="images/design/img_bac.png" />
+            </a>
         </div>
     </div>
 
+    <div class="blank-div-for-header"></div>
 
-</s_t3>
-<script src="./images/script.js"></script>
+    <div class="bg-white input-box-default">
+        <span class="title-span">물품 이미지 (최대 5장)</span>
+        <hr/>
+        <span class="description-span">
+            요청자에게 적합한 물품인지 파악하기 위해 필요한 정보입니다.
+        </span>
+        <br>
+        <span class="description-span">
+            첫 번째 이미지가 대표 이미지로 지정됩니다.
+        </span>
+        <div class="product-img-wrapper">
+            <div class="product-img"></div>
+            <div class="product-img"></div>
+            <div class="product-img"></div>
+            <div class="product-img"></div>
+            <div class="add-image-btn">
+
+            </div>
+        </div>
+    </div>
+
+    <input type="file" id="imgInput" />
+
+    <div class="bg-white input-box-default">
+        <span class="title-span">배송가능 날짜</span>
+        <hr/>
+    </div>
+
+    <div class="bg-white input-box-default">
+        <span class="title-span">주소지</span>
+        <hr/>
+    </div>
+
+    <div class="bg-white input-box-default">
+        <span class="title-span">물품설명 (10자 이상, 100자 미만)</span>
+        <hr/>
+        <input id="textBoxProductInfo" type="text" placeholder="제품의 상태, 크기, 훼손여부 등을 상세하게 적어주세요." maxlength="200">
+    </div>
+
+    <div class="bg-white input-box-default">
+        <span class="title-span">하고 싶은 말(10자 이상, 100자 미만)</span>
+        <hr/>
+        <input id="textBoxMessage" type="text" placeholder="나눔을 하게 된 이유나 기타 하고 싶은 말이 있다면 작성해주세요." maxlength="200">
+    </div>
+
+    <div data-role="footer" data-position="fixed" data-tap-toggle="false" style="border: none;">
+        <div id="fixed-bottom-btn" style="width: 100%">
+            <div>
+                <span> 완료 </span>
+            </div>
+        </div>
+    </div>
+
+</div> <!-- page -->
+
+<?php require "./common/footer.php"; ?>
+
+<!-- Initialize Swiper -->
+<script>
+
+    function goBack() {
+        window.history.back();
+    }
+
+    $('.reply').click(function(){
+        $.ajax({
+            async:true,
+            success:function(data){
+                //alert("success");
+                window.location='comment_detail.php';
+            }
+        })
+    })
+
+    /*
+    $('.add-image-btn').click(function(){
+        $.ajax({
+            async:true,
+            success:function(data){
+                alert("success");
+                //$('#imgInput').trigger('click');
+               // window.location='comment_detail.php';
+                //readURL(this);
+            }
+        })
+    })
+    */
+/*
+    $('.add-image-btn').click(function(){
+        $.ajax({
+            async:true,
+            success:function(data){
+                alert("success");
+                $('#imgInput').click();
+            }
+        })
+    })*/
+
+    jQuery(function($){
+        $('.add-image-btn').on('click', function(e){
+            e.preventDefault();
+            $('#imgInput')[0].click();
+        });
+    });
+
+    $('#imgInput').change(function(){
+        readImageURL(this);
+    });
+
+    $('.product-img').click(function(){
+        $(this).css("backgroundImage", "none");
+    });
+
+    function readImageURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                //$('#blah').attr('src', e.target.result);
+                setImageInDiv(e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    function setImageInDiv(imgURL) {
+        imgURL = "url(" + imgURL + ")";
+        $(".product-img").each(function() {
+            if( $(this).css('backgroundImage') == "none") {
+                $(this).css('backgroundImage', imgURL);
+                return false;
+            }
+        });
+    }
+
+    // header 및 footer 툴바 고정
+    $.mobile.toolbar.prototype.options.updatePagePadding = false;
+    $.mobile.toolbar.prototype.options.hideDuringFocus = "";
+    $.mobile.toolbar.prototype.options.tapToggle = false;
+
+</script>
 </body>
-
 </html>
+

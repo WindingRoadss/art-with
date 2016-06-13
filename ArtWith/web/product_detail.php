@@ -495,19 +495,31 @@
         background-color: white;
     }
 
-    .dday-info-div {
+    .header-title {
         position: absolute;
-        width: 100%;
+        margin: 0 auto;
+        width: 150px;
         height: 42px;
-        top: 0px;
-        right: 0px;
+        top: 0;
+        left: 0;
+        right: 0;
         line-height: 42px;
         z-index: 1001;
         text-align: center;
         vertical-align: middle;
     }
 
-    .dday-info-div .day-img {
+    .header-title .day-img {
+        vertical-align: middle;
+        line-height: 42px;
+        width: 21px;
+        height: 18.5px;
+        maring: 0;
+        padding: 3;
+        z-index: 1001;
+    }
+
+    .day-img {
         vertical-align: middle;
         line-height: 42px;
         width: 21px;
@@ -516,7 +528,7 @@
         padding: 3;
     }
 
-    .dday-info-span {
+    .header-title-span {
         line-height: 42px;
         color: white;
         font-weight: lighter;
@@ -535,9 +547,9 @@
 
 	<div class="bg-white" id="page">
 
-        <div class="dday-info-div">
+        <div class="header-title">
             <img class="day-img" src="images/design/img_dday.png">
-            <span class="dday-info-span">D.day 20</span>
+            <span class="header-title-span">D.day 20</span>
         </div>
 
         <!--
