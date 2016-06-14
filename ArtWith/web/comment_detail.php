@@ -333,7 +333,30 @@
             font-size: 14px;
             border-spacing: 0;
         }
-
+        .share-info-table-left {
+        	font-size: 14px;
+        	display: table-cell;
+        	vertical-align: top;
+        }
+        .share-info-table-right {
+        	font-size: 14px;
+        	display: table-cell;
+        	vertical-align: top;
+        }
+        .share-info-table-left tr th {
+       		padding-left: 20px;
+       		padding-top: 10px;
+       		font-weight: bold;
+       		text-align: left;
+        }
+        .share-info-table-right tr td {
+        	padding-left: 13px;
+       		padding-top: 10px;
+       		text-align: left;
+       		font-weight: bold;
+       		color: #848587;
+        }
+        
         .share-info-table tr th {
             text-align: left;
             vertical-align: top;
@@ -362,7 +385,8 @@
             width: 100%;
             background-color: #ec6b3e;
             color: white;
-            font-size: 12px;
+            font-size: 13px;
+            font-weight: normal;
             display: -webkit-box;
             display: -webkit-flex;
             display: -moz-box;
@@ -383,11 +407,16 @@
             height: 65px;
         }
 
-        .share-info-table-left tr th {
-            text-align: left;
+/*
+        .share-info-leftcolumn {
+        	padding-left: 3px;
+        	font-weight: bold;
+        	font-size: 14px;
+       		text-align: left;
             vertical-align: top;
         }
-
+        */
+        
         .share-info-table-notice1 {
             padding-top: 50px;
             padding-left: 20px;
@@ -519,70 +548,77 @@
                 <div class="swiper-wrapper">
                     <div id="share_info_div_one" class="swiper-slide swiper-slide-popup">
                         <div style="width: 100%; position: absolute; top: 0; left: 0;">
-                            <table class="share-info-table">
-                                <tr>
-                                    <td colspan="2" class="share-info-table-head" valign="middle">나눔정보확인</td>
-                                </tr>
-                                <tr>
-                                    <th style="width: 35%; padding-top:30px; padding-left:10px; border:0;">요청자ID</th>
-                                    <td style="width: 65%; padding-top:30px; padding-left: 13px; font-weight: bold; color: #848587;">내가기부왕</td>
-                                </tr>
-                                <tr>
-                                    <th class="share-info-table-th">배송가능날짜</th>
-                                    <td class="share-info-table-td">2016.06.01</td>
-                                </tr>
-                                <tr>
-                                    <th class="share-info-table-th">거래가능지역</th>
-                                    <td class="share-info-table-td">서울시 노원구</td>
-                                </tr>
-                                <tr>
-                                    <th class="share-info-table-th">물품설명</th>
-                                    <td class="share-info-table-td">
-                                        비싼 돈주고 하나 장만했지만<br>
-                                        입을 일이 없었습니다.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th class="share-info-table-th" style="border:0;">하고싶은말</th>
-                                    <td class="share-info-table-td">기본 한복도 이쁜데 좀 더 리폼하면<br>
-                                        더 이쁠 거 같아요~
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
+							<table class="share-info-table">
+								<tr>
+									<td class="share-info-table-head" valign="middle">선택
+											<a href="#" data-rel="back"><img src="/images/design/img_x.png" style="position: absolute; right: 10px; top: 15px;  width: 30px; height: 30px;"></a> 
+									</td>
+								</tr>
+							 </table>
+									<div style="position: relative; top: 20px; font-size: 14px; font-weight: bold;">[나눔댓글 정보확인]</div>
+							<table class="share-info-table" style="position: relative; top: 55px;">
+
+								<tr>
+									<th style="width: 35%; padding-left: 10px;">요청자ID</th>
+									<td style="width: 65%; padding-left: 13px; font-weight: bold; color: #848587;">내가기부왕</td>
+								</tr>
+								<tr>
+									<th class="share-info-table-th">배송가능날짜</th>
+									<td class="share-info-table-td">2016.06.01</td>
+								</tr>
+								<tr>
+									<th class="share-info-table-th">거래가능지역</th>
+									<td class="share-info-table-td">서울시 노원구</td>
+								</tr>
+								<tr>
+									<th class="share-info-table-th">물품설명</th>
+									<td class="share-info-table-td">비싼 돈주고 하나 장만했지만<br> 입을 일이
+										없었습니다.
+									</td>
+								</tr>
+								<tr>
+									<th class="share-info-table-th">하고싶은말</th>
+									<td class="share-info-table-td">기본 한복도 이쁜데 좀 더 리폼하면<br> 더 이쁠 거
+										같아요~
+									</td>
+								</tr>
+							</table>
+						</div>
                     </div>
 
                     <div id="share_info_div_two" class="swiper-slide swiper-slide-popup">
                         <div style="width: 100%; position: absolute; top: 0; left: 0;">
                             <table class="share-info-table">
-                                <tr>
-                                    <td colspan="2" class="share-info-table-head" valign="middle">티켓전송확인</td>
-                                </tr>
-                                <tr>
-                                    <th style="width: 30%; padding-top:35px; padding-left:10px; border:0;">공연명</th>
-                                    <td style="width: 70%; padding-top:35px; padding-left: 13px; font-weight: bold; color: #848587;">마술가게</td>
-                                </tr>
-                                <tr>
-                                    <th class="share-info-table-th">공연일시</th>
-                                    <td class="share-info-table-td">2016.10.10 - 2016.11.25</td>
-                                </tr>
-                                <tr>
-                                    <th class="share-info-table-th">공연장소</th>
-                                    <td class="share-info-table-td">두레홀 4관</td>
-                                </tr>
-                                <tr>
-                                    <th class="share-info-table-th">티켓장수</th>
-                                    <td class="share-info-table-td">3장</td>
-                                </tr>
-                                <tr>
-                                    <th class="share-info-table-th">소속단체</th>
-                                    <td class="share-info-table-td">극단 두레</td>
-                                </tr>
-                                <tr>
-                                    <th class="share-info-table-th" style="border:0;">대표자</th>
-                                    <td class="share-info-table-td">김원봉</td>
-                                </tr>
-                            </table>
+								<tr>
+									<td class="share-info-table-head" valign="middle">선택
+											<a href="#" data-rel="back"><img src="/images/design/img_x.png" style="position: absolute; right: 10px; top: 15px;  width: 30px; height: 30px;"></a> 
+									</td>
+								</tr>
+							 </table>
+									<div style="position: relative; top: 20px; font-size: 14px; font-weight: bold;">[나눔혜택 정보확인]</div>
+							<table class="share-info-table" style="position: relative; top: 55px;">
+
+								<tr>
+									<th style="width: 35%; padding-left: 30px;">혜택명</th>
+									<td style="width: 65%; padding-left: 13px; font-weight: bold; color: #848587;">마술가게</td>
+								</tr>
+								<tr>
+									<th class="share-info-table-th" style="padding-left: 30px;">일시</th>
+									<td class="share-info-table-td">2016.10.10 - 2016.11.25</td>
+								</tr>
+								<tr>
+									<th class="share-info-table-th" style="padding-left: 30px;">위치</th>
+									<td class="share-info-table-td">두레홀 4관</td>
+								</tr>
+								<tr>
+									<th class="share-info-table-th" style="padding-left: 30px;">상세설명</th>
+									<td class="share-info-table-td">극단두레 </td>							
+								</tr>
+								<tr>
+									<th class="share-info-table-th" style="padding-left: 30px;">대표자</th>
+									<td class="share-info-table-td">김원봉 </td>
+								</tr>
+							</table>
                         </div>
                     </div>
                 </div>
