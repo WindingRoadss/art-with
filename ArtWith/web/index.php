@@ -663,8 +663,8 @@
     }
 
     .product-img {
-        width: 100%;
-        height: auto;
+        width: auto;
+        height: 100%;
     }
 
     .blank-div-for-header {

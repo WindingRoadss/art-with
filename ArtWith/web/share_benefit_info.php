@@ -37,7 +37,7 @@
     .ui-body-a, .ui-page-theme-a .ui-body-inherit, html .ui-bar-a .ui-body-inherit, html .ui-body-a .ui-body-inherit, html body .ui-group-theme-a .ui-body-inherit, html .ui-panel-page-container-a {
         background-color: transparent;
         border-color: transparent;
-        color: transparent;
+        /*color: transparent;*/
         text-shadow: 0;
     }
 
@@ -121,6 +121,15 @@
         -moz-box-shadow: none !important;
         -webkit-box-shadow: none !important;
         box-shadow: none !important;
+    }
+
+    ::selection {
+        background: lightgrey;
+        color: white
+    }
+
+    textarea {
+        resize: none;
     }
 
     /* Art-With 전용 CSS */
@@ -343,7 +352,7 @@
 
     #textBoxBenefitContents {
         min-height: 15px;
-        height: 30px;
+        height: 52px;
         background-color: white;
         border: solid #f08b68 1px;
         color: #828282;
@@ -531,7 +540,7 @@
             <div class="bg-white input-box-default">
                 <span class="title-span">혜택명</span>
                 <hr/>
-                <input id="textBoxBenefitContents" type="text" placeholder="나눔자가 세분화된 분류로 검색하기 위한 정보입니다." maxlength="200">
+                <textarea id="textBoxBenefitContents" placeholder="- 초청권일 경우 : 공연 및 상영 이름&#13;&#10;- 재능기부일 경우 : 재능의 종류&#13;&#10;- 기념품일 경우 : 공연 및 상영과 관련된 물품의 종류"></textarea>
             </div>
 
             <div class="bg-white input-box-default" id="date_div">
@@ -705,7 +714,6 @@
 
 <script type="text/javascript">
 
-
     function DropDownCat(el) {
         this.dd = el;
         this.initEvents();
@@ -806,6 +814,8 @@
                 $('#cat_div').css('height', '88px');
         }
     }
+
+    $("#textBoxBenefitContents").css("resize", "none");
 
     function changeHeightAddrDiv() {
         var numAddrDropDownActive = $('#address_div.active').length;

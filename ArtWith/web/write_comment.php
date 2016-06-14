@@ -69,6 +69,11 @@
         font-weight: normal;
     }
 
+    ::selection {
+        background: lightgrey;
+        color: white
+    }
+
     /* Art-With 전용 CSS */
     @font-face {
         font-family:"Nanum Gothic";

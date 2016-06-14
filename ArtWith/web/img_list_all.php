@@ -3,7 +3,7 @@
 $prev_link = "images/design/";
 $img_link[0] = "img_hb1.png";$img_due[0] = 20; $img_user[0] = "나눔나눔"; $img_rep[0] =22; $img_tag[0] =   "#새댁 #결혼식 #화사한" ;
 $img_link[1] = "img_hb2.png"; $img_due[1] =14; $img_user[1] =  "갠소"; $img_rep[1] = 24; $img_tag[1] = "#깔끔한 #세련된";
-$img_link[2] = "img_hb3.png";  $img_due[2] = 35; $img_user[2] = "방지턱"; $img_rep[2] = 1;$img_tag[2] = "#화려한 #궁중의상 #왕비 #깔끔한" ;
+$img_link[2] = "img_hb3.png";  $img_due[2] = 35; $img_user[2] = "방지턱"; $img_rep[2] = 1;$img_tag[2] = "#전통 #다양한 #화려한" ;
 $img_link[3] = "img_hb4.png"; $img_due[3] = 7; $img_user[3] = "광은이용"; $img_rep[3] = 10; $img_tag[3] = "#규수" ;
 $img_link[4] = "img_hb5.png"; $img_due[4] =  10; $img_user[4] = "굿쯘임당"; $img_rep[4] = 6; $img_tag[4] = "#기생 #다채로운";
 $img_link[5] = "img_hb6.png"; $img_due[5] =  21; $img_user[5] = "기부왕"; $img_rep[5] = 7; $img_tag[5] = "#황진이 #기생 #화려한";
@@ -11,11 +11,11 @@ $img_link[6] = "img_hb7.png"; $img_due[6] =  37; $img_user[6] = "브이"; $img_r
 $img_link[7] = "img_hb8.png"; $img_due[7] =   2; $img_user[7] = "허그미"; $img_rep[7] = 21; $img_tag[7] = "#알록달록 #귀여운 #화려한 #다채로운 #깔끔한" ;
 $img_link[8] = "img_hb9.png"; $img_due[8] =  15; $img_user[8] = "기부천사"; $img_rep[8] = 16; $img_tag[8] = "#왕비 #할머니 #예쁜";
 $img_link[9] = "img_hb10.png";$img_due[9] =   11; $img_user[9] = "크러쉬굳"; $img_rep[9] = 2; $img_tag[9] = "#기생";
-$img_link[10] = "img_hb11.png";$img_due[10] = 15; $img_user[10] = "참깨와친구"; $img_rep[10] = 41; $img_tag[10] = "#전통 #다양한";
-$img_link[11] = "img_doc.png"; $img_due[11] = 22; $img_user[11] = "우리봉봉"; $img_rep[11] = 3; $img_tag[11] =  "#경찰 #수사물 #의경";
-$img_link[12] = "img_gui.png"; $img_due[12] = 11; $img_user[12] = "뚜비"; $img_rep[12] = 17; $img_tag[12] =  "#의사가운 #하얀거탑 #하얀";
-$img_link[13] = "img_pia.png"; $img_due[13] = 7; $img_user[13] = "음오아예"; $img_rep[13] = 25; $img_tag[13] =  "#악기 #낡은 #7080" ;
-$img_link[14] = "img_pol.png"; $img_due[14] = 24; $img_user[14] = "나누리랏다"; $img_rep[14] = 36; $img_tag[14] =  "#피아노";
+$img_link[10] = "img_hb11.png";$img_due[10] = 15; $img_user[10] = "참깨와친구"; $img_rep[10] = 41; $img_tag[10] = "#궁중의상 #왕비 #깔끔한";
+$img_link[11] = "img_doc.png"; $img_due[11] = 22; $img_user[11] = "우리봉봉"; $img_rep[11] = 3; $img_tag[11] =  "#의사가운 #하얀거탑 #하얀";
+$img_link[12] = "img_gui.png"; $img_due[12] = 11; $img_user[12] = "뚜비"; $img_rep[12] = 17; $img_tag[12] =  "#악기 #낡은 #7080 ";
+$img_link[13] = "img_pia.png"; $img_due[13] = 7; $img_user[13] = "음오아예"; $img_rep[13] = 25; $img_tag[13] =  "#피아노" ;
+$img_link[14] = "img_pol.png"; $img_due[14] = 24; $img_user[14] = "나누리랏다"; $img_rep[14] = 36; $img_tag[14] =  "#경찰 #수사물 #의경";
 $img_link[15] = "img_tel.png"; $img_due[15] = 35; $img_user[15] = "나누자흐흐"; $img_rep[15] = 1; $img_tag[15] =  "#전화기 #70년대";
 $img_link[16] = "img_key.png"; $img_due[16] = 40; $img_user[16] = "빌려가세염"; $img_rep[16] = 0; $img_tag[16] =  "#키 #오줌싸개";
 /*echo(" <ul style=\"list-style:none;  width:80%; \"> ");
@@ -59,7 +59,7 @@ for($count=0; $count<16; $count++) {
     echo(" <td class=\"product-info-table-td-right td-info\"> ");
     echo(" <div style=\"height: 100%;\"> ");
     echo(" <div class=\"div-info-row\"> ");
-    echo(" <img src=\"images/design/img_day.png\" class=\"img-info-icon\"/> ");
+    echo(" <img src=\"images/design/img_day_white.png\" class=\"img-info-icon\"/> ");
     echo(" </div> ");
     echo(" <span class=\"span-info-row\">$img_due[$count]</span> ");
     echo(" </div> ");
