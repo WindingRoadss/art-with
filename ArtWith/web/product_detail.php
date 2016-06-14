@@ -494,7 +494,7 @@
     }
 
     .header-title {
-        position: absolute;
+        position: fixed;
         margin: 0 auto;
         width: 150px;
         height: 42px;
@@ -881,8 +881,8 @@
   				</div>
         -->
 
-        <div id="fixed-bottom-btn" style="width: 100%">
-            <a id="btn_write_comment" href="http://www.naver.com">
+        <div id="fixed-bottom-btn" style="width: 100%;">
+            <a id="btn_write_comment" href="#">
                 <div>
                     <img src="images/design/img_plus2.png"/>
                 </div>
