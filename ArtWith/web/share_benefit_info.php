@@ -117,6 +117,12 @@
         border: 0;
     }
 
+    body, input, select, textarea, button, .ui-btn {
+        font-size: 0.8em;
+        /* line-height: 1.3; */
+        font-family: sans-serif /*{global-font-family}*/;
+    }
+
     .no-shadow {
         -moz-box-shadow: none !important;
         -webkit-box-shadow: none !important;
@@ -383,7 +389,7 @@
 <div class="bg-gray" id="page">
 
     <div class="header-title">
-        <span class="header-title-span">나눔혜택정보</span>
+        <span class="header-title-span">나눔윗요청</span>
     </div>
 
     <div id="fixed-top-header" class="header">
@@ -406,7 +412,7 @@
         <div data-role="navbar">
             <ul>
                 <li><a id="tab-product-info" href="#one" data-ajax="false" class="no-shadow tab-menu ui-btn-active"><span>물품정보</span></a></li>
-                <li><a id="tab-concert-info" href="#two" data-ajax="false" class="no-shadow tab-menu"><span>공연정보</span></a></li>
+                <li><a id="tab-concert-info" href="#two" data-ajax="false" class="no-shadow tab-menu"><span>나눔혜택정보</span></a></li>
             </ul>
         </div>
         <div id="one">
@@ -554,73 +560,358 @@
                 <div class="wrapper-div">
                     <table style="width: 100%; margin: 5 0 0 0; padding: 0;">
                         <tr>
-                            <td style="width: 33.33%;">
-                                <div id="cat_first_drop_down" class="wrapper-dropdown" tabindex="1" >
-                                    <span>전체</span>
-                                    <ul class="dropdown" id="ul_cat_first">
-                                        <li><a href="#">전체</a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
+                            <td style="width: 45%;">
+                                <div id="date_picker_start_drop_down" class="wrapper-dropdown" tabindex="1" >
+                                    <span id="start_year_text">2016년</span>
+                                    <span id="start_month_text">6월</span>
+                                    <span id="start_date_text">15일</span>
+                                    <ul class="dropdown" id="ul_date_picker_start">
+                                        <li>
+                                            <div class="due-date-start" style="width: 100%;">
+                                                <table style="width: 100%; margin: 0; padding: 0; border: 0; border-spacing: 0;">
+                                                    <tr>
+                                                        <td class="due-date-style-td">
+                                                            <select id="start_year_select" data-role="none" size="6" class="due-date-style-select">
+                                                                <option value="2016" >2016</option>
+                                                                <option value="2015" >2015</option>
+                                                                <option value="2014" >2014</option>
+                                                                <option value="2013" >2013</option>
+                                                                <option value="2012" >2012</option>
+                                                                <option value="2011" >2011</option>
+                                                                <option value="2010" >2010</option>
+                                                                <option value="2009" >2009</option>
+                                                            </select>
+                                                        </td>
+                                                        <td class="due-date-style-td">
+                                                            <select id="start_month_select" data-role="none" size="6" class="due-date-style-select">
+                                                                <option value="1" >1</option>
+                                                                <option value="2" >2</option>
+                                                                <option value="3" >3</option>
+                                                                <option value="4" >4</option>
+                                                                <option value="5" >5</option>
+                                                                <option value="6" >6</option>
+                                                                <option value="7" >7</option>
+                                                                <option value="8" >8</option>
+                                                                <option value="9" >9</option>
+                                                                <option value="10" >10</option>
+                                                                <option value="11" >11</option>
+                                                                <option value="12" >12</option>
+                                                            </select>
+                                                        </td>
+                                                        <td class="due-date-style-td">
+                                                            <select id="start_date_select" data-role="none" size="6" class="due-date-style-select">
+                                                                <option value="1" >1</option>
+                                                                <option value="2" >2</option>
+                                                                <option value="3" >3</option>
+                                                                <option value="4" >4</option>
+                                                                <option value="5" >5</option>
+                                                                <option value="6" >6</option>
+                                                                <option value="7" >7</option>
+                                                                <option value="8" >8</option>
+                                                                <option value="9" >9</option>
+                                                                <option value="10" >10</option>
+                                                                <option value="11" >11</option>
+                                                                <option value="12" >12</option>
+                                                                <option value="13" >13</option>
+                                                                <option value="14" >14</option>
+                                                                <option value="15" >15</option>
+                                                                <option value="16" >16</option>
+                                                                <option value="17" >17</option>
+                                                                <option value="18" >18</option>
+                                                                <option value="19" >19</option>
+                                                                <option value="20" >20</option>
+                                                                <option value="21" >21</option>
+                                                                <option value="22" >22</option>
+                                                                <option value="23" >23</option>
+                                                                <option value="24" >24</option>
+                                                                <option value="25" >25</option>
+                                                                <option value="26" >26</option>
+                                                                <option value="27" >27</option>
+                                                                <option value="28" >28</option>
+                                                                <option value="29" >29</option>
+                                                                <option value="30" >30</option>
+                                                                <option value="31" >31</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </li>
                                     </ul>
                                 </div>
                             </td>
 
-                            <td style="width: 33.33%;">
-                                <div id="cat_second_drop_down" class="wrapper-dropdown" tabindex="1">
-                                    <span>전체</span>
-                                    <ul class="dropdown" id="ul_cat_second">
-                                        <li><a href="#">전체</a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                    </ul>
-                                </div>
+                            <td style="width: 10%; text-align: center">
+                                <span style="color: #f08b68; font-size: 20px">―</span>
                             </td>
 
-                            <td style="width: 33.33%;">
-                                <div id="cat_third_drop_down" class="wrapper-dropdown" tabindex="1">
-                                    <span>전체</span>
-                                    <ul class="dropdown" id="ul_cat_third">
-                                        <li><a href="#">전체</a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
+                            <td style="width: 45%;">
+                                <div id="date_picker_end_drop_down" class="wrapper-dropdown" tabindex="1" >
+                                    <span id="end_year_text">2016년</span>
+                                    <span id="end_month_text">6월</span>
+                                    <span id="end_date_text">15일</span>
+                                    <ul class="dropdown" id="ul_date_picker_end">
+                                        <li>
+                                            <div class="due-date-end" style="width: 100%;">
+                                                <table style="width: 100%; margin: 0; padding: 0; border: 0; border-spacing: 0;">
+                                                    <tr>
+                                                        <td class="due-date-style-td">
+                                                            <select id="end_year_select" data-role="none" size="6" class="due-date-style-select">
+                                                                <option value="2016" >2016</option>
+                                                                <option value="2015" >2015</option>
+                                                                <option value="2014" >2014</option>
+                                                                <option value="2013" >2013</option>
+                                                                <option value="2012" >2012</option>
+                                                                <option value="2011" >2011</option>
+                                                                <option value="2010" >2010</option>
+                                                                <option value="2009" >2009</option>
+                                                            </select>
+                                                        </td>
+                                                        <td class="due-date-style-td">
+                                                            <select id="end_month_select" data-role="none" size="6" class="due-date-style-select">
+                                                                <option value="1" >1</option>
+                                                                <option value="2" >2</option>
+                                                                <option value="3" >3</option>
+                                                                <option value="4" >4</option>
+                                                                <option value="5" >5</option>
+                                                                <option value="6" >6</option>
+                                                                <option value="7" >7</option>
+                                                                <option value="8" >8</option>
+                                                                <option value="9" >9</option>
+                                                                <option value="10" >10</option>
+                                                                <option value="11" >11</option>
+                                                                <option value="12" >12</option>
+                                                            </select>
+                                                        </td>
+                                                        <td class="due-date-style-td">
+                                                            <select id="end_date_select" data-role="none" size="6" class="due-date-style-select">
+                                                                <option value="1" >1</option>
+                                                                <option value="2" >2</option>
+                                                                <option value="3" >3</option>
+                                                                <option value="4" >4</option>
+                                                                <option value="5" >5</option>
+                                                                <option value="6" >6</option>
+                                                                <option value="7" >7</option>
+                                                                <option value="8" >8</option>
+                                                                <option value="9" >9</option>
+                                                                <option value="10" >10</option>
+                                                                <option value="11" >11</option>
+                                                                <option value="12" >12</option>
+                                                                <option value="13" >13</option>
+                                                                <option value="14" >14</option>
+                                                                <option value="15" >15</option>
+                                                                <option value="16" >16</option>
+                                                                <option value="17" >17</option>
+                                                                <option value="18" >18</option>
+                                                                <option value="19" >19</option>
+                                                                <option value="20" >20</option>
+                                                                <option value="21" >21</option>
+                                                                <option value="22" >22</option>
+                                                                <option value="23" >23</option>
+                                                                <option value="24" >24</option>
+                                                                <option value="25" >25</option>
+                                                                <option value="26" >26</option>
+                                                                <option value="27" >27</option>
+                                                                <option value="28" >28</option>
+                                                                <option value="29" >29</option>
+                                                                <option value="30" >30</option>
+                                                                <option value="31" >31</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </li>
                                     </ul>
                                 </div>
                             </td>
                         </tr>
                     </table>
                 </div>
-
             </div>
+
+            <!--
+            <div class="bg-white input-box-default" id="date_div">
+                <span class="title-span">일시</span>
+                <hr/>
+
+                <span class="description-span">
+                    나눔혜택을 제공할 수 있는 일시를 적어주세요.
+                </span>
+
+                <div class="wrapper-div">
+                    <table style="width: 100%; margin: 5 0 0 0; padding: 0;">
+                        <tr>
+                            <td style="width: 45%;">
+                                <div id="date_picker_start_drop_down" class="wrapper-dropdown" tabindex="1" >
+                                    <span id="start_year_text">2016년</span>
+                                    <span id="start_month_text">6월</span>
+                                    <span id="start_date_text">15일</span>
+                                    <ul class="dropdown" id="ul_date_picker_start">
+                                        <li>
+                                            <div class="due-date-start" style="width: 100%;">
+                                                <table style="width: 100%; margin: 0; padding: 0; border: 0; border-spacing: 0;">
+                                                    <tr>
+                                                        <td class="due-date-style-td">
+                                                            <select id="start_year_select" data-role="none" size="6" class="due-date-style-select">
+                                                                <option value="2016" >2016</option>
+                                                                <option value="2015" >2015</option>
+                                                                <option value="2014" >2014</option>
+                                                                <option value="2013" >2013</option>
+                                                                <option value="2012" >2012</option>
+                                                                <option value="2011" >2011</option>
+                                                                <option value="2010" >2010</option>
+                                                                <option value="2009" >2009</option>
+                                                            </select>
+                                                        </td>
+                                                        <td class="due-date-style-td">
+                                                            <select id="start_month_select" data-role="none" size="6" class="due-date-style-select">
+                                                                <option value="1" >1</option>
+                                                                <option value="2" >2</option>
+                                                                <option value="3" >3</option>
+                                                                <option value="4" >4</option>
+                                                                <option value="5" >5</option>
+                                                                <option value="6" >6</option>
+                                                                <option value="7" >7</option>
+                                                                <option value="8" >8</option>
+                                                                <option value="9" >9</option>
+                                                                <option value="10" >10</option>
+                                                                <option value="11" >11</option>
+                                                                <option value="12" >12</option>
+                                                            </select>
+                                                        </td>
+                                                        <td class="due-date-style-td">
+                                                            <select id="start_date_select" data-role="none" size="6" class="due-date-style-select">
+                                                                <option value="1" >1</option>
+                                                                <option value="2" >2</option>
+                                                                <option value="3" >3</option>
+                                                                <option value="4" >4</option>
+                                                                <option value="5" >5</option>
+                                                                <option value="6" >6</option>
+                                                                <option value="7" >7</option>
+                                                                <option value="8" >8</option>
+                                                                <option value="9" >9</option>
+                                                                <option value="10" >10</option>
+                                                                <option value="11" >11</option>
+                                                                <option value="12" >12</option>
+                                                                <option value="13" >13</option>
+                                                                <option value="14" >14</option>
+                                                                <option value="15" >15</option>
+                                                                <option value="16" >16</option>
+                                                                <option value="17" >17</option>
+                                                                <option value="18" >18</option>
+                                                                <option value="19" >19</option>
+                                                                <option value="20" >20</option>
+                                                                <option value="21" >21</option>
+                                                                <option value="22" >22</option>
+                                                                <option value="23" >23</option>
+                                                                <option value="24" >24</option>
+                                                                <option value="25" >25</option>
+                                                                <option value="26" >26</option>
+                                                                <option value="27" >27</option>
+                                                                <option value="28" >28</option>
+                                                                <option value="29" >29</option>
+                                                                <option value="30" >30</option>
+                                                                <option value="31" >31</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+
+                            <td style="width: 10%; text-align: center">
+                                <span style="color: #f08b68; font-size: 20px">―</span>
+                            </td>
+
+                            <td style="width: 45%;">
+                                <div id="date_picker_end_drop_down" class="wrapper-dropdown" tabindex="1" >
+                                    <span id="end_year_text">2016년</span>
+                                    <span id="end_month_text">6월</span>
+                                    <span id="end_date_text">15일</span>
+                                    <ul class="dropdown" id="ul_date_picker_end">
+                                        <li>
+                                            <div class="due-date-end" style="width: 100%;">
+                                                <table style="width: 100%; margin: 0; padding: 0; border: 0; border-spacing: 0;">
+                                                    <tr>
+                                                        <td class="due-date-style-td">
+                                                            <select id="end_year_select" data-role="none" size="6" class="due-date-style-select">
+                                                                <option value="2016" >2016</option>
+                                                                <option value="2015" >2015</option>
+                                                                <option value="2014" >2014</option>
+                                                                <option value="2013" >2013</option>
+                                                                <option value="2012" >2012</option>
+                                                                <option value="2011" >2011</option>
+                                                                <option value="2010" >2010</option>
+                                                                <option value="2009" >2009</option>
+                                                            </select>
+                                                        </td>
+                                                        <td class="due-date-style-td">
+                                                            <select id="end_month_select" data-role="none" size="6" class="due-date-style-select">
+                                                                <option value="1" >1</option>
+                                                                <option value="2" >2</option>
+                                                                <option value="3" >3</option>
+                                                                <option value="4" >4</option>
+                                                                <option value="5" >5</option>
+                                                                <option value="6" >6</option>
+                                                                <option value="7" >7</option>
+                                                                <option value="8" >8</option>
+                                                                <option value="9" >9</option>
+                                                                <option value="10" >10</option>
+                                                                <option value="11" >11</option>
+                                                                <option value="12" >12</option>
+                                                            </select>
+                                                        </td>
+                                                        <td class="due-date-style-td">
+                                                            <select id="end_date_select" data-role="none" size="6" class="due-date-style-select">
+                                                                <option value="1" >1</option>
+                                                                <option value="2" >2</option>
+                                                                <option value="3" >3</option>
+                                                                <option value="4" >4</option>
+                                                                <option value="5" >5</option>
+                                                                <option value="6" >6</option>
+                                                                <option value="7" >7</option>
+                                                                <option value="8" >8</option>
+                                                                <option value="9" >9</option>
+                                                                <option value="10" >10</option>
+                                                                <option value="11" >11</option>
+                                                                <option value="12" >12</option>
+                                                                <option value="13" >13</option>
+                                                                <option value="14" >14</option>
+                                                                <option value="15" >15</option>
+                                                                <option value="16" >16</option>
+                                                                <option value="17" >17</option>
+                                                                <option value="18" >18</option>
+                                                                <option value="19" >19</option>
+                                                                <option value="20" >20</option>
+                                                                <option value="21" >21</option>
+                                                                <option value="22" >22</option>
+                                                                <option value="23" >23</option>
+                                                                <option value="24" >24</option>
+                                                                <option value="25" >25</option>
+                                                                <option value="26" >26</option>
+                                                                <option value="27" >27</option>
+                                                                <option value="28" >28</option>
+                                                                <option value="29" >29</option>
+                                                                <option value="30" >30</option>
+                                                                <option value="31" >31</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            -->
 
             <div class="bg-white input-box-default">
                 <span class="title-span">위치</span>
@@ -748,12 +1039,49 @@
         }
     }
 
+    function DropDownDateStartPicker(el) {
+        this.dd = el;
+        this.initEvents();
+    }
+
+    DropDownDateStartPicker.prototype = {
+        initEvents : function() {
+            var obj = this;
+
+            obj.dd.on('click', function(event){
+                $(this).addClass('active');
+                event.stopPropagation();
+                changeHeightDueDateStartDiv();
+            });
+        }
+    }
+
+    function DropDownDateEndPicker(el) {
+        this.dd = el;
+        this.initEvents();
+    }
+
+    DropDownDateEndPicker.prototype = {
+        initEvents : function() {
+            var obj = this;
+
+            obj.dd.on('click', function(event){
+                $(this).addClass('active');
+                event.stopPropagation();
+                changeHeightDueDateEndDiv();
+            });
+        }
+    }
+
     $(function() {
         var yearDropDown = new DropDownCat( $('#cat_first_drop_down') );
         var monthDropDown = new DropDownCat( $('#cat_second_drop_down') );
         var dayDropDown = new DropDownCat( $('#cat_third_drop_down') );
         var districtDropDown = new DropDownAddr( $('#district_drop_down') );
-        var cityDropDown = new DropDownAddr( $('#city_drop_down ') );
+        var cityDropDown = new DropDownAddr( $('#city_drop_down') );
+
+        var datePickerStartDropDown = new DropDownDateStartPicker( $('#date_picker_start_drop_down') );
+        var datePickerEndDropDown = new DropDownDateEndPicker( $('#date_picker_end_drop_down') );
 
         // 화면 아무 곳이나 찍었을 때 active 삭제
         $(document).click(function() {
@@ -761,6 +1089,7 @@
             $('.wrapper-dropdown').removeClass('active');
             $('#transport_div').css('height', '88');
             $('#address_div').css('height', '88');
+            $('#date_div').css('height', '106');
         });
 
     });
@@ -829,7 +1158,100 @@
         }
     }
 
+    function changeHeightDueDateStartDiv() {
+        var numDueStartDropDownActive = $('#date_picker_start_drop_down.active').length;
+        if ($('#date_div').css('height') == '106px') { // closed
+            $('#date_div').css('height', '220px');
+        }
+        else {
+            if(numDueStartDropDownActive == 0)
+                $('#date_div').css('height', '106px');
+        }
+    }
+
+    function changeHeightDueDateEndDiv() {
+        var numDueEndDropDownActive = $('#date_picker_end_drop_down.active').length;
+        if ($('#date_div').css('height') == '106px') { // closed
+            $('#date_div').css('height', '220px');
+        }
+        else {
+            if(numDueEndDropDownActive == 0)
+                $('#date_div').css('height', '106px');
+        }
+    }
+
+    $("#start_year_select").change(function(){
+        $("#start_year_text").text($(this).val() + "년");
+    });
+
+    $("#start_month_select").change(function(){
+        $("#start_month_text").text($(this).val() + "월");
+    });
+
+    $("#start_date_select").change(function(){
+        $("#start_date_text").text($(this).val() + "일");
+    });
+
+    $("#end_year_select").change(function(){
+        $("#end_year_text").text($(this).val() + "년");
+    });
+
+    $("#end_month_select").change(function(){
+        $("#end_month_text").text($(this).val() + "월");
+    });
+
+    $("#end_date_select").change(function(){
+        $("#end_date_text").text($(this).val() + "일");
+    });
+
+    $("#mobile_select").selectmenu();
+
 </script>
+
+<style>
+    /* date picker */
+    .due-date-start {
+        border-top: 1px solid;
+        border-left: 1px solid #f08b68;
+        border-right: 1px solid #f08b68;
+        border-bottom: 1px solid #f08b68;
+    }
+
+    .due-date-end {
+        border-top: 1px solid;
+        border-left: 1px solid #f08b68;
+        border-right: 1px solid #f08b68;
+        border-bottom: 1px solid #f08b68;
+    }
+
+    #ul_date_picker_start {
+        overflow: hidden;
+        height: 120px;
+    }
+
+    #ul_date_picker_end {
+        overflow: hidden;
+        height: 120px;
+    }
+
+    .due-date-style-td {
+        width: 33.33%;
+        height: 108px;
+    }
+
+    .due-date-style-select {
+        width: 100%;
+        border: none;
+        outline: none;
+        text-indent: 6px;
+        padding: 0;
+        margin: 0;
+        color: #f08b68;
+        background: white;
+    }
+
+</style>
+
 </body>
 </html>
 
