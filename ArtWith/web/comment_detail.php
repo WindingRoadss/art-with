@@ -141,14 +141,14 @@
 
         .swiper-container-popup {
             width: 100%;
-            height: 350px;
+            height: 370px;
             margin-left: auto;
             margin-right: auto;
         }
 
         .swiper-slide-popup {
             width: 95%;
-            height: 350px;
+            height: 380px;
         }
 
         .swiper-slide-no-center {
@@ -364,26 +364,26 @@
         }
 
         .share-info-table-th {
-            padding-left: 10px;
-            padding-top: 10px;
+            padding: 5px;
+            width: 35%;
+            font-size: 0.9em;
         }
 
         .share-info-table-td {
-            padding-left: 13px; padding-top : 5px;
-            padding-right: 10px;
+            padding: 5px;
             font-weight: bold;
+            font-size: 0.9em;
             color: #848587;
-            padding-top: 5px;
+            line-height: 1.5em;
+            padding-left: 10px;
         }
 
         .comment-info-bottom-comment {
             position: absolute;
             bottom: 0;
-
-            border-bottom-left-radius: 5px;
-            border-bottom-right-radius: 5px;
             height: 12%;
             width: 100%;
+            line-height: 1.5em;
             background-color: #ec6b3e;
             color: white;
             font-size: 13px;
@@ -438,6 +438,10 @@
 
         .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
             background-color: white;
+        }
+
+        .ui-body-a, .ui-page-theme-a .ui-body-inherit, html .ui-bar-a .ui-body-inherit, html .ui-body-a .ui-body-inherit, html body .ui-group-theme-a .ui-body-inherit, html .ui-panel-page-container-a {
+            text-shadow: none;
         }
 
     </style>
@@ -552,16 +556,16 @@
 							<table class="share-info-table">
 								<tr>
 									<td class="share-info-table-head" valign="middle">선택
-											<a href="#" data-rel="back"><img src="images/design/img_x.png" style="position: absolute; right: 10px; top: 15px;  width: 30px; height: 30px;"></a>
+                                        <a href="#" data-rel="back"><img src="images/design/img_x.png" style="position: absolute; right: 10px; top: 15px;  width: 30px; height: 30px;"></a>
 									</td>
 								</tr>
 							 </table>
-									<div style="position: relative; top: 20px; font-size: 14px; font-weight: bold;">[나눔댓글 정보확인]</div>
-							<table class="share-info-table" style="position: relative; top: 55px;">
+                            <div style="position: relative; top: 20px; font-size: 14px; font-weight: bold;">[나눔댓글 정보확인]</div>
+                            <table class="share-info-table" style="position: relative; top: 45px; padding-right: 20px; padding-left: 20px;">
 
 								<tr>
-									<th style="width: 35%; padding-left: 10px;">요청자ID</th>
-									<td style="width: 65%; padding-left: 13px; font-weight: bold; color: #848587;">내가기부왕</td>
+                                    <th style="font-size: 0.9em; width: 35%; padding-bottom: 5px; padding-left: 5px; padding-right: 5px;">요청자ID</th>
+                                    <td style="width: 65%; padding-left: 10px; padding-bottom: 5px; font-weight: bold; font-size: 0.9em; color: #848587; line-height: 1.5em;">내가기부왕</td>
 								</tr>
 								<tr>
 									<th class="share-info-table-th">배송가능날짜</th>
@@ -579,7 +583,7 @@
 								</tr>
 								<tr>
 									<th class="share-info-table-th">하고싶은말</th>
-									<td class="share-info-table-td">기본 한복도 이쁜데 좀 더 리폼하면<br> 더 이쁠 거
+									<td class="share-info-table-td">기본 한복도 이쁜데 좀 더 리폼하면 더 이쁠 거
 										같아요~
 									</td>
 								</tr>
@@ -596,27 +600,31 @@
 									</td>
 								</tr>
 							 </table>
-									<div style="position: relative; top: 20px; font-size: 14px; font-weight: bold;">[나눔혜택 정보확인]</div>
-							<table class="share-info-table" style="position: relative; top: 55px;">
+                            <div style="position: relative; top: 20px; font-size: 14px; font-weight: bold;">[나눔혜택 정보확인]</div>
+							<table class="share-info-table" style="position: relative; top: 45px; padding-right: 20px; padding-left: 20px;">
 
 								<tr>
-									<th style="width: 35%; padding-left: 30px;">혜택명</th>
-									<td style="width: 65%; padding-left: 13px; font-weight: bold; color: #848587;">마술가게</td>
+                                    <th style="font-size: 0.9em; width: 35%; padding-bottom: 5px; padding-left: 5px; padding-right: 5px;">혜택명</th>
+                                    <td style="width: 65%; padding-left: 10px; padding-bottom: 5px; font-weight: bold; font-size: 0.9em; color: #848587; line-height: 1.5em;">마술가게</td>
 								</tr>
 								<tr>
-									<th class="share-info-table-th" style="padding-left: 30px;">일시</th>
+									<th class="share-info-table-th">일시</th>
 									<td class="share-info-table-td">2016.10.10 - 2016.11.25</td>
 								</tr>
 								<tr>
-									<th class="share-info-table-th" style="padding-left: 30px;">위치</th>
+									<th class="share-info-table-th">위치</th>
 									<td class="share-info-table-td">두레홀 4관</td>
 								</tr>
 								<tr>
-									<th class="share-info-table-th" style="padding-left: 30px;">상세설명</th>
-									<td class="share-info-table-td">극단두레 </td>							
+									<th class="share-info-table-th">상세설명</th>
+									<td class="share-info-table-td">3장 </td>
 								</tr>
+                                <tr>
+                                    <th class="share-info-table-th">소속</th>
+                                    <td class="share-info-table-td">극단 두레</td>
+                                </tr>
 								<tr>
-									<th class="share-info-table-th" style="padding-left: 30px;">대표자</th>
+									<th class="share-info-table-th">대표자</th>
 									<td class="share-info-table-td">김원봉 </td>
 								</tr>
 							</table>
@@ -628,13 +636,11 @@
             </div>
 
             <div id="share_btn_set" class="center-img-frame" style="width: 100%; height: 50px">
-                <a href="#" data-rel="back"><img style="width: 120px; height: auto;" src="images/design/img_cancel.png"></a>
-                <a id="btn_next" href="#"><img style="width: 120px; height: auto; margin-left: 15px" src="images/design/img_next.png" ></a>
+                <a id="btn_next" href="#"><img style="width: 120px; height: auto;" src="images/design/img_next.png" ></a>
             </div>
 
             <div id="ticket_btn_set" class="center-img-frame" style="width: 100%; height: 50px; display: none">
-                <a id="btn_prev" href="#" ><img style="width: 120px; height: auto;" src="images/design/img_back.png"></a>
-                <a href="#" data-rel="back"><img style="width: 120px; height: auto; margin-left: 15px" src="images/design/img_ok.png" ></a>
+                <a href="#" data-rel="back"><img style="width: 120px; height: auto;" src="images/design/img_ok.png" ></a>
             </div>
 
             <div class="comment-info-bottom-comment">* 확인을 누르시면 나눔자 선택이 완료되어<br>
@@ -946,6 +952,7 @@
         $("#share_info_div_one").removeAttr("align-items");*/
 
     </script>
+
 </body>
 </html>
 
