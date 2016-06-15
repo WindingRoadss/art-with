@@ -376,7 +376,7 @@
             padding-top: 5px;
         }
 
-        .share-info-bottom-comment {
+        .comment-info-bottom-comment {
             position: absolute;
             bottom: 0;
 
@@ -637,7 +637,7 @@
                 <a href="#" data-rel="back"><img style="width: 120px; height: auto; margin-left: 15px" src="images/design/img_ok.png" ></a>
             </div>
 
-            <div class="share-info-bottom-comment">* 확인을 누르시면 나눔자 선택이 완료되어<br>
+            <div class="comment-info-bottom-comment">* 확인을 누르시면 나눔자 선택이 완료되어<br>
                 MY에서 나눔 상세 내용을 확인할 수 있습니다.
             </div>
         </div>

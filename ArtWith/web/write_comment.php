@@ -74,6 +74,13 @@
         color: white
     }
 
+    .ui-body-a, .ui-page-theme-a .ui-body-inherit, html .ui-bar-a .ui-body-inherit, html .ui-body-a .ui-body-inherit, html body .ui-group-theme-a .ui-body-inherit, html .ui-panel-page-container-a {
+        background-color: white;
+        border-color: transparent;
+        color: transparent;
+        text-shadow: 0;
+    }
+
     /* Art-With 전용 CSS */
     @font-face {
         font-family:"Nanum Gothic";
@@ -484,113 +491,61 @@
     <div data-role="popup" id="popup_next" data-dismissible="false" style="width: 300px; height: 500px; border-width: 1;" data-overlay-theme="b">
         <div class="swiper-container swiper-container-popup">
             <div class="swiper-wrapper">
-                <div id="share_info_div_one" class="swiper-slide swiper-slide-popup">
-                    <div style="width: 100%; position: absolute; top: 0; left: 0;">
-                        <table class="share-info-table">
-                            <tr>
-                                <td class="share-info-table-head" valign="middle">나눔윗 요청확인
-                                    <a href="#" data-rel="back"><img src="images/design/img_x.png" style="position: absolute; right: 10px; top: 15px;  width: 30px; height: 30px;"></a>
-                                </td>
-                            </tr>
-                        </table>
-                        <div style="position: relative; top: 10px; font-size: 14px; font-weight: bold;">[물품정보]</div>
-                        <table class="share-info-table" style="position: relative; top: 22px; padding-right: 20px; padding-left: 20px;">
-                            <tr>
-                                <th style="font-size: 0.9em; width: 35%; padding-bottom: 5px; padding-left: 5px; padding-right: 5px;">대표이미지</th>
-                                <td>
-                                    <div class="represent-img-wrapper">
-                                        <div class="product-represent-img"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="share-info-table-th">카테고리</th>
-                                <td class="share-info-table-td">의상 > 전통의상 > 여성한복</td>
-                            </tr>
-                            <tr>
-                                <th class="share-info-table-th">태그</th>
-                                <td class="share-info-table-td">#화려한 #궁중의상 #왕비</td>
-                            </tr>
-                            <tr>
-                                <th class="share-info-table-th">거래가능지역</th>
-                                <td class="share-info-table-td">서울시 동대문구
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="share-info-table-th">물품설명</th>
-                                <td class="share-info-table-td">저희 연극이 의상실이 배경인데 화려한 여성한복을 구하기 재정상 어렵습니다. 화려한 여성한복이면 됩니다~
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
 
                 <div id="share_info_div_two" class="swiper-slide swiper-slide-popup">
                     <div style="width: 100%; position: absolute; top: 0; left: 0;">
                         <table class="share-info-table">
                             <tr>
-                                <td class="share-info-table-head" valign="middle">나눔윗 요청확인
-                                    <a href="#" data-rel="back"><img src="images/design/img_x.png" style="position: absolute; right: 10px; top: 15px;  width: 30px; height: 30px;"></a>
+                                <td class="share-info-table-head" valign="middle">나눔댓글 정보확인
+                                    <a href="#" data-rel="back"><img src="images/design/img_x.png" style="position: absolute; right: 15px; top: 15px;  width: 30px; height: 30px;"></a>
                                 </td>
                             </tr>
                         </table>
-                        <div style="position: relative; top: 10px; font-size: 14px; font-weight: bold;">[나눔혜택정보]</div>
                         <table class="share-info-table" style="position: relative; top: 22px; padding-right: 20px; padding-left: 20px;">
                             <tr>
-                                <th style="font-size: 0.9em; width: 35%; padding-bottom: 5px; padding-left: 5px; padding-right: 5px;">나눔혜택</th>
-                                <td style="width: 65%;" class="share-info-table-td">티켓</td>
+                                <th style="font-size: 0.9em; width: 35%; padding-bottom: 5px; padding-left: 5px; padding-right: 5px;">요청자ID</th>
+                                <td style="width: 65%; padding-left: 10px; padding-bottom: 5px; font-weight: bold; font-size: 0.9em; color: #848587; line-height: 1.5em;">내가기부왕</td>
                             </tr>
                             <tr>
-                                <th class="share-info-table-th">혜택명</th>
-                                <td class="share-info-table-td">작업의 정석</td>
+                                <th class="share-info-table-th">배송가능날짜</th>
+                                <td class="share-info-table-td">2016.06.01</td>
                             </tr>
                             <tr>
-                                <th class="share-info-table-th">일시</th>
-                                <td class="share-info-table-td">2016.06.22</td>
+                                <th class="share-info-table-th">거래가능지역</th>
+                                <td class="share-info-table-td">서울시 노원구</td>
                             </tr>
                             <tr>
-                                <th class="share-info-table-th">위치</th>
-                                <td class="share-info-table-td">서울시 동대문구 제기동<br>동아플라자 2층</td>
+                                <th class="share-info-table-th">물품설명</th>
+                                <td class="share-info-table-td">비싼 돈주고 하나 장만했지만 입을 일이 없었습니다.</td>
                             </tr>
                             <tr>
-                                <th class="share-info-table-th">상세설명</th>
-                                <td class="share-info-table-td">연극티켓 2장 드려요~ </td>
-                            </tr>
-                            <tr>
-                                <th class="share-info-table-th">소속</th>
-                                <td class="share-info-table-td">단체</td>
-                            </tr>
-                            <tr>
-                                <th class="share-info-table-th">대표자</th>
-                                <td class="share-info-table-td">김원봉 </td>
+                                <th class="share-info-table-th">하고싶은말</th>
+                                <td class="share-info-table-td">기본 한복도 이쁜데 좀 더 리폼하면 더 이쁠 거 같아요</td>
                             </tr>
                         </table>
                     </div>
                 </div>
             </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
         </div>
 
-        <div id="share_btn_set" class="center-img-frame" style="width: 100%; height: 50px">
-            <a id="btn_next" href="#"><img style="width: 120px; height: auto;" src="images/design/img_next.png" ></a>
-        </div>
-
-        <div id="ticket_btn_set" class="center-img-frame" style="width: 100%; height: 50px; display: none">
+        <div class="center-img-frame" style="width: 100%; height: 50px;">
             <a href="#" data-rel="back"><img style="width: 120px; height: auto;" src="images/design/img_okk.png" ></a>
         </div>
 
-        <div class="share-info-bottom-comment">
-            * 나눔 요청에 대한 내용을 재확인해주세요.
+        <div class="comment-info-bottom-comment">
+            * 확인을 누르시면 나눔자 선택이 완료되어<br>
+            MY 에서 나눔 상세 내용을 확인할 수 있습니다.
         </div>
     </div>
     <!-- end popup -->
 
     <div data-role="footer" data-position="fixed" data-tap-toggle="false" style="border: none;">
         <div id="fixed-bottom-btn" style="width: 100%">
-            <div>
-                <span> 완료 </span>
-            </div>
+            <a id="btn_finish" href="#popup_next" data-rel="popup" data-position-to="window">
+                <div>
+                    <span> 완료 </span>
+                </div>
+            </a>
         </div>
     </div>
 
@@ -781,7 +736,7 @@
     }
 
     function changeHeightAddrDiv() {
-        var numAddrDropDownActive = $('#address_div.active').length;
+        var numAddrDropDownActive = $('#address_div .active').length;
 
         if ($('#address_div').css('height') == '88px') { // closed
             $('#address_div').css('height', '250px');
@@ -792,7 +747,210 @@
         }
     }
 
+    /* 팝업 관련 */
+    var swiper_popup = new Swiper('.swiper-container-popup', {
+        slidesPerView: 1,
+        paginationClickable: true,
+        pagination: '.swiper-pagination',
+        onSlideChangeEnd: function() {
+            changeButtons();
+        }
+    });
+
+    function checkActiveIndex() {
+        if(swiper_popup.activeIndex == 0)
+            return 0;
+        else
+            return 1;
+    }
+
+    function loadRepresentImage() {
+        var url = $(".product-img").first().css( "backgroundImage");
+        //alert(url);
+        setImageInImgDiv(".product-represent-img", url)
+    }
+
+    function setImageInImgDiv(imgDivId, imgURL) {
+        $(imgDivId).each(function() {
+            $(this).css('backgroundImage', imgURL);
+        });
+    }
+
 </script>
+
+
+<style>
+    /* 팝업 관련 */
+    .share-info-table {
+        width: 100%;
+        font-size: 14px;
+        border-spacing: 0;
+    }
+
+    .share-info-table-left tr th {
+        padding-left: 20px;
+        padding-top: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .share-info-table-right tr td {
+        padding-left: 13px;
+        padding-top: 10px;
+        text-align: left;
+        font-weight: bold;
+        color: #848587;
+    }
+
+    .share-info-table tr th {
+        text-align: left;
+        vertical-align: top;
+        border-right: 1pt solid lightgray;
+    }
+
+    .share-info-table-th {
+        padding: 5px;
+        width: 35%;
+        font-size: 0.9em;
+    }
+
+    .share-info-table-td {
+        padding: 5px;
+        font-weight: bold;
+        font-size: 0.9em;
+        color: #848587;
+        line-height: 1.5em;
+        padding-left: 10px;
+    }
+
+    .comment-info-bottom-comment {
+        position: absolute;
+        bottom: 0;
+        height: 12%;
+        width: 100%;
+        line-height: 1.5em;
+        background-color: #ec6b3e;
+        color: white;
+        text-shadow: none;
+        font-size: 13px;
+        font-weight: normal;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .share-info-table-head {
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        border-bottom: 2pt solid #e3e5e6;
+        height: 65px;
+    }
+
+    .swiper-container-popup {
+        width: 100%;
+        height: 370px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .swiper-slide-popup {
+        width: 95%;
+        height: 380px;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        border-style: solid;
+        border: 0px;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+
+    .button-set {
+        margin-top: 20px;
+        text-align: center;
+        height: 60px;
+        width: 100%;
+    }
+
+    .center-img-frame {
+        height: 140px;      /* equals max image height */
+        width: 100%;
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    .center-img-frame:before,
+    .center-img-frame_before {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+
+    .center-img-frame img {
+        vertical-align: middle;
+        height: 58.5px;
+        wodth: 58.5px;
+    }
+
+    /* Move this to conditional comments */
+    .center-img-frame {
+        list-style:none;
+        behavior: expression(
+                function(t){
+                    t.insertAdjacentHTML('afterBegin','<span class="center-img-frame_before"></span>');
+                    t.runtimeStyle.behavior = 'none';
+                }(this)
+            );
+    }
+
+    .represent-img-wrapper {
+        display: table;
+        margin-left: 10px;
+        padding-bottom: 5px;
+    }
+
+    .represent-img-wrapper div {
+        height: 59px; /* width 계산 후 height 값 세팅(jquery) */
+        width: 59px;
+        display: table-cell;
+        border: solid grey 1px;
+        border-radius: 5px;
+        padding: 0px;
+        top: 0px;
+    }
+
+    .product-represent-img {
+        background-position: center top;
+        background-size: 100% auto;
+    }
+
+</style>
+
 </body>
 </html>
 

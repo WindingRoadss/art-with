@@ -467,8 +467,8 @@
                                     <span>전체</span>
                                     <ul class="dropdown" id="ul_cat_first">
                                         <li><a href="#">전체</a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
+                                        <li><a href="#">의상</a></li>
+                                        <li><a href="#">소품</a></li>
                                         <li><a href="#"></a></li>
                                         <li><a href="#"></a></li>
                                         <li><a href="#"></a></li>
@@ -488,9 +488,9 @@
                                     <span>전체</span>
                                     <ul class="dropdown" id="ul_cat_second">
                                         <li><a href="#">전체</a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
+                                        <li><a href="#">일반의상</a></li>
+                                        <li><a href="#">전통의상</a></li>
+                                        <li><a href="#">컨셉의상</a></li>
                                         <li><a href="#"></a></li>
                                         <li><a href="#"></a></li>
                                         <li><a href="#"></a></li>
@@ -509,10 +509,10 @@
                                     <span>전체</span>
                                     <ul class="dropdown" id="ul_cat_third">
                                         <li><a href="#">전체</a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
-                                        <li><a href="#"></a></li>
+                                        <li><a href="#">여성한복</a></li>
+                                        <li><a href="#">남성한복</a></li>
+                                        <li><a href="#">전통잡화</a></li>
+                                        <li><a href="#">시대의상</a></li>
                                         <li><a href="#"></a></li>
                                         <li><a href="#"></a></li>
                                         <li><a href="#"></a></li>
@@ -818,7 +818,7 @@
                         <table class="share-info-table" style="position: relative; top: 22px; padding-right: 20px; padding-left: 20px;">
                             <tr>
                                 <th style="font-size: 0.9em; width: 35%; padding-bottom: 5px; padding-left: 5px; padding-right: 5px;">나눔혜택</th>
-                                <td style="width: 65%;" class="share-info-table-td">티켓</td>
+                                <td style="width: 65%; padding-left: 10px; padding-bottom: 5px; font-weight: bold; font-size: 0.9em; color: #848587; line-height: 1.5em;">티켓</td>
                             </tr>
                             <tr>
                                 <th class="share-info-table-th">혜택명</th>
@@ -860,7 +860,7 @@
             <a href="#" data-rel="back"><img style="width: 120px; height: auto;" src="images/design/img_okk.png" ></a>
         </div>
 
-        <div class="share-info-bottom-comment">
+        <div class="comment-info-bottom-comment">
             * 나눔 요청에 대한 내용을 재확인해주세요.
         </div>
     </div>
@@ -893,15 +893,6 @@
             success:function(data){
                 //alert("success");
                 window.location='comment_detail.php';
-            }
-        })
-    })
-
-    $('#btn_main_next').click(function(){
-        $.ajax({
-            async:true,
-            success:function(data){
-                loadRepresentImage();
             }
         })
     })
@@ -1218,6 +1209,15 @@
     });
 
     /* 팝업 관련 */
+    $('#btn_main_next').click(function(){
+        $.ajax({
+            async:true,
+            success:function(data){
+                loadRepresentImage();
+            }
+        })
+    })
+
     var swiper_popup = new Swiper('.swiper-container-popup', {
         slidesPerView: 1,
         paginationClickable: true,
@@ -1407,7 +1407,7 @@
         padding-left: 10px;
     }
 
-    .share-info-bottom-comment {
+    .comment-info-bottom-comment {
         position: absolute;
         bottom: 0;
         height: 12%;
