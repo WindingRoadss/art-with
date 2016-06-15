@@ -117,6 +117,21 @@
         border: 0;
     }
 
+    .ui-body-a, .ui-page-theme-a .ui-body-inherit, html .ui-bar-a .ui-body-inherit, html .ui-body-a .ui-body-inherit, html body .ui-group-theme-a .ui-body-inherit, html .ui-panel-page-container-a {
+        background-color: #fff /*{a-body-background-color}*/;
+        border-color: #ddd /*{a-body-border}*/;
+        color: #333 /*{a-body-color}*/;
+        text-shadow: 0 /*{a-body-shadow-x}*/ 1px /*{a-body-shadow-y}*/ 0 /*{a-body-shadow-radius}*/ #f3f3f3 /*{a-body-shadow-color}*/;
+    }
+    .ui-popup {
+        position: relative;
+    }
+    .ui-overlay-shadow {
+        -webkit-box-shadow: 0 0 12px rgba(0,0,0,.6);
+        -moz-box-shadow: 0 0 12px rgba(0,0,0,.6);
+        box-shadow: 0 0 12px rgba(0,0,0,.6);
+    }
+
     body, input, select, textarea, button, .ui-btn {
         font-size: 0.8em;
         /* line-height: 1.3; */
@@ -730,189 +745,6 @@
                 </div>
             </div>
 
-            <!--
-            <div class="bg-white input-box-default" id="date_div">
-                <span class="title-span">일시</span>
-                <hr/>
-
-                <span class="description-span">
-                    나눔혜택을 제공할 수 있는 일시를 적어주세요.
-                </span>
-
-                <div class="wrapper-div">
-                    <table style="width: 100%; margin: 5 0 0 0; padding: 0;">
-                        <tr>
-                            <td style="width: 45%;">
-                                <div id="date_picker_start_drop_down" class="wrapper-dropdown" tabindex="1" >
-                                    <span id="start_year_text">2016년</span>
-                                    <span id="start_month_text">6월</span>
-                                    <span id="start_date_text">15일</span>
-                                    <ul class="dropdown" id="ul_date_picker_start">
-                                        <li>
-                                            <div class="due-date-start" style="width: 100%;">
-                                                <table style="width: 100%; margin: 0; padding: 0; border: 0; border-spacing: 0;">
-                                                    <tr>
-                                                        <td class="due-date-style-td">
-                                                            <select id="start_year_select" data-role="none" size="6" class="due-date-style-select">
-                                                                <option value="2016" >2016</option>
-                                                                <option value="2015" >2015</option>
-                                                                <option value="2014" >2014</option>
-                                                                <option value="2013" >2013</option>
-                                                                <option value="2012" >2012</option>
-                                                                <option value="2011" >2011</option>
-                                                                <option value="2010" >2010</option>
-                                                                <option value="2009" >2009</option>
-                                                            </select>
-                                                        </td>
-                                                        <td class="due-date-style-td">
-                                                            <select id="start_month_select" data-role="none" size="6" class="due-date-style-select">
-                                                                <option value="1" >1</option>
-                                                                <option value="2" >2</option>
-                                                                <option value="3" >3</option>
-                                                                <option value="4" >4</option>
-                                                                <option value="5" >5</option>
-                                                                <option value="6" >6</option>
-                                                                <option value="7" >7</option>
-                                                                <option value="8" >8</option>
-                                                                <option value="9" >9</option>
-                                                                <option value="10" >10</option>
-                                                                <option value="11" >11</option>
-                                                                <option value="12" >12</option>
-                                                            </select>
-                                                        </td>
-                                                        <td class="due-date-style-td">
-                                                            <select id="start_date_select" data-role="none" size="6" class="due-date-style-select">
-                                                                <option value="1" >1</option>
-                                                                <option value="2" >2</option>
-                                                                <option value="3" >3</option>
-                                                                <option value="4" >4</option>
-                                                                <option value="5" >5</option>
-                                                                <option value="6" >6</option>
-                                                                <option value="7" >7</option>
-                                                                <option value="8" >8</option>
-                                                                <option value="9" >9</option>
-                                                                <option value="10" >10</option>
-                                                                <option value="11" >11</option>
-                                                                <option value="12" >12</option>
-                                                                <option value="13" >13</option>
-                                                                <option value="14" >14</option>
-                                                                <option value="15" >15</option>
-                                                                <option value="16" >16</option>
-                                                                <option value="17" >17</option>
-                                                                <option value="18" >18</option>
-                                                                <option value="19" >19</option>
-                                                                <option value="20" >20</option>
-                                                                <option value="21" >21</option>
-                                                                <option value="22" >22</option>
-                                                                <option value="23" >23</option>
-                                                                <option value="24" >24</option>
-                                                                <option value="25" >25</option>
-                                                                <option value="26" >26</option>
-                                                                <option value="27" >27</option>
-                                                                <option value="28" >28</option>
-                                                                <option value="29" >29</option>
-                                                                <option value="30" >30</option>
-                                                                <option value="31" >31</option>
-                                                            </select>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </td>
-
-                            <td style="width: 10%; text-align: center">
-                                <span style="color: #f08b68; font-size: 20px">―</span>
-                            </td>
-
-                            <td style="width: 45%;">
-                                <div id="date_picker_end_drop_down" class="wrapper-dropdown" tabindex="1" >
-                                    <span id="end_year_text">2016년</span>
-                                    <span id="end_month_text">6월</span>
-                                    <span id="end_date_text">15일</span>
-                                    <ul class="dropdown" id="ul_date_picker_end">
-                                        <li>
-                                            <div class="due-date-end" style="width: 100%;">
-                                                <table style="width: 100%; margin: 0; padding: 0; border: 0; border-spacing: 0;">
-                                                    <tr>
-                                                        <td class="due-date-style-td">
-                                                            <select id="end_year_select" data-role="none" size="6" class="due-date-style-select">
-                                                                <option value="2016" >2016</option>
-                                                                <option value="2015" >2015</option>
-                                                                <option value="2014" >2014</option>
-                                                                <option value="2013" >2013</option>
-                                                                <option value="2012" >2012</option>
-                                                                <option value="2011" >2011</option>
-                                                                <option value="2010" >2010</option>
-                                                                <option value="2009" >2009</option>
-                                                            </select>
-                                                        </td>
-                                                        <td class="due-date-style-td">
-                                                            <select id="end_month_select" data-role="none" size="6" class="due-date-style-select">
-                                                                <option value="1" >1</option>
-                                                                <option value="2" >2</option>
-                                                                <option value="3" >3</option>
-                                                                <option value="4" >4</option>
-                                                                <option value="5" >5</option>
-                                                                <option value="6" >6</option>
-                                                                <option value="7" >7</option>
-                                                                <option value="8" >8</option>
-                                                                <option value="9" >9</option>
-                                                                <option value="10" >10</option>
-                                                                <option value="11" >11</option>
-                                                                <option value="12" >12</option>
-                                                            </select>
-                                                        </td>
-                                                        <td class="due-date-style-td">
-                                                            <select id="end_date_select" data-role="none" size="6" class="due-date-style-select">
-                                                                <option value="1" >1</option>
-                                                                <option value="2" >2</option>
-                                                                <option value="3" >3</option>
-                                                                <option value="4" >4</option>
-                                                                <option value="5" >5</option>
-                                                                <option value="6" >6</option>
-                                                                <option value="7" >7</option>
-                                                                <option value="8" >8</option>
-                                                                <option value="9" >9</option>
-                                                                <option value="10" >10</option>
-                                                                <option value="11" >11</option>
-                                                                <option value="12" >12</option>
-                                                                <option value="13" >13</option>
-                                                                <option value="14" >14</option>
-                                                                <option value="15" >15</option>
-                                                                <option value="16" >16</option>
-                                                                <option value="17" >17</option>
-                                                                <option value="18" >18</option>
-                                                                <option value="19" >19</option>
-                                                                <option value="20" >20</option>
-                                                                <option value="21" >21</option>
-                                                                <option value="22" >22</option>
-                                                                <option value="23" >23</option>
-                                                                <option value="24" >24</option>
-                                                                <option value="25" >25</option>
-                                                                <option value="26" >26</option>
-                                                                <option value="27" >27</option>
-                                                                <option value="28" >28</option>
-                                                                <option value="29" >29</option>
-                                                                <option value="30" >30</option>
-                                                                <option value="31" >31</option>
-                                                            </select>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-            -->
-
             <div class="bg-white input-box-default">
                 <span class="title-span">위치</span>
                 <hr/>
@@ -928,12 +760,119 @@
         </div>
     </div>
 
+    <!-- start popup -->
+    <div data-role="popup" id="popup_next" data-dismissible="false" style="width: 300px; height: 500px; border-width: 1;" data-overlay-theme="b">
+        <div class="swiper-container swiper-container-popup">
+            <div class="swiper-wrapper">
+                <div id="share_info_div_one" class="swiper-slide swiper-slide-popup">
+                    <div style="width: 100%; position: absolute; top: 0; left: 0;">
+                        <table class="share-info-table">
+                            <tr>
+                                <td class="share-info-table-head" valign="middle">나눔윗 요청확인
+                                    <a href="#" data-rel="back"><img src="images/design/img_x.png" style="position: absolute; right: 10px; top: 15px;  width: 30px; height: 30px;"></a>
+                                </td>
+                            </tr>
+                        </table>
+                        <div style="position: relative; top: 10px; font-size: 14px; font-weight: bold;">[물품정보]</div>
+                        <table class="share-info-table" style="position: relative; top: 22px; padding-right: 20px; padding-left: 20px;">
+                            <tr>
+                                <th style="font-size: 0.9em; width: 35%; padding-bottom: 5px; padding-left: 5px; padding-right: 5px;">대표이미지</th>
+                                <td>
+                                    <div class="represent-img-wrapper">
+                                        <div class="product-represent-img"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="share-info-table-th">카테고리</th>
+                                <td class="share-info-table-td">의상 > 전통의상 > 여성한복</td>
+                            </tr>
+                            <tr>
+                                <th class="share-info-table-th">태그</th>
+                                <td class="share-info-table-td">#화려한 #궁중의상 #왕비</td>
+                            </tr>
+                            <tr>
+                                <th class="share-info-table-th">거래가능지역</th>
+                                <td class="share-info-table-td">서울시 동대문구
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="share-info-table-th">물품설명</th>
+                                <td class="share-info-table-td">저희 연극이 의상실이 배경인데 화려한 여성한복을 구하기 재정상 어렵습니다. 화려한 여성한복이면 됩니다~
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="share_info_div_two" class="swiper-slide swiper-slide-popup">
+                    <div style="width: 100%; position: absolute; top: 0; left: 0;">
+                        <table class="share-info-table">
+                            <tr>
+                                <td class="share-info-table-head" valign="middle">나눔윗 요청확인
+                                    <a href="#" data-rel="back"><img src="images/design/img_x.png" style="position: absolute; right: 10px; top: 15px;  width: 30px; height: 30px;"></a>
+                                </td>
+                            </tr>
+                        </table>
+                        <div style="position: relative; top: 10px; font-size: 14px; font-weight: bold;">[나눔혜택정보]</div>
+                        <table class="share-info-table" style="position: relative; top: 22px; padding-right: 20px; padding-left: 20px;">
+                            <tr>
+                                <th style="font-size: 0.9em; width: 35%; padding-bottom: 5px; padding-left: 5px; padding-right: 5px;">나눔혜택</th>
+                                <td style="width: 65%;" class="share-info-table-td">티켓</td>
+                            </tr>
+                            <tr>
+                                <th class="share-info-table-th">혜택명</th>
+                                <td class="share-info-table-td">작업의 정석</td>
+                            </tr>
+                            <tr>
+                                <th class="share-info-table-th">일시</th>
+                                <td class="share-info-table-td">2016.06.22</td>
+                            </tr>
+                            <tr>
+                                <th class="share-info-table-th">위치</th>
+                                <td class="share-info-table-td">서울시 동대문구 제기동<br>동아플라자 2층</td>
+                            </tr>
+                            <tr>
+                                <th class="share-info-table-th">상세설명</th>
+                                <td class="share-info-table-td">연극티켓 2장 드려요~ </td>
+                            </tr>
+                            <tr>
+                                <th class="share-info-table-th">소속</th>
+                                <td class="share-info-table-td">단체</td>
+                            </tr>
+                            <tr>
+                                <th class="share-info-table-th">대표자</th>
+                                <td class="share-info-table-td">김원봉 </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div id="share_btn_set" class="center-img-frame" style="width: 100%; height: 50px">
+            <a id="btn_next" href="#"><img style="width: 120px; height: auto;" src="images/design/img_next.png" ></a>
+        </div>
+
+        <div id="ticket_btn_set" class="center-img-frame" style="width: 100%; height: 50px; display: none">
+            <a href="#" data-rel="back"><img style="width: 120px; height: auto;" src="images/design/img_okk.png" ></a>
+        </div>
+
+        <div class="share-info-bottom-comment">
+            * 나눔 요청에 대한 내용을 재확인해주세요.
+        </div>
+    </div>
+    <!-- end popup -->
 
     <div data-role="footer" data-position="fixed" data-tap-toggle="false" style="border: none;">
         <div id="fixed-bottom-btn" style="width: 100%">
-            <div>
-                <span> 다음 </span>
-            </div>
+            <a id="btn_main_next" href="#popup_next" data-rel="popup" data-position-to="window">
+                <div>
+                    <span> 다음 </span>
+                </div>
+            </a>
         </div>
     </div>
 
@@ -954,6 +893,15 @@
             success:function(data){
                 //alert("success");
                 window.location='comment_detail.php';
+            }
+        })
+    })
+
+    $('#btn_main_next').click(function(){
+        $.ajax({
+            async:true,
+            success:function(data){
+                loadRepresentImage();
             }
         })
     })
@@ -1269,6 +1217,104 @@
         });
     });
 
+    /* 팝업 관련 */
+    var swiper_popup = new Swiper('.swiper-container-popup', {
+        slidesPerView: 1,
+        paginationClickable: true,
+        pagination: '.swiper-pagination',
+        onSlideChangeEnd: function() {
+            changeButtons();
+        }
+    });
+
+    $('.swiper-container-popup').click(function(){
+        $.ajax({
+            async:true,
+            success:function(data){
+                //alert("success");
+                //$("#share_info_div_one").css("-webkit-box-pack", "");
+                //alert($("#share_info_div_one").css("-webkit-box-pack"));
+                //alert(swiper_popup.activeIndex);
+            }
+        })
+    })
+
+    $('#choice').click(function(){
+        $.ajax({
+            async:true,
+            success:function(data){
+                alert("success");
+                //$("#share_info_div_one").css("-webkit-box-pack", "");
+                //alert($("#share_info_div_one").css("-webkit-box-pack"));
+                alert(swiper_popup.activeIndex);
+            }
+        })
+    })
+
+    $('#btn_next').click(function(){
+        $.ajax({
+            async:true,
+            success:function(data){
+                nextSlide();
+                //alert(swiper_popup.activeIndex);
+            }
+        })
+    })
+
+    function nextSlide() {
+        //swiper_popup.slideNext(runCallbacks, speed);
+        swiper_popup.slideNext(false);
+        changeButtons();
+    }
+
+    $('#btn_prev').click(function(){
+        $.ajax({
+            async:true,
+            success:function(data){
+                prevSlide();
+                //alert(swiper_popup.activeIndex);
+            }
+        })
+    })
+
+    function prevSlide() {
+        swiper_popup.slidePrev(false);
+        changeButtons();
+    }
+
+
+    function checkActiveIndex() {
+        if(swiper_popup.activeIndex == 0)
+            return 0;
+        else
+            return 1;
+    }
+
+    function changeButtons() {
+        if(checkActiveIndex() == 1) {
+            //alert("index is 1");
+            $("#share_btn_set").css("display", "none");
+            $("#ticket_btn_set").css("display", "");
+        }
+        else {
+            //alert("index is 0");
+            $("#ticket_btn_set").css("display", "none");
+            $("#share_btn_set").css("display", "");
+        }
+    }
+
+    function loadRepresentImage() {
+        var url = $(".product-img").first().css( "backgroundImage");
+        //alert(url);
+        setImageInImgDiv(".product-represent-img", url)
+    }
+
+    function setImageInImgDiv(imgDivId, imgURL) {
+        $(imgDivId).each(function() {
+            $(this).css('backgroundImage', imgURL);
+        });
+    }
+
 </script>
 
 <style>
@@ -1315,6 +1361,175 @@
 
     a.date_select:hover {
         color: red;
+    }
+
+
+    /* 팝업 관련 */
+    .share-info-table {
+        width: 100%;
+        font-size: 14px;
+        border-spacing: 0;
+    }
+
+    .share-info-table-left tr th {
+        padding-left: 20px;
+        padding-top: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .share-info-table-right tr td {
+        padding-left: 13px;
+        padding-top: 10px;
+        text-align: left;
+        font-weight: bold;
+        color: #848587;
+    }
+
+    .share-info-table tr th {
+        text-align: left;
+        vertical-align: top;
+        border-right: 1pt solid lightgray;
+    }
+
+    .share-info-table-th {
+        padding: 5px;
+        width: 35%;
+        font-size: 0.9em;
+    }
+
+    .share-info-table-td {
+        padding: 5px;
+        font-weight: bold;
+        font-size: 0.9em;
+        color: #848587;
+        line-height: 1.5em;
+        padding-left: 10px;
+    }
+
+    .share-info-bottom-comment {
+        position: absolute;
+        bottom: 0;
+        height: 12%;
+        width: 100%;
+        background-color: #ec6b3e;
+        color: white;
+        text-shadow: none;
+        font-size: 13px;
+        font-weight: normal;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .share-info-table-head {
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        border-bottom: 2pt solid #e3e5e6;
+        height: 65px;
+    }
+
+    .swiper-container-popup {
+        width: 100%;
+        height: 370px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .swiper-slide-popup {
+        width: 95%;
+        height: 380px;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        border-style: solid;
+        border: 0px;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+
+    .button-set {
+        margin-top: 20px;
+        text-align: center;
+        height: 60px;
+        width: 100%;
+    }
+
+    .center-img-frame {
+        height: 140px;      /* equals max image height */
+        width: 100%;
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    .center-img-frame:before,
+    .center-img-frame_before {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+
+    .center-img-frame img {
+        vertical-align: middle;
+        height: 58.5px;
+        wodth: 58.5px;
+    }
+
+    /* Move this to conditional comments */
+    .center-img-frame {
+        list-style:none;
+        behavior: expression(
+                function(t){
+                    t.insertAdjacentHTML('afterBegin','<span class="center-img-frame_before"></span>');
+                    t.runtimeStyle.behavior = 'none';
+                }(this)
+            );
+    }
+
+    .represent-img-wrapper {
+        display: table;
+        margin-left: 10px;
+        padding-bottom: 5px;
+    }
+
+    .represent-img-wrapper div {
+        height: 59px; /* width 계산 후 height 값 세팅(jquery) */
+        width: 59px;
+        display: table-cell;
+        border: solid grey 1px;
+        border-radius: 5px;
+        padding: 0px;
+        top: 0px;
+    }
+
+    .product-represent-img {
+        background-position: center top;
+        background-size: 100% auto;
     }
 
 </style>

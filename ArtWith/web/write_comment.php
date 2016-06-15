@@ -480,6 +480,112 @@
         <input id="textBoxMessage" type="text" placeholder="나눔을 하게 된 이유나 기타 하고 싶은 말이 있다면 작성해주세요." maxlength="200">
     </div>
 
+    <!-- start popup -->
+    <div data-role="popup" id="popup_next" data-dismissible="false" style="width: 300px; height: 500px; border-width: 1;" data-overlay-theme="b">
+        <div class="swiper-container swiper-container-popup">
+            <div class="swiper-wrapper">
+                <div id="share_info_div_one" class="swiper-slide swiper-slide-popup">
+                    <div style="width: 100%; position: absolute; top: 0; left: 0;">
+                        <table class="share-info-table">
+                            <tr>
+                                <td class="share-info-table-head" valign="middle">나눔윗 요청확인
+                                    <a href="#" data-rel="back"><img src="images/design/img_x.png" style="position: absolute; right: 10px; top: 15px;  width: 30px; height: 30px;"></a>
+                                </td>
+                            </tr>
+                        </table>
+                        <div style="position: relative; top: 10px; font-size: 14px; font-weight: bold;">[물품정보]</div>
+                        <table class="share-info-table" style="position: relative; top: 22px; padding-right: 20px; padding-left: 20px;">
+                            <tr>
+                                <th style="font-size: 0.9em; width: 35%; padding-bottom: 5px; padding-left: 5px; padding-right: 5px;">대표이미지</th>
+                                <td>
+                                    <div class="represent-img-wrapper">
+                                        <div class="product-represent-img"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="share-info-table-th">카테고리</th>
+                                <td class="share-info-table-td">의상 > 전통의상 > 여성한복</td>
+                            </tr>
+                            <tr>
+                                <th class="share-info-table-th">태그</th>
+                                <td class="share-info-table-td">#화려한 #궁중의상 #왕비</td>
+                            </tr>
+                            <tr>
+                                <th class="share-info-table-th">거래가능지역</th>
+                                <td class="share-info-table-td">서울시 동대문구
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="share-info-table-th">물품설명</th>
+                                <td class="share-info-table-td">저희 연극이 의상실이 배경인데 화려한 여성한복을 구하기 재정상 어렵습니다. 화려한 여성한복이면 됩니다~
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="share_info_div_two" class="swiper-slide swiper-slide-popup">
+                    <div style="width: 100%; position: absolute; top: 0; left: 0;">
+                        <table class="share-info-table">
+                            <tr>
+                                <td class="share-info-table-head" valign="middle">나눔윗 요청확인
+                                    <a href="#" data-rel="back"><img src="images/design/img_x.png" style="position: absolute; right: 10px; top: 15px;  width: 30px; height: 30px;"></a>
+                                </td>
+                            </tr>
+                        </table>
+                        <div style="position: relative; top: 10px; font-size: 14px; font-weight: bold;">[나눔혜택정보]</div>
+                        <table class="share-info-table" style="position: relative; top: 22px; padding-right: 20px; padding-left: 20px;">
+                            <tr>
+                                <th style="font-size: 0.9em; width: 35%; padding-bottom: 5px; padding-left: 5px; padding-right: 5px;">나눔혜택</th>
+                                <td style="width: 65%;" class="share-info-table-td">티켓</td>
+                            </tr>
+                            <tr>
+                                <th class="share-info-table-th">혜택명</th>
+                                <td class="share-info-table-td">작업의 정석</td>
+                            </tr>
+                            <tr>
+                                <th class="share-info-table-th">일시</th>
+                                <td class="share-info-table-td">2016.06.22</td>
+                            </tr>
+                            <tr>
+                                <th class="share-info-table-th">위치</th>
+                                <td class="share-info-table-td">서울시 동대문구 제기동<br>동아플라자 2층</td>
+                            </tr>
+                            <tr>
+                                <th class="share-info-table-th">상세설명</th>
+                                <td class="share-info-table-td">연극티켓 2장 드려요~ </td>
+                            </tr>
+                            <tr>
+                                <th class="share-info-table-th">소속</th>
+                                <td class="share-info-table-td">단체</td>
+                            </tr>
+                            <tr>
+                                <th class="share-info-table-th">대표자</th>
+                                <td class="share-info-table-td">김원봉 </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div id="share_btn_set" class="center-img-frame" style="width: 100%; height: 50px">
+            <a id="btn_next" href="#"><img style="width: 120px; height: auto;" src="images/design/img_next.png" ></a>
+        </div>
+
+        <div id="ticket_btn_set" class="center-img-frame" style="width: 100%; height: 50px; display: none">
+            <a href="#" data-rel="back"><img style="width: 120px; height: auto;" src="images/design/img_okk.png" ></a>
+        </div>
+
+        <div class="share-info-bottom-comment">
+            * 나눔 요청에 대한 내용을 재확인해주세요.
+        </div>
+    </div>
+    <!-- end popup -->
+
     <div data-role="footer" data-position="fixed" data-tap-toggle="false" style="border: none;">
         <div id="fixed-bottom-btn" style="width: 100%">
             <div>

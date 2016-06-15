@@ -957,14 +957,19 @@
             if(valueIncOrDec == 0) { // Inc
                 currentNum++;
                 $('.cheer-info-span span').text(currentNum);
+                changeCheerSpanColor("#26b2c1")
                 //alert($('.cheer-info-span span').text());
             }
             else { // Dec
                 currentNum--;
                 $('.cheer-info-span span').text(currentNum);
+                changeCheerSpanColor("#848587")
             }
         }
 
+        function changeCheerSpanColor(color) {
+            $('.cheer-info-span').css("color", color);
+        }
 
         $('.cat-and-cheer-info-table tr td a').click(function(){
             $.ajax({

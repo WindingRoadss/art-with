@@ -379,6 +379,7 @@
         .share-info-bottom-comment {
             position: absolute;
             bottom: 0;
+
             border-bottom-left-radius: 5px;
             border-bottom-right-radius: 5px;
             height: 12%;
@@ -551,7 +552,7 @@
 							<table class="share-info-table">
 								<tr>
 									<td class="share-info-table-head" valign="middle">선택
-											<a href="#" data-rel="back"><img src="/images/design/img_x.png" style="position: absolute; right: 10px; top: 15px;  width: 30px; height: 30px;"></a> 
+											<a href="#" data-rel="back"><img src="images/design/img_x.png" style="position: absolute; right: 10px; top: 15px;  width: 30px; height: 30px;"></a>
 									</td>
 								</tr>
 							 </table>
@@ -591,7 +592,7 @@
                             <table class="share-info-table">
 								<tr>
 									<td class="share-info-table-head" valign="middle">선택
-											<a href="#" data-rel="back"><img src="/images/design/img_x.png" style="position: absolute; right: 10px; top: 15px;  width: 30px; height: 30px;"></a> 
+											<a href="#" data-rel="back"><img src="images/design/img_x.png" style="position: absolute; right: 10px; top: 15px;  width: 30px; height: 30px;"></a>
 									</td>
 								</tr>
 							 </table>
