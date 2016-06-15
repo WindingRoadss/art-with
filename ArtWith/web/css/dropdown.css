@@ -134,7 +134,7 @@
 
 /* Hover state */
 
-.wrapper-dropdown .dropdown li:hover a {
+.wrapper-dropdown .dropdown li a:hover {
     color: grey;
 }
 

@@ -570,68 +570,68 @@
                                             <div class="due-date-start" style="width: 100%;">
                                                 <table style="width: 100%; margin: 0; padding: 0; border: 0; border-spacing: 0;">
                                                     <tr>
-                                                        <td class="due-date-style-td">
-                                                            <select id="start_year_select" data-role="none" size="6" class="due-date-style-select">
-                                                                <option value="2016" >2016</option>
-                                                                <option value="2015" >2015</option>
-                                                                <option value="2014" >2014</option>
-                                                                <option value="2013" >2013</option>
-                                                                <option value="2012" >2012</option>
-                                                                <option value="2011" >2011</option>
-                                                                <option value="2010" >2010</option>
-                                                                <option value="2009" >2009</option>
-                                                            </select>
+                                                        <td class="due-date-style-td start-year">
+                                                            <ul style="overflow: auto; height: 100%; list-style: none; padding: 0;">
+                                                                <li><a class="date_select" href="#">2016</a></li>
+                                                                <li><a class="date_select" href="#">2015</a></li>
+                                                                <li><a class="date_select" href="#">2014</a></li>
+                                                                <li><a class="date_select" href="#">2013</a></li>
+                                                                <li><a class="date_select" href="#">2012</a></li>
+                                                                <li><a class="date_select" href="#">2011</a></li>
+                                                                <li><a class="date_select" href="#">2010</a></li>
+                                                                <li><a class="date_select" href="#">2009</a></li>
+                                                            </ul>
                                                         </td>
-                                                        <td class="due-date-style-td">
-                                                            <select id="start_month_select" data-role="none" size="6" class="due-date-style-select">
-                                                                <option value="1" >1</option>
-                                                                <option value="2" >2</option>
-                                                                <option value="3" >3</option>
-                                                                <option value="4" >4</option>
-                                                                <option value="5" >5</option>
-                                                                <option value="6" >6</option>
-                                                                <option value="7" >7</option>
-                                                                <option value="8" >8</option>
-                                                                <option value="9" >9</option>
-                                                                <option value="10" >10</option>
-                                                                <option value="11" >11</option>
-                                                                <option value="12" >12</option>
-                                                            </select>
+                                                        <td class="due-date-style-td start-month">
+                                                            <ul style="overflow: auto; height: 100%; list-style: none; padding: 0;">
+                                                                <li><a class="date_select" href="#">1</a></li>
+                                                                <li><a class="date_select" href="#">2</a></li>
+                                                                <li><a class="date_select" href="#">3</a></li>
+                                                                <li><a class="date_select" href="#">4</a></li>
+                                                                <li><a class="date_select" href="#">5</a></li>
+                                                                <li><a class="date_select" href="#">6</a></li>
+                                                                <li><a class="date_select" href="#">7</a></li>
+                                                                <li><a class="date_select" href="#">8</a></li>
+                                                                <li><a class="date_select" href="#">9</a></li>
+                                                                <li><a class="date_select" href="#">10</a></li>
+                                                                <li><a class="date_select" href="#">11</a></li>
+                                                                <li><a class="date_select" href="#">12</a></li>
+                                                            </ul>
                                                         </td>
-                                                        <td class="due-date-style-td">
-                                                            <select id="start_date_select" data-role="none" size="6" class="due-date-style-select">
-                                                                <option value="1" >1</option>
-                                                                <option value="2" >2</option>
-                                                                <option value="3" >3</option>
-                                                                <option value="4" >4</option>
-                                                                <option value="5" >5</option>
-                                                                <option value="6" >6</option>
-                                                                <option value="7" >7</option>
-                                                                <option value="8" >8</option>
-                                                                <option value="9" >9</option>
-                                                                <option value="10" >10</option>
-                                                                <option value="11" >11</option>
-                                                                <option value="12" >12</option>
-                                                                <option value="13" >13</option>
-                                                                <option value="14" >14</option>
-                                                                <option value="15" >15</option>
-                                                                <option value="16" >16</option>
-                                                                <option value="17" >17</option>
-                                                                <option value="18" >18</option>
-                                                                <option value="19" >19</option>
-                                                                <option value="20" >20</option>
-                                                                <option value="21" >21</option>
-                                                                <option value="22" >22</option>
-                                                                <option value="23" >23</option>
-                                                                <option value="24" >24</option>
-                                                                <option value="25" >25</option>
-                                                                <option value="26" >26</option>
-                                                                <option value="27" >27</option>
-                                                                <option value="28" >28</option>
-                                                                <option value="29" >29</option>
-                                                                <option value="30" >30</option>
-                                                                <option value="31" >31</option>
-                                                            </select>
+                                                        <td class="due-date-style-td start-date">
+                                                            <ul style="overflow: auto; height: 100%; list-style: none; padding: 0;">
+                                                                <li><a class="date_select" href="#">1</a></li>
+                                                                <li><a class="date_select" href="#">2</a></li>
+                                                                <li><a class="date_select" href="#">3</a></li>
+                                                                <li><a class="date_select" href="#">4</a></li>
+                                                                <li><a class="date_select" href="#">5</a></li>
+                                                                <li><a class="date_select" href="#">6</a></li>
+                                                                <li><a class="date_select" href="#">7</a></li>
+                                                                <li><a class="date_select" href="#">8</a></li>
+                                                                <li><a class="date_select" href="#">9</a></li>
+                                                                <li><a class="date_select" href="#">10</a></li>
+                                                                <li><a class="date_select" href="#">11</a></li>
+                                                                <li><a class="date_select" href="#">12</a></li>
+                                                                <li><a class="date_select" href="#">13</a></li>
+                                                                <li><a class="date_select" href="#">14</a></li>
+                                                                <li><a class="date_select" href="#">15</a></li>
+                                                                <li><a class="date_select" href="#">16</a></li>
+                                                                <li><a class="date_select" href="#">17</a></li>
+                                                                <li><a class="date_select" href="#">18</a></li>
+                                                                <li><a class="date_select" href="#">19</a></li>
+                                                                <li><a class="date_select" href="#">20</a></li>
+                                                                <li><a class="date_select" href="#">21</a></li>
+                                                                <li><a class="date_select" href="#">22</a></li>
+                                                                <li><a class="date_select" href="#">23</a></li>
+                                                                <li><a class="date_select" href="#">24</a></li>
+                                                                <li><a class="date_select" href="#">25</a></li>
+                                                                <li><a class="date_select" href="#">26</a></li>
+                                                                <li><a class="date_select" href="#">27</a></li>
+                                                                <li><a class="date_select" href="#">28</a></li>
+                                                                <li><a class="date_select" href="#">29</a></li>
+                                                                <li><a class="date_select" href="#">30</a></li>
+                                                                <li><a class="date_select" href="#">31</a></li>
+                                                            </ul>
                                                         </td>
                                                     </tr>
                                                 </table>
@@ -655,68 +655,68 @@
                                             <div class="due-date-end" style="width: 100%;">
                                                 <table style="width: 100%; margin: 0; padding: 0; border: 0; border-spacing: 0;">
                                                     <tr>
-                                                        <td class="due-date-style-td">
-                                                            <select id="end_year_select" data-role="none" size="6" class="due-date-style-select">
-                                                                <option value="2016" >2016</option>
-                                                                <option value="2015" >2015</option>
-                                                                <option value="2014" >2014</option>
-                                                                <option value="2013" >2013</option>
-                                                                <option value="2012" >2012</option>
-                                                                <option value="2011" >2011</option>
-                                                                <option value="2010" >2010</option>
-                                                                <option value="2009" >2009</option>
-                                                            </select>
+                                                        <td class="due-date-style-td end-year">
+                                                            <ul style="overflow: auto; height: 100%; list-style: none; padding: 0;">
+                                                                <li><a class="date_select" href="#">2016</a></li>
+                                                                <li><a class="date_select" href="#">2015</a></li>
+                                                                <li><a class="date_select" href="#">2014</a></li>
+                                                                <li><a class="date_select" href="#">2013</a></li>
+                                                                <li><a class="date_select" href="#">2012</a></li>
+                                                                <li><a class="date_select" href="#">2011</a></li>
+                                                                <li><a class="date_select" href="#">2010</a></li>
+                                                                <li><a class="date_select" href="#">2009</a></li>
+                                                            </ul>
                                                         </td>
-                                                        <td class="due-date-style-td">
-                                                            <select id="end_month_select" data-role="none" size="6" class="due-date-style-select">
-                                                                <option value="1" >1</option>
-                                                                <option value="2" >2</option>
-                                                                <option value="3" >3</option>
-                                                                <option value="4" >4</option>
-                                                                <option value="5" >5</option>
-                                                                <option value="6" >6</option>
-                                                                <option value="7" >7</option>
-                                                                <option value="8" >8</option>
-                                                                <option value="9" >9</option>
-                                                                <option value="10" >10</option>
-                                                                <option value="11" >11</option>
-                                                                <option value="12" >12</option>
-                                                            </select>
+                                                        <td class="due-date-style-td end-month">
+                                                            <ul style="overflow: auto; height: 100%; list-style: none; padding: 0;">
+                                                                <li><a class="date_select" href="#">1</a></li>
+                                                                <li><a class="date_select" href="#">2</a></li>
+                                                                <li><a class="date_select" href="#">3</a></li>
+                                                                <li><a class="date_select" href="#">4</a></li>
+                                                                <li><a class="date_select" href="#">5</a></li>
+                                                                <li><a class="date_select" href="#">6</a></li>
+                                                                <li><a class="date_select" href="#">7</a></li>
+                                                                <li><a class="date_select" href="#">8</a></li>
+                                                                <li><a class="date_select" href="#">9</a></li>
+                                                                <li><a class="date_select" href="#">10</a></li>
+                                                                <li><a class="date_select" href="#">11</a></li>
+                                                                <li><a class="date_select" href="#">12</a></li>
+                                                            </ul>
                                                         </td>
-                                                        <td class="due-date-style-td">
-                                                            <select id="end_date_select" data-role="none" size="6" class="due-date-style-select">
-                                                                <option value="1" >1</option>
-                                                                <option value="2" >2</option>
-                                                                <option value="3" >3</option>
-                                                                <option value="4" >4</option>
-                                                                <option value="5" >5</option>
-                                                                <option value="6" >6</option>
-                                                                <option value="7" >7</option>
-                                                                <option value="8" >8</option>
-                                                                <option value="9" >9</option>
-                                                                <option value="10" >10</option>
-                                                                <option value="11" >11</option>
-                                                                <option value="12" >12</option>
-                                                                <option value="13" >13</option>
-                                                                <option value="14" >14</option>
-                                                                <option value="15" >15</option>
-                                                                <option value="16" >16</option>
-                                                                <option value="17" >17</option>
-                                                                <option value="18" >18</option>
-                                                                <option value="19" >19</option>
-                                                                <option value="20" >20</option>
-                                                                <option value="21" >21</option>
-                                                                <option value="22" >22</option>
-                                                                <option value="23" >23</option>
-                                                                <option value="24" >24</option>
-                                                                <option value="25" >25</option>
-                                                                <option value="26" >26</option>
-                                                                <option value="27" >27</option>
-                                                                <option value="28" >28</option>
-                                                                <option value="29" >29</option>
-                                                                <option value="30" >30</option>
-                                                                <option value="31" >31</option>
-                                                            </select>
+                                                        <td class="due-date-style-td end-date">
+                                                            <ul style="overflow: auto; height: 100%; list-style: none; padding: 0;">
+                                                                <li><a class="date_select" href="#">1</a></li>
+                                                                <li><a class="date_select" href="#">2</a></li>
+                                                                <li><a class="date_select" href="#">3</a></li>
+                                                                <li><a class="date_select" href="#">4</a></li>
+                                                                <li><a class="date_select" href="#">5</a></li>
+                                                                <li><a class="date_select" href="#">6</a></li>
+                                                                <li><a class="date_select" href="#">7</a></li>
+                                                                <li><a class="date_select" href="#">8</a></li>
+                                                                <li><a class="date_select" href="#">9</a></li>
+                                                                <li><a class="date_select" href="#">10</a></li>
+                                                                <li><a class="date_select" href="#">11</a></li>
+                                                                <li><a class="date_select" href="#">12</a></li>
+                                                                <li><a class="date_select" href="#">13</a></li>
+                                                                <li><a class="date_select" href="#">14</a></li>
+                                                                <li><a class="date_select" href="#">15</a></li>
+                                                                <li><a class="date_select" href="#">16</a></li>
+                                                                <li><a class="date_select" href="#">17</a></li>
+                                                                <li><a class="date_select" href="#">18</a></li>
+                                                                <li><a class="date_select" href="#">19</a></li>
+                                                                <li><a class="date_select" href="#">20</a></li>
+                                                                <li><a class="date_select" href="#">21</a></li>
+                                                                <li><a class="date_select" href="#">22</a></li>
+                                                                <li><a class="date_select" href="#">23</a></li>
+                                                                <li><a class="date_select" href="#">24</a></li>
+                                                                <li><a class="date_select" href="#">25</a></li>
+                                                                <li><a class="date_select" href="#">26</a></li>
+                                                                <li><a class="date_select" href="#">27</a></li>
+                                                                <li><a class="date_select" href="#">28</a></li>
+                                                                <li><a class="date_select" href="#">29</a></li>
+                                                                <li><a class="date_select" href="#">30</a></li>
+                                                                <li><a class="date_select" href="#">31</a></li>
+                                                            </ul>
                                                         </td>
                                                     </tr>
                                                 </table>
@@ -1206,6 +1206,69 @@
 
     $("#mobile_select").selectmenu();
 
+    $(".date_select").css("border", "0");
+    $(".date_select").css("display", "inline-block");
+    $(".date_select").css("padding", "0");
+    $(".date_select").css("height", "auto");
+    $(".date_select").css("padding", "3px");
+    $(".date_select").css("font-size", "0.8em");
+    //$(".end_date_select").removeClass('hover');
+
+    function changeSeletedDate(wholeObj, selectedObj) {
+        wholeObj.css("background", "white");
+        wholeObj.css("color", "#f08b68");
+        selectedObj.css("background", "grey");
+        selectedObj.css("color", "white");
+    }
+
+    $('.end-year li a').each( function(index) {
+        $(this).click( function() {
+            //alert($(this).text());
+            $("#end_year_text").text($(this).text() + "년");
+            changeSeletedDate($('.end-year li a'),  $(this));
+        });
+    });
+
+    $('.end-month li a').each( function(index) {
+        $(this).click( function() {
+            //alert($(this).text());
+            $("#end_month_text").text($(this).text() + "월");
+            changeSeletedDate($('.end-month li a'),  $(this));
+        });
+    });
+
+    $('.end-date li a').each( function(index) {
+        $(this).click( function() {
+            //alert($(this).text());
+            $("#end_date_text").text($(this).text() + "일");
+            changeSeletedDate($('.end-date li a'),  $(this));
+        });
+    });
+
+    $('.start-year li a').each( function(index) {
+        $(this).click( function() {
+            //alert($(this).text());
+            $("#start_year_text").text($(this).text() + "년");
+            changeSeletedDate($('.start-year li a'),  $(this));
+        });
+    });
+
+    $('.start-month li a').each( function(index) {
+        $(this).click( function() {
+            //alert($(this).text());
+            $("#start_month_text").text($(this).text() + "월");
+            changeSeletedDate($('.start-month li a'),  $(this));
+        });
+    });
+
+    $('.start-date li a').each( function(index) {
+        $(this).click( function() {
+            //alert($(this).text());
+            $("#start_date_text").text($(this).text() + "일");
+            changeSeletedDate($('.start-date li a'),  $(this));
+        });
+    });
+
 </script>
 
 <style>
@@ -1250,8 +1313,13 @@
         background: white;
     }
 
+    a.date_select:hover {
+        color: red;
+    }
+
 </style>
 
 </body>
 </html>
+
 
