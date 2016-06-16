@@ -462,6 +462,10 @@
         font-weight: bold;
         color: gray;
     	}
+    	.color-mint {
+    		color: #4fc9de;
+    	}
+    	
     	.cat-info-div:after{
         content: "";
         display: inline-block;
@@ -1057,7 +1061,7 @@
         }
 
         $('#btn_withtalk').click(function() {
-			
+			$('#btn_withtalk').addClass('color-mint');
             
         }
                 )
