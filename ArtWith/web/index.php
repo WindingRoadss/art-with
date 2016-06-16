@@ -146,6 +146,14 @@
 
             $("#sharewith").attr('src','images/design/img_nnw_off.png');
             $("#sharewith").val(0);
+			
+		$.ajax({
+            async:true,
+            success:function(data){
+                //alert("success");
+                window.location='wetalk_list.php';
+            }
+        })					
         }
     });
 
