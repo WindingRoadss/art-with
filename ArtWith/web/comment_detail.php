@@ -309,12 +309,55 @@
             background-image:url("images/design/img_background.png");
             background-size: 100% 100%;
         }
+        
+        .comment-and-cheer-info-table {
+        width: 100%;
+        font-weight: bold;
+        font-size: 13px;
+        color: #848587;
+        line-height: 1.6em;
+        border-spacing: 0;
+        background-color: white;
+        height: 35px;
+        padding: 5px;
+    }
+
+    .comment-and-cheer-info-table tr th {
+        text-align: left;
+        vertical-align: bottom;
+        color: black;
+    }
+
+    .comment-and-cheer-info-table tr th .comment-img {
+        vertical-align: middle;
+        width: 18px;
+        height: auto;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    .comment-and-cheer-info-table tr td {
+        text-align: right;
+        vertical-align: middle;
+        font-size: 15px;
+        color: #26b2c1;
+        height: 29.5px;
+        background-image:url("images/design/img_cheer.png");
+        background-size: 116px 29.5px ;
+        background-position: 100% 50%;
+        background-repeat: no-repeat;
+    }
+
+    .comment-info-span {
+        vertical-align: middle;
+        font-size: 11px;
+    }
 
         .comment-detail-info-table {
             width: 100%;
             padding-left: 25px;
             padding-right: 25px;
-            padding-top: 10px;
+            padding-top: 30px;
             padding-bottom: 80px;
             line-height: 23px;
             font-size: 14px;
@@ -377,6 +420,61 @@
             line-height: 1.5em;
             padding-left: 10px;
         }
+        .cat-and-cheer-info-table {
+        width: 100%;
+        font-weight: bold;
+        font-size: 14px;
+        color: #848587;
+        line-height: 1.6em;
+        border-spacing: 0;
+    	}
+    	.cat-and-cheer-info-table tr th {
+        text-align: center;
+        vertical-align: middle;
+        color: black;
+        border-bottom: 2px solid #e3e5e6;
+        border-right: 2px solid #e3e5e6;
+        border-top: 2px solid #e3e5e6;
+    }
+
+    .cat-and-cheer-info-table tr td {
+        text-align: center;
+        vertical-align: middle;
+        color: black;
+        border-bottom: 2px solid #e3e5e6;
+        border-top: 2px solid #e3e5e6;
+    }
+    	
+    	.cat-info-div{
+        width: 100%;
+        color: #26b2c1;
+        display: -moz-inline-stack;
+        display: inline-block;
+        zoom: 1;
+        *display: inline;
+        text-align: center;
+        font-size: 0; /* Optional */
+    	}
+    	
+    	.withtalk-span {
+        vertical-align: middle;
+        font-size: 15px;
+        font-weight: bold;
+        color: gray;
+    	}
+    	.cat-info-div:after{
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+    	}
+    	
+    	.choice-span {
+        vertical-align: middle;
+        font-size: 15px;
+        color: #848587;
+        font-weight: bold;
+   		}
 
         .comment-info-bottom-comment {
             position: absolute;
@@ -398,6 +496,8 @@
             -webkit-align-items: center;
             align-items: center;
             justify-content: center;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
         }
 
         .share-info-table-head {
@@ -512,17 +612,36 @@
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
         </div>
-
+<!--  
         <div class="button-set" style="width: 100%">
             <img style="height: 43px; width: auto;" src="images/design/img_talk.png">
             <a id="btn_choice" href="#popup_choice" data-rel="popup" data-position-to="window">
                 <img style="height: 43px; width: auto;" src="images/design/img_choice.png" style="margin-left: 5px">
             </a>
         </div>
-
+-->
+         <table class="cat-and-cheer-info-table">
+            <tr>
+                <th style="width: 50%; height: 45px; background-color: #f6f6f6; border-top: 0px;">
+                    <div class="cat-info-div">
+                    	<a href="chatroom.php" data-rel="next" target="_self;" style="text-decoration:none;">
+                        <span id="btn_withtalk" class="withtalk-span"><b>윗톡</b></span>
+                        </a>
+                    </div>
+                </th>
+                <td style="width: 50%; background-color: #f6f6f6; border-top: 0px;">
+                	<a href="#popup_choice" data-rel="popup" data-position-to="window" style="text-decoration:none;">
+                    <span id="btn_choice" class="choice-span">선택</span>
+                    </a>
+                </td>
+            </tr>
+        </table>
+        
+        
+        
         <table class="comment-detail-info-table">
             <tr>
-                <th style="width: 30%;">요청자ID</th>
+                <th style="width: 30%;">닉네임</th>
                 <td style="width: 70%;">내가기부왕</td>
             </tr>
             <tr>
@@ -564,7 +683,7 @@
                             <table class="share-info-table" style="position: relative; top: 45px; padding-right: 20px; padding-left: 20px;">
 
 								<tr>
-                                    <th style="font-size: 0.9em; width: 35%; padding-bottom: 5px; padding-left: 5px; padding-right: 5px;">요청자ID</th>
+                                    <th style="font-size: 0.9em; width: 35%; padding-bottom: 5px; padding-left: 5px; padding-right: 5px;">닉네임</th>
                                     <td style="width: 65%; padding-left: 10px; padding-bottom: 5px; font-weight: bold; font-size: 0.9em; color: #848587; line-height: 1.5em;">내가기부왕</td>
 								</tr>
 								<tr>
@@ -738,9 +857,29 @@
                     </div>
                    </div>
                </div>
-            </div> --> <!-- footer -->
+            </div> --> 
+            <!-- footer -->
 
         <div data-role="footer" data-position="fixed" data-tap-toggle="false" style="border: none;">
+        
+               <!-- category and d.day info -->
+            <table class="comment-and-cheer-info-table">
+                <tr>
+                    <th style="width: 65%;">
+                        <div class="bg-white">
+                            <img class="comment-img" src="images/design/img_re.png">
+                            <span class="comment-info-span">댓글 22개</span>
+                        </div>
+                    </th>
+                    <!--
+                    <td style="width: 35%;">
+                        <span class="cheer-info-span">응원해요 26</span>
+                    </td>
+                    -->
+                </tr>
+            </table>
+        
+        
             <div class="swiper-container swiper-container-comment bg-white" >
                 <div class="swiper-wrapper">
                     <div class="swiper-slide swiper-slide-comment">
@@ -917,6 +1056,12 @@
             }
         }
 
+        $('#btn_withtalk').click(function() {
+			
+            
+        }
+                )
+
         //$("#share_info_div_one").dragEnd()
 
 
@@ -952,7 +1097,6 @@
         $("#share_info_div_one").removeAttr("align-items");*/
 
     </script>
-
 </body>
 </html>
 
