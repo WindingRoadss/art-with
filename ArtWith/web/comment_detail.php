@@ -627,15 +627,18 @@
          <table class="cat-and-cheer-info-table">
             <tr>
                 <th style="width: 50%; height: 45px; background-color: #f6f6f6; border-top: 0px;">
-                    <div class="cat-info-div">
+                    <div id="btn_withtalk" class="cat-info-div">
                     	<!--  <a href="chatroom.php" data-rel="next" style="text-decoration:none;"> -->
-                        <span id="btn_withtalk" class="withtalk-span"><b>윗톡</b></span>
+                        <span class="withtalk-span"><b>윗톡</b></span>
                         <!-- </a>  -->
                     </div>
                 </th>
                 <td style="width: 50%; background-color: #f6f6f6; border-top: 0px;">
                 	<a href="#popup_choice" data-rel="popup" data-position-to="window" style="text-decoration:none;">
-                    <span id="btn_choice" class="choice-span">선택</span>
+                		<div style="width: 100%; height: auto;">
+                			<span id="btn_choice" class="choice-span">선택</span>	
+                		</div>
+                    
                     </a>
                 </td>
             </tr>
