@@ -628,9 +628,9 @@
             <tr>
                 <th style="width: 50%; height: 45px; background-color: #f6f6f6; border-top: 0px;">
                     <div class="cat-info-div">
-                    	<a href="chatroom.php" data-rel="next" target="_self;" style="text-decoration:none;">
+                    	<!--  <a href="chatroom.php" data-rel="next" style="text-decoration:none;"> -->
                         <span id="btn_withtalk" class="withtalk-span"><b>윗톡</b></span>
-                        </a>
+                        <!-- </a>  -->
                     </div>
                 </th>
                 <td style="width: 50%; background-color: #f6f6f6; border-top: 0px;">
@@ -1063,8 +1063,18 @@
         $('#btn_withtalk').click(function() {
 			$('#btn_withtalk').addClass('color-mint');
             
-        }
-                )
+        })
+        
+        $('#btn_withtalk').click(function(){
+            $.ajax({
+                async:true,
+                success:function(data){
+                    window.location='chatroom.php';
+                }
+            })
+        })
+                
+                
 
         //$("#share_info_div_one").dragEnd()
 
