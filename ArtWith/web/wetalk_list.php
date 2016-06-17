@@ -200,14 +200,6 @@
 				$("#wetalk").next().val(0);
 				$("#myspace").attr('src','images/design/img_my_off.png');
 				$("#myspace").val(0);	
-				
-		$.ajax({
-            async:true,
-            success:function(data){
-                //alert("success");
-                window.location='index.php';
-            }
-        })						
 							
 			}
 		});
@@ -621,7 +613,7 @@
          <div data-role="footer" data-position="fixed" data-tap-toggle="false" style="border: none;">
             <div style="width: 100%">
                 <div>
-                    <a href="#">
+                    <a href="index.php">
                         <img class="bottom-tab-menu" id="sharewith" value="0" src="images/design/img_nnw_off.png" style="underbutton" width="33%"/>
                     </a>
                     <a href="#">
