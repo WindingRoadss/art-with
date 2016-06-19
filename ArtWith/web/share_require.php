@@ -468,7 +468,6 @@
                                     <ul class="dropdown" id="ul_cat_first">
                                         <li><a href="#">전체</a></li>
                                         <li><a href="#">의상</a></li>
-                                        <li><a href="#">소품</a></li>
                                         <li><a href="#"></a></li>
                                         <li><a href="#"></a></li>
                                         <li><a href="#"></a></li>
@@ -956,6 +955,8 @@
             obj.dd.on('click', function(event){
                 $(this).toggleClass('active');
                 event.stopPropagation();
+                //alert($(this).attr("id"));
+                loadCatList($(this).attr("id"));
                 changeHeightCategoryDiv();
             });
         }
@@ -1036,26 +1037,36 @@
     var countTransDropDownOpened = 0; // 1 : open, 0 : closed
     var isDropDownOpenAddr = 0; // 1 : open, 0 : closed
 
-    $('#cat_div #ul_cat_first li a').each( function(index) {
-        $(this).click( function() {
-            $('#cat_first_drop_down span').text($(this).text());
-            //changeHeightTransportDiv();
-        });
-    });
 
-    $('#cat_div #ul_cat_second li a').each( function(index) {
-        $(this).click( function() {
-            $('#cat_second_drop_down span').text($(this).text());
-            //changeHeightTransportDiv();
+    function eachCatFirstLiClick() {
+        $('#cat_div #ul_cat_first li a').each( function(index) {
+            $(this).click( function() {
+                var superCatName = $(this).text();
+                $('#cat_first_drop_down span').text(superCatName);
+                loadNextCatList("cat_first_drop_down", superCatName);
+            });
         });
-    });
+    }
 
-    $('#cat_div #ul_cat_third li a').each( function(index) {
-        $(this).click( function() {
-            $('#cat_third_drop_down span').text($(this).text());
-            //changeHeightTransportDiv();
+    function eachCatSecondLiClick() {
+        $('#cat_div #ul_cat_second li a').each( function(index) {
+            $(this).click( function() {
+                var superCatName = $(this).text();
+                //alert($(this).text());
+                $('#cat_second_drop_down span').text(superCatName);
+                loadNextCatList("cat_second_drop_down", superCatName);
+            });
         });
-    });
+    }
+
+    function eachCatThirdLiClick() {
+        $('#cat_div #ul_cat_third li a').each( function(index) {
+            $(this).click( function() {
+                var superCatName = $(this).text();
+                $('#cat_third_drop_down span').text(superCatName);
+            });
+        });
+    }
 
     $('#address_div #ul_city li a').each( function(index) {
         $(this).click( function() {
@@ -1313,6 +1324,63 @@
         $(imgDivId).each(function() {
             $(this).css('backgroundImage', imgURL);
         });
+    }
+
+    function loadCatList(catNum) { // 카테고리 드롭다운 눌렀을 때
+        $.ajax({
+            url: "db/share_require/load_catlist.php", //the page containing php script
+            type: "POST", //request type
+            data: "catNum=" + catNum,
+            success: function (result) {
+                if(catNum == "cat_first_drop_down") {
+                    var jsonObj = JSON.parse(result);
+                    setCatList(catNum, jsonObj);
+
+                    eachCatFirstLiClick();
+                }
+            }
+        });
+    }
+
+    function loadNextCatList(superCat, superCatName) { // 카테고리 선택했을 경우
+        $.ajax({
+            url: "db/share_require/load_next_catlist.php", //the page containing php script
+            type: "POST", //request type
+            data: "superCat=" + superCat + "&superCatName=" + superCatName,
+            success: function (result) {
+                var catNum;
+                if(superCat == "cat_first_drop_down") {
+                    catNum = "cat_second_drop_down";
+                    emptyDropDown(catNum);
+                    var jsonObj = JSON.parse(result);
+                    setCatList(catNum, jsonObj);
+                    eachCatSecondLiClick();
+                }
+                //var catNum = "cat_third_drop_down";
+                else if(superCat == "cat_second_drop_down") {
+                    catNum = "cat_third_drop_down";
+                    emptyDropDown(catNum);
+                    var jsonObj = JSON.parse(result);
+                    setCatList(catNum, jsonObj);
+                    eachCatThirdLiClick();
+                }
+            }
+        });
+    }
+
+    function emptyDropDown(catNum){
+        $("#" + catNum + " ul").empty();
+    }
+
+    function setCatList(catNum, jsonObj) {
+        //alert(jsonObj.length);
+        if(catNum == "cat_first_drop_down")
+            emptyDropDown(catNum);
+        $("#" + catNum + " ul").append('<li><a href="#" class="ui-link">' + '전체' + '</a></li>');
+        for(var i = 0; i < jsonObj.length; i++) {
+            var rowObj = jsonObj[i];
+            $("#" + catNum + " ul").append('<li><a href="#" class="ui-link">' + rowObj.category_name + '</a></li>');
+        }
     }
 
 </script>
